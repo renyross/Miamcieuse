@@ -95,27 +95,32 @@ export function closeQuickViewModal() {
 
 // Mobile Menu Drawer
 function initMobileMenu() {
-  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenuBtn = document.getElementById('hero-menu-toggle-btn') || document.getElementById('mobile-menu-btn');
   const mobileBackdrop = document.getElementById('mobile-nav-backdrop');
   const mobileCloseBtn = document.getElementById('mobile-nav-close-btn');
+
+  const closeMenu = () => {
+    if (mobileBackdrop) {
+      mobileBackdrop.classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
+  };
 
   if (mobileMenuBtn && mobileBackdrop) {
     mobileMenuBtn.addEventListener('click', () => {
       mobileBackdrop.classList.add('is-open');
       document.body.style.overflow = 'hidden';
     });
+  }
 
-    const closeMenu = () => {
-      mobileBackdrop.classList.remove('is-open');
-      document.body.style.overflow = '';
-    };
+  if (mobileCloseBtn) mobileCloseBtn.addEventListener('click', closeMenu);
 
-    if (mobileCloseBtn) mobileCloseBtn.addEventListener('click', closeMenu);
+  if (mobileBackdrop) {
     mobileBackdrop.addEventListener('click', (e) => {
       if (e.target === mobileBackdrop) closeMenu();
     });
 
-    document.querySelectorAll('.mobile-nav-item').forEach(item => {
+    document.querySelectorAll('.mobile-nav-item:not(.menu-dropdown-toggle)').forEach(item => {
       item.addEventListener('click', () => closeMenu());
     });
   }

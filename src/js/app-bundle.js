@@ -2246,19 +2246,29 @@
     }, { passive: true });
 
     // Menu mobile
-    const mobBtn = document.getElementById('mobile-menu-btn');
+    const mobBtn = document.getElementById('hero-menu-toggle-btn') || document.getElementById('mobile-menu-btn');
     const mobDrawer = document.getElementById('mobile-nav-backdrop');
     const mobClose = document.getElementById('mobile-nav-close-btn');
+
+    const closeMob = function() {
+      if (mobDrawer) {
+        mobDrawer.classList.remove('is-open');
+        document.body.style.overflow = '';
+      }
+    };
+
     if (mobBtn && mobDrawer) {
       mobBtn.addEventListener('click', function() {
         mobDrawer.classList.add('is-open');
         document.body.style.overflow = 'hidden';
       });
-      const closeMob = function() {
-        mobDrawer.classList.remove('is-open');
-        document.body.style.overflow = '';
-      };
-      if (mobClose) mobClose.addEventListener('click', closeMob);
+    }
+
+    if (mobClose) {
+      mobClose.addEventListener('click', closeMob);
+    }
+
+    if (mobDrawer) {
       mobDrawer.addEventListener('click', function(e) {
         if (e.target === mobDrawer) closeMob();
       });
