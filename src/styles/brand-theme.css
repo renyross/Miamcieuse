@@ -1,0 +1,45 @@
+/* Charte Miam'cieuse : vert profond, fuchsia et surfaces claires. */
+:root {
+  --brand-green: #07521c;
+  --brand-fuchsia: #cf0072;
+  --text-main: #12351c;
+  --text-muted: #58665a;
+  --border-color: #dce7da;
+  --color-cacao: #294631;
+  --color-cacao-dark: #12351c;
+  --color-beige: #e9f1e7;
+  --shadow-pink: 0 8px 24px rgb(207 0 114 / 20%);
+}
+.hero-order-now-btn,
+.popular-plus-btn,
+.home-offer-button,
+.home-packs-section .pack-card .btn,
+.home-club-section .newsletter-form .btn {
+  background: var(--brand-fuchsia);
+  color: #fff;
+  box-shadow: 0 4px 12px rgb(207 0 114 / 14%);
+}
+.hero-order-now-btn:hover,
+.popular-plus-btn:hover,
+.home-offer-button:hover,
+.home-packs-section .pack-card .btn:hover,
+.home-club-section .newsletter-form .btn:hover {
+  background: #aa005e;
+  color: #fff;
+}
+.home-offer-button span { color: var(--brand-fuchsia); }
+.hero-slide-overlay {
+  background: linear-gradient(90deg, rgb(3 23 10 / 90%), rgb(3 23 10 / 55%) 50%, rgb(3 23 10 / 10%));
+}
+.hero-banner-tag { color: #fff0f8; background: rgb(207 0 114 / 35%); border-color: rgb(255 183 223 / 50%); }
+.hero-badge-count { box-shadow: 0 2px 6px rgb(207 0 114 / 20%); border-color: #f7faf6; }
+.hero-dot.is-active { box-shadow: 0 0 8px rgb(207 0 114 / 35%); }
+.home-offer-banner::before {
+  background: linear-gradient(90deg, #092f15, rgb(9 47 21 / 92%) 30%, rgb(9 47 21 / 15%) 72%, rgb(9 47 21 / 45%));
+}
+.home-offer-price { border-color: #477153; }
+.category-circle-item.is-active .category-circle-bubble { box-shadow: 0 4px 12px rgb(207 0 114 / 15%); }
+.home-club-section .newsletter-card { border: 1px solid #315b3b; }
+.site-footer a:focus-visible,
+button:focus-visible,
+.popular-view-all:focus-visible { outline: 3px solid #cf0072; outline-offset: 3px; }

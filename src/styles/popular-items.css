@@ -1,0 +1,376 @@
+/* ===================================================
+   MIAM'CIEUSE — Section "Nos Meilleurs Produits" (Popular Items)
+   Style Exact Conforme à la Capture Fournie
+   =================================================== */
+
+/* Section Globale avec fond beige doux crème chaleureux */
+.popular-items-section {
+  background-color: #f7faf6;
+  padding: 4.5rem 0 5.5rem 0;
+  width: 100%;
+}
+
+.popular-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto 2.5rem auto;
+  max-width: 980px;
+  width: 100%;
+}
+
+.popular-header-left {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.popular-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #12351c;
+  font-family: 'Plus Jakarta Sans', var(--font-sans), sans-serif;
+  letter-spacing: -0.025em;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.popular-view-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #12351c;
+  font-weight: 800;
+  font-size: 1.1rem;
+  font-family: 'Plus Jakarta Sans', var(--font-sans), sans-serif;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.popular-view-all .popular-arrow {
+  color: #cf0072;
+  font-size: 1.35rem;
+  font-weight: 900;
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.popular-view-all:hover {
+  color: #cf0072;
+}
+
+.popular-view-all:hover .popular-arrow {
+  transform: translateX(5px);
+}
+
+/* Grille 3 Colonnes Centrée — Proportions Rectangles Verticaux (comme Image 2) */
+.popular-items-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.25rem;
+  max-width: 980px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Carte Individuelle Blanche — Rectangle Vertical Élancé */
+.popular-card {
+  background: #FFFFFF;
+  border-radius: 8px; /* Bords rectangulaires modérés, pas trop arrondis */
+  padding: 1.6rem 1.5rem 1.6rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.035);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  min-height: 420px; /* Format rectangle vertical élancé */
+}
+
+.popular-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+/* Bouton Coeur en haut à droite */
+.popular-heart-btn {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  color: #4A4A4A;
+  transition: all 0.2s ease;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.popular-heart-btn svg {
+  width: 22px;
+  height: 22px;
+  stroke: #4A4A4A;
+  fill: none;
+  stroke-width: 1.9;
+  transition: all 0.25s ease;
+}
+
+.popular-heart-btn:hover svg {
+  stroke: #cf0072;
+  transform: scale(1.15);
+}
+
+.popular-heart-btn.is-active svg {
+  stroke: #cf0072;
+  fill: #cf0072;
+  transform: scale(1.15);
+}
+
+/* Conteneur Image Découpée — Agrandie pour occuper généreusement la largeur de la carte */
+.popular-image-wrap {
+  width: 100%;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+
+.popular-image-wrap::after {
+  content: '';
+  position: absolute;
+  bottom: 6px;
+  width: 75%;
+  height: 16px;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0) 70%);
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.popular-image-wrap img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 215px;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.07));
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  z-index: 2;
+}
+
+.popular-card:hover .popular-image-wrap img {
+  transform: scale(1.08) translateY(-4px);
+}
+
+/* Titre & Description */
+.popular-item-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #1A1A1A;
+  margin: 0 0 0.35rem 0;
+  font-family: 'Plus Jakarta Sans', var(--font-sans), sans-serif;
+  line-height: 1.25;
+}
+
+.popular-item-desc {
+  font-size: 0.90rem;
+  color: #707070;
+  line-height: 1.45;
+  margin: 0 0 1.25rem 0;
+  min-height: 40px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-family: 'Plus Jakarta Sans', var(--font-sans), sans-serif;
+}
+
+/* Bas de carte : Prix Orange & Bouton (+) Orange Rond (Exact Image 2) */
+.popular-bottom-row {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.75rem;
+}
+
+.popular-item-price {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #cf0072;
+  font-family: 'Plus Jakarta Sans', var(--font-sans), sans-serif;
+  letter-spacing: -0.015em;
+}
+
+.popular-plus-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%; /* Bouton orange rond comme sur l'image 2 */
+  background: #cf0072;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(255, 94, 0, 0.35);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  line-height: 1;
+}
+
+.popular-plus-btn:hover {
+  background: #aa005e;
+  transform: scale(1.1);
+  box-shadow: 0 8px 22px rgba(255, 94, 0, 0.48);
+}
+
+.popular-plus-btn:active {
+  transform: scale(0.92);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .popular-header-bar,
+  .popular-items-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+    max-width: 660px;
+  }
+}
+
+@media (max-width: 767px) {
+  .popular-items-section {
+    padding: 1.5rem 0 1.75rem;
+    background: #f0f6ef;
+  }
+
+  .popular-items-section > .container {
+    padding-inline: 12px;
+  }
+
+  .popular-header-bar {
+    max-width: none;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .popular-header-left {
+    min-width: 0;
+  }
+
+  .popular-title {
+    font-size: clamp(14px, 3.7vw, 20px);
+    line-height: 1.25;
+  }
+
+  .popular-view-all {
+    flex-shrink: 0;
+    gap: 4px;
+    min-height: 32px;
+    font-size: 11px;
+    white-space: nowrap;
+    color: #aa005e;
+  }
+
+  .popular-view-all .popular-arrow {
+    color: inherit;
+    font-size: 17px;
+  }
+
+  /* Six produits en deux rangées compactes de trois sur mobile. */
+  .popular-items-grid {
+    max-width: none;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-flow: row;
+    gap: 12px 8px;
+    padding-block: 2px;
+  }
+
+  .popular-card {
+    min-width: 0;
+    min-height: 0;
+    padding: 5px 6px 7px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 6px rgb(75 44 21 / 5%);
+  }
+
+  .popular-heart-btn {
+    top: 2px;
+    right: 2px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .popular-heart-btn svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .popular-image-wrap {
+    height: auto;
+    aspect-ratio: 1;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    background: #f5f8f3;
+  }
+
+  .popular-image-wrap img {
+    max-height: none;
+  }
+
+  .popular-item-title {
+    font-size: clamp(10px, 2.7vw, 15px);
+    line-height: 1.3;
+    margin-bottom: 4px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 0;
+  }
+
+  .popular-item-desc {
+    font-size: clamp(9px, 2.3vw, 12px);
+    line-height: 1.35;
+    min-height: 2.7em;
+    margin-bottom: 4px;
+  }
+
+  .popular-bottom-row {
+    gap: 2px;
+    padding-top: 4px;
+  }
+
+  .popular-item-price {
+    color: #aa005e;
+    font-size: clamp(11px, 3vw, 17px);
+    white-space: nowrap;
+  }
+
+  .popular-plus-btn {
+    flex-shrink: 0;
+    width: 26px;
+    height: 26px;
+    background: #cf0072;
+    box-shadow: none;
+    font-size: 20px;
+  }
+
+  .popular-card:hover,
+  .popular-card:hover .popular-image-wrap img {
+    transform: none;
+  }
+}

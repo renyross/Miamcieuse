@@ -1,0 +1,74 @@
+.site-brand-logo {
+  display: block;
+  width: 220px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  cursor: pointer;
+}
+.greeting-brand a,
+.mobile-nav-header a,
+.footer-brand a.footer-logo-link {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.greeting-brand a:hover,
+.mobile-nav-header a:hover,
+.footer-brand a.footer-logo-link:hover {
+  transform: scale(1.02);
+  opacity: 0.92;
+}
+.greeting-brand .site-brand-logo {
+  width: 180px;
+  max-width: 100%;
+  height: auto;
+  margin-inline: auto;
+  transition: width 0.2s ease;
+}
+.mobile-nav-header .site-brand-logo {
+  width: 180px;
+  max-width: 80%;
+}
+.footer-brand > .site-brand-logo,
+.footer-brand a.footer-logo-link .site-brand-logo {
+  width: 230px;
+  margin-bottom: 18px;
+}
+.greeting-slogan {
+  display: block;
+  font-size: 0.86rem;
+  color: #58665a;
+  font-weight: 600;
+  letter-spacing: 0.015em;
+  margin-top: 3px;
+  line-height: 1.25;
+}
+
+.mobile-nav-brand-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.mobile-nav-slogan {
+  display: block;
+  font-size: 11px;
+  color: #58665a;
+  font-weight: 600;
+  margin-top: 4px;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+}
+
+@media (max-width: 767px) {
+  .greeting-brand .site-brand-logo {
+    width: 135px;
+    margin-inline: auto;
+  }
+  .greeting-slogan {
+    font-size: 10.5px;
+    margin-top: 2px;
+  }
+}

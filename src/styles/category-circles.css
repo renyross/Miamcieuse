@@ -1,0 +1,208 @@
+/* ===================================================
+   MIAM'CIEUSE — Section Sélecteur de Catégories
+   Rondelles nettement réduites en taille et en arrondi
+   (Format compact épuré avec coins adoucis 10px au lieu de cercles)
+   =================================================== */
+
+.category-circles-section {
+  background-color: #f7faf6;
+  padding: 0.5rem 0 1.75rem 0;
+  width: 100%;
+}
+
+.category-circles-container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.category-circles-scroll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding: 0.5rem 0.5rem 0.75rem 0.5rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.category-circles-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.category-circle-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  cursor: pointer;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  padding: 0;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.category-circle-item:hover {
+  transform: translateY(-2px);
+}
+
+/* Rondelle totalement arrondie (100% circulaire / 50%) */
+.category-circle-bubble {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: 2.5px solid transparent;
+  outline-offset: 3px;
+  overflow: hidden;
+}
+
+/* Image interne totalement arrondie */
+.category-circle-bubble img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.08));
+  transition: transform 0.25s ease;
+}
+
+.category-circle-item:hover .category-circle-bubble img {
+  transform: scale(1.1);
+}
+
+/* Label sous la rondelle */
+.category-circle-label {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #294631;
+  font-family: 'Plus Jakarta Sans', var(--font-sans), sans-serif;
+  text-align: center;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+/* ÉTAT ACTIF (Cercle 100% rond avec contour rouge franc) */
+.category-circle-item.is-active .category-circle-bubble {
+  border-radius: 50%;
+  outline: 2.5px solid #cf0072;
+  outline-offset: 3px;
+  box-shadow: 0 6px 16px rgba(196, 18, 32, 0.2);
+}
+
+.category-circle-item.is-active .category-circle-label {
+  color: #cf0072;
+  font-weight: 800;
+}
+
+/* Responsive smartphone */
+@media (max-width: 900px) {
+  .category-circles-scroll {
+    justify-content: flex-start;
+    gap: 1.1rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .category-circle-bubble {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  .category-circle-bubble img {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+  }
+
+  .category-circle-label {
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .category-circles-section {
+    padding: 0.5rem 0 1rem 0;
+    overflow: hidden;
+  }
+
+  .category-circles-container {
+    padding-inline: 10px;
+  }
+
+  .category-circles-scroll {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 14px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    padding: 6px 6px 12px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    cursor: grab;
+    user-select: none;
+  }
+
+  .category-circles-scroll:active {
+    cursor: grabbing;
+  }
+
+  .category-circles-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .category-circle-item {
+    flex: 0 0 auto;
+    min-width: 54px;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* Afficher tous les éléments sans exception, y compris le 7ème (Packs) */
+  .category-circle-item:nth-child(n + 7) {
+    display: flex;
+  }
+
+  .category-circle-bubble {
+    width: 52px;
+    height: 52px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .category-circle-bubble img {
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .category-circle-label {
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+}
+

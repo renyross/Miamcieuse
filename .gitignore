@@ -1,0 +1,30 @@
+# Dépendances (ne pas versionner)
+node_modules/
+.pnp
+.pnp.js
+
+# Build de production (généré automatiquement)
+dist/
+dist-ssr/
+*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Fichiers système Mac & éditeurs
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.idea/
+.vscode/
+
+# Variables d'environnement secrètes
+.env
+.env.*
+!.env.example
+

@@ -1,0 +1,279 @@
+.mobile-nav-drawer {
+  width: min(90%, 360px);
+  max-width: 360px;
+  background: #f7faf6;
+  box-shadow: 12px 0 40px rgb(7 31 16 / 18%);
+}
+.mobile-nav-header {
+  padding: 22px 20px;
+  background: #fff;
+  gap: 16px;
+}
+.mobile-nav-header .cart-close-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid #dce7da;
+  background: #f7faf6;
+  color: #07521c;
+}
+.mobile-nav-links {
+  min-height: 0;
+  padding: 20px 14px;
+  gap: 8px;
+}
+.mobile-nav-item {
+  min-height: 56px;
+  padding: 10px 12px;
+  gap: 8px;
+  border: 1px solid #e3ebe0;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 14px;
+  line-height: 1.3;
+  color: #12351c;
+  transition: background 150ms, border-color 150ms;
+}
+.menu-link-label { display: flex; align-items: center; gap: 12px; }
+.menu-link-icon {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  background: #eef5eb;
+  color: #07521c;
+}
+.menu-link-icon svg { width: 20px; height: 20px; }
+.mobile-nav-item > span:last-child { color: #cf0072; font-size: 22px; }
+.mobile-nav-item:hover,
+.mobile-nav-item:focus-visible { background: #fdf0f7; border-color: #e7a8cb; }
+.mobile-nav-footer {
+  padding: 16px 14px max(18px, env(safe-area-inset-bottom));
+  gap: 12px;
+  background: #fff;
+  flex-shrink: 0;
+}
+.mobile-nav-footer .btn {
+  min-height: 46px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #cf0072;
+  font-size: 14px;
+  box-shadow: none;
+}
+.mobile-nav-footer .lang-switch {
+  display: flex;
+  padding: 4px;
+  gap: 4px;
+  border-radius: 8px;
+  background: #f0f5ed;
+}
+.mobile-nav-footer .lang-btn {
+  flex: 1;
+  min-height: 38px;
+  padding: 6px;
+  border-radius: 6px;
+  font-size: 11px;
+  white-space: normal;
+}
+.mobile-nav-footer .lang-btn.is-active { background: #07521c; color: #fff; }
+
+/* Menu déroulant Boutique & Mamba */
+.menu-dropdown-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.menu-dropdown-toggle {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.menu-dropdown-wrapper.is-open .menu-dropdown-toggle {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-color: #cf0072;
+  background: #fff9fc;
+}
+
+.menu-link-text-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.menu-link-title {
+  font-weight: 700;
+  color: #12351c;
+}
+
+.menu-link-badge {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #aa005e;
+  background: #fce8f3;
+  padding: 1px 7px;
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+}
+
+.menu-dropdown-arrow {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: #f0f5ed;
+  color: #07521c;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background 0.2s, color 0.2s;
+  flex-shrink: 0;
+}
+
+.menu-dropdown-wrapper.is-open .menu-dropdown-arrow {
+  transform: rotate(180deg);
+  background: #cf0072;
+  color: #ffffff;
+}
+
+.menu-dropdown-content {
+  display: none;
+  flex-direction: column;
+  padding: 10px 8px 14px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  animation: slideDownMenu 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.menu-dropdown-wrapper.is-open .menu-dropdown-content {
+  display: flex;
+}
+
+@keyframes slideDownMenu {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* En-tête de retour façon modèle (ex: ← PROMENADE / ← BOUTIQUE & MAMBA) */
+.menu-collection-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  background: #f1f5f9;
+  border-radius: 999px;
+  color: #1e293b;
+  cursor: pointer;
+  margin: 4px 6px 8px;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.menu-collection-header:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.menu-collection-back-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #334155;
+  transition: transform 0.2s ease;
+}
+
+.menu-collection-header:hover .menu-collection-back-arrow {
+  transform: translateX(-3px);
+}
+
+.menu-collection-header-title {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1e293b;
+  font-family: var(--font-sans), sans-serif;
+}
+
+/* Liste des Collections conforme au modèle */
+.menu-collections-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-collection-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 14px;
+  border-bottom: 1px solid #eef2f6;
+  color: #1e293b;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: var(--font-sans), sans-serif;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  background: transparent;
+  text-decoration: none;
+  user-select: none;
+}
+
+.menu-collection-item:last-child {
+  border-bottom: none;
+}
+
+.menu-collection-item:hover,
+.menu-collection-item:active {
+  background: #f8fafc;
+  color: #cf0072;
+  padding-left: 20px;
+  font-weight: 600;
+}
+
+/* Sous-éléments indentés (ex: Bon Savè Lakay, Packs spécifiques) */
+.menu-collection-subitem {
+  padding-left: 26px !important;
+  font-size: 14px !important;
+  color: #475569 !important;
+  background: #fbfdfa;
+}
+
+.menu-collection-subitem .menu-collection-name::before {
+  content: '↳';
+  margin-right: 8px;
+  color: #94a3b8;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.menu-collection-subitem:hover,
+.menu-collection-subitem:active {
+  background: #fdf2f8 !important;
+  color: #cf0072 !important;
+  padding-left: 30px !important;
+  font-weight: 600;
+}
+
+.menu-collection-subitem:hover .menu-collection-name::before {
+  color: #cf0072;
+}

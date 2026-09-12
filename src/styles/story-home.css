@@ -1,0 +1,183 @@
+/* Histoire : portrait et palette chaleureuse de l'accueil. */
+.story-adventure-section {
+  padding: 48px 0;
+  background: #f7faf6;
+}
+.story-adventure-grid {
+  max-width: 980px;
+  margin: auto;
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+  gap: 48px;
+}
+.story-cutout-wrap { padding: 0 0 16px; min-width: 0; }
+.story-shape-card {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #c6aa88;
+  box-shadow: 0 12px 30px rgb(74 36 17 / 12%);
+}
+.story-person-img {
+  position: static;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  transform: none;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 0;
+}
+.story-floating-stat {
+  padding: 10px 12px;
+  font-size: 11px;
+  border-radius: 8px;
+  color: #294631;
+  box-shadow: 0 6px 20px rgb(74 36 17 / 10%);
+}
+.story-floating-stat.stat-top { top: auto; bottom: 56px; left: 12px; }
+.story-floating-stat.stat-bottom { bottom: 4px; right: 12px; }
+.story-adventure-text { min-width: 0; }
+.story-adventure-text h5 {
+  display: inline-block;
+  padding: 7px 12px;
+  margin: 0 0 16px;
+  border-radius: 8px;
+  background: #fce8f3;
+  color: #aa005e;
+  font: 800 11px var(--font-sans), sans-serif;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.story-adventure-title {
+  font-size: clamp(28px, 3.2vw, 42px);
+  line-height: 1.12;
+  letter-spacing: -.035em;
+  color: #12351c;
+  margin-bottom: 20px;
+}
+.story-adventure-title span { color: #aa005e; }
+.story-adventure-desc {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #58665a;
+  margin-bottom: 28px;
+}
+.story-adventure-section .stats-counter-row { gap: 10px; }
+.story-adventure-section .stat-box-modern {
+  background: #ffffff;
+  border: 1px solid #dce7da;
+  border-radius: 10px;
+  padding: 16px 8px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.story-adventure-section .stat-box-modern:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(18, 53, 28, 0.08);
+  border-color: #cf0072;
+}
+.story-adventure-section .stat-number {
+  color: #aa005e;
+  font-size: 28px;
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+.story-adventure-section .stat-label { color: #294631; font-size: 11px; font-weight: 600; }
+
+@media (max-width: 767px) {
+  .story-adventure-section { padding: 28px 0; }
+  .story-adventure-section > .container { padding-inline: 16px; }
+  .story-adventure-grid { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  
+  /* Visuel Histoire en grand format vertical pour afficher entièrement la photo */
+  .story-cutout-wrap {
+    width: 100%;
+    max-width: 100%;
+    margin-inline: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .story-shape-card {
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+    margin-inline: auto;
+    aspect-ratio: 4 / 5;
+    height: auto;
+    min-height: unset;
+    max-height: unset;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #1b0b07;
+    box-shadow: 0 16px 36px rgba(35, 10, 5, 0.20);
+    border: 1px solid rgba(207, 0, 114, 0.15);
+  }
+  
+  .story-shape-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(16, 4, 3, 0) 0%, rgba(16, 4, 3, 0.35) 100%);
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .story-person-img {
+    position: static;
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    transform: none;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 0;
+  }
+  
+  /* Badges flottants en superposition élégante style Hero */
+  .story-floating-stat {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 999px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    font-size: 11.5px;
+    font-weight: 800;
+    padding: 7px 13px;
+    color: #12351c;
+    z-index: 3;
+  }
+  
+  .story-floating-stat.stat-top {
+    top: 14px;
+    left: 14px;
+    bottom: auto;
+    right: auto;
+  }
+  
+  .story-floating-stat.stat-bottom {
+    bottom: 14px;
+    right: 14px;
+    top: auto;
+    left: auto;
+  }
+
+  .story-adventure-title { font-size: 28px; margin-bottom: 12px; }
+  .story-adventure-desc { font-size: 14px; margin-bottom: 18px; }
+  .story-adventure-section .stat-number { font-size: 23px; }
+  .story-adventure-section .stat-label { font-size: 10px; }
+}
+
