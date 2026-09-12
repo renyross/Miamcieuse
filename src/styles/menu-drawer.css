@@ -148,11 +148,11 @@
   display: none;
   flex-direction: column;
   padding: 10px 8px 14px;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: #f7faf6;
+  border: 1px solid #e3ebe0;
   border-top: none;
-  border-radius: 0 0 12px 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  border-radius: 0 0 10px 10px;
+  gap: 8px;
   animation: slideDownMenu 0.22s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -171,31 +171,37 @@
   }
 }
 
-/* En-tête de retour façon modèle (ex: ← PROMENADE / ← BOUTIQUE & MAMBA) */
+/* En-tête de retour BOUTIQUE */
 .menu-collection-header {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 12px 18px;
-  background: #f1f5f9;
-  border-radius: 999px;
-  color: #1e293b;
+  gap: 10px;
+  padding: 12px 14px;
+  background: #eef5eb;
+  border: 1px solid #dce7da;
+  border-radius: 8px;
+  color: #07521c;
   cursor: pointer;
-  margin: 4px 6px 8px;
-  transition: all 0.2s ease;
+  margin: 2px 0 6px;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: all 0.15s ease;
   user-select: none;
 }
 
 .menu-collection-header:hover {
-  background: #e2e8f0;
-  color: #0f172a;
+  background: #e1efe0;
+  border-color: #c5dcbf;
+  color: #053b14;
 }
 
 .menu-collection-back-arrow {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #334155;
+  color: #07521c;
   transition: transform 0.2s ease;
 }
 
@@ -206,74 +212,66 @@
 .menu-collection-header-title {
   font-size: 13px;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #1e293b;
+  color: #07521c;
   font-family: var(--font-sans), sans-serif;
 }
 
-/* Liste des Collections conforme au modèle */
+/* Liste des Collections identique au style des items de menu */
 .menu-collections-list {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
+  gap: 8px;
 }
 
 .menu-collection-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 14px;
-  border-bottom: 1px solid #eef2f6;
-  color: #1e293b;
-  font-size: 15px;
-  font-weight: 500;
-  font-family: var(--font-sans), sans-serif;
+  width: 100%;
   cursor: pointer;
-  transition: all 0.15s ease;
-  background: transparent;
-  text-decoration: none;
   user-select: none;
+  text-decoration: none;
+  box-sizing: border-box;
 }
 
-.menu-collection-item:last-child {
-  border-bottom: none;
-}
-
-.menu-collection-item:hover,
-.menu-collection-item:active {
-  background: #f8fafc;
-  color: #cf0072;
-  padding-left: 20px;
+.menu-collection-name {
   font-weight: 600;
+  color: #12351c;
 }
 
-/* Sous-éléments indentés (ex: Bon Savè Lakay, Packs spécifiques) */
+/* Sous-éléments indentés */
 .menu-collection-subitem {
-  padding-left: 26px !important;
-  font-size: 14px !important;
-  color: #475569 !important;
-  background: #fbfdfa;
+  width: calc(100% - 14px) !important;
+  margin-left: 14px !important;
+  border-left: 3px solid #cf0072 !important;
+  background: #ffffff !important;
 }
 
-.menu-collection-subitem .menu-collection-name::before {
-  content: '↳';
-  margin-right: 8px;
-  color: #94a3b8;
+.menu-collection-subitem .menu-collection-name {
+  font-size: 13.5px;
+  color: #2b4533;
+}
+
+.menu-collection-subitem .menu-link-icon {
+  background: #fdf0f7;
+  color: #cf0072;
+}
+
+.menu-sub-prefix {
+  color: #cf0072;
+  font-weight: 700;
+  margin-right: 6px;
   font-size: 13px;
-  font-weight: 600;
 }
 
 .menu-collection-subitem:hover,
-.menu-collection-subitem:active {
-  background: #fdf2f8 !important;
-  color: #cf0072 !important;
-  padding-left: 30px !important;
-  font-weight: 600;
+.menu-collection-subitem:focus-visible {
+  background: #fff5fa !important;
+  border-color: #cf0072 !important;
 }
 
-.menu-collection-subitem:hover .menu-collection-name::before {
-  color: #cf0072;
-}
