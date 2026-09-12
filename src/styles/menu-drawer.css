@@ -171,53 +171,6 @@
   }
 }
 
-/* En-tête de retour BOUTIQUE */
-.menu-collection-header {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 14px;
-  background: #eef5eb;
-  border: 1px solid #dce7da;
-  border-radius: 8px;
-  color: #07521c;
-  cursor: pointer;
-  margin: 2px 0 6px;
-  font-weight: 700;
-  font-size: 13px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  transition: all 0.15s ease;
-  user-select: none;
-}
-
-.menu-collection-header:hover {
-  background: #e1efe0;
-  border-color: #c5dcbf;
-  color: #053b14;
-}
-
-.menu-collection-back-arrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #07521c;
-  transition: transform 0.2s ease;
-}
-
-.menu-collection-header:hover .menu-collection-back-arrow {
-  transform: translateX(-3px);
-}
-
-.menu-collection-header-title {
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #07521c;
-  font-family: var(--font-sans), sans-serif;
-}
-
 /* Liste des Collections identique au style des items de menu */
 .menu-collections-list {
   list-style: none;
