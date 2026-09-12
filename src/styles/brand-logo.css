@@ -21,7 +21,7 @@
   opacity: 0.92;
 }
 .greeting-brand .site-brand-logo {
-  width: 180px;
+  width: 150px;
   max-width: 100%;
   height: auto;
   margin-inline: auto;
@@ -64,7 +64,7 @@
 
 @media (max-width: 767px) {
   .greeting-brand .site-brand-logo {
-    width: 135px;
+    width: 118px;
     margin-inline: auto;
   }
   .greeting-slogan {

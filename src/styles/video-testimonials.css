@@ -601,9 +601,13 @@
   }
 
   .testimonials-marquee-wrapper {
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 3%, black 97%, transparent 100%);
-    mask-image: linear-gradient(to right, transparent 0%, black 3%, black 97%, transparent 100%);
-    padding: 4px 0 12px;
+    position: relative;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    padding: 10px 0 20px;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent calc(max(10px, (100% - 1000px) / 2)), black calc(max(10px, (100% - 1000px) / 2) + 80px), black calc(100% - max(10px, (100% - 1000px) / 2) - 80px), transparent calc(100% - max(10px, (100% - 1000px) / 2)), transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, transparent calc(max(10px, (100% - 1000px) / 2)), black calc(max(10px, (100% - 1000px) / 2) + 80px), black calc(100% - max(10px, (100% - 1000px) / 2) - 80px), transparent calc(100% - max(10px, (100% - 1000px) / 2)), transparent 100%);
   }
 
   .testimonials-marquee-track {
