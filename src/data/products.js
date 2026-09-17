@@ -1,26 +1,28 @@
-// Base de données des produits Miam'cieuse
+// Base de données des produits Miam’Icieuse
 export const products = [
   {
-    id: "mamba-traditionnel-16oz",
-    slug: "mamba-traditionnel-16oz",
-    name: "Mamba Haïtien Traditionnel",
-    name_ht: "Mamba Tradisyonèl Ayisyen",
-    subtitle: "Le beurre de cacahuètes artisanal au goût unique d'Haïti",
-    subtitle_ht: "Bè pistach atizanal ak bon gou inik peyi Dayiti",
+    id: "mamba-pimente-sale",
+    slug: "mamba-pimente-sale",
+    name: "Mamba Haïtien Pimenté Salé",
+    name_ht: "Mamba Ayisyen Pike ak Sèl",
+    subtitle: "Le grand classique haïtien relevé au piment bouk et assaisonné au sel marin pur",
+    subtitle_ht: "Vrè gou piman bouk peyi a melanje ak bon sèl lanmè natirèl",
     category: "mamba",
     categoryName: "Mamba",
     categoryName_ht: "Mamba",
+    spiciness: "pimente",
+    taste: "sale",
     price: 11.90,
     originalPrice: 13.50,
-    rating: 4.9,
-    reviewCount: 148,
+    rating: 5.0,
+    reviewCount: 168,
     isBestseller: true,
     isNew: false,
     isFavorite: true,
-    badge: "Best-seller",
-    badge_ht: "Pi Vandi",
+    badge: "Best-seller 🌶️",
+    badge_ht: "Pi Vandi 🌶️",
     inStock: true,
-    stockCount: 42,
+    stockCount: 50,
     images: [
       "./images/product-mamba-pot.png",
       "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=1000&q=85",
@@ -28,74 +30,164 @@ export const products = [
     ],
     formats: [
       { id: "16oz", name: "16 oz (454g)", price: 11.90, isDefault: true },
-      { id: "32oz", name: "32 oz (908g)", price: 19.90, isDefault: false }
+      { id: "32oz", name: "32 oz (908g)", price: 21.50, isDefault: false }
     ],
     variants: [
-      { id: "doux", name: "Doux & Onctueux", name_ht: "Dous & Krèm" },
-      { id: "pimente", name: "Légèrement Pimenté (Piman Bouk)", name_ht: "Piman Bouk (Pike)" }
+      { id: "pimente-sale", name: "Pimenté & Salé", name_ht: "Pike & Sèl (Piman Bouk)" }
     ],
-    description: "Notre Mamba est élaboré selon la pure tradition haïtienne : des cacahuètes premium torréfiées à cœur à la perfection, broyées finement pour une texture ultra onctueuse et gourmande. Disponible en version douce ou pimentée avec le fameux Piman Bouk.",
-    description_ht: "Mamba nou an fèt selon vrè tradisyon ayisyen an: pistach siperyè griye ak swen, moulen fen pou yon teksti krèm ak bon gou. Disponib nan vèsyon dous oswa pike ak bon Piman Bouk.",
-    ingredients: "100% Cacahuètes sélectionnées torréfiées, sel marin pur, piment oiseau haïtien (uniquement dans la version pimentée). Sans huile de palme, sans conservateur.",
-    ingredients_ht: "100% Pistach byen chwazi epi griye, sèl lanmè natirèl, piman bouk (sèlman nan vèsyon pike). San lwil palm, san konsèvatè.",
-    storage: "À conserver dans un endroit frais et sec. Se conserve 12 mois. Ne nécessite pas de réfrigération.",
-    storage_ht: "Kenbe nan yon kote ki fre epi sèk. Ka konsève pandan 12 mwa. Pa bezwen mete nan frijidè.",
-    usage: "Parfait étalé sur une cassave chaude, du pain croustillant, dans vos smoothies gourmands ou tout simplement à la cuillère !",
-    usage_ht: "Bon anpil sou kasav cho, pen kroustiyan, nan smoothie oswa dirèkteman ak kiyè pou moun ki renmen dous !",
-    shippingInfo: "Expédition sous 24-48h. Emballage sécurisé thermo-isolé.",
-    crossSellIds: ["cassave-traditionnelle-artisanale", "chocolat-cacao-haitien-baton", "pack-mamba-lover"]
+    description: "Le véritable Mamba haïtien dans toute sa splendeur : cacahuètes d'Haïti torréfiées à cœur au feu doux, relevées de piment bouk frais et assaisonnées au sel marin pur. Texture onctueuse, saveur explosive.",
+    description_ht: "Vrè Mamba ayisyen an: bon pistach peyi griye dousman, byen melanje ak piman bouk fre ak bon sèl lanmè. Bèl teksti krèm ak gou inik.",
+    ingredients: "Cacahuètes sélectionnées torréfiées 98%, piment bouk haïtien 1.5%, sel marin pur 0.5%. Sans huile de palme, sans conservateur.",
+    ingredients_ht: "Pistach chwazi byen griye 98%, piman bouk natirèl 1.5%, sèl lanmè 0.5%. San lwil palm, san konsèvatè.",
+    storage: "Conserver à température ambiante dans un endroit frais et sec. Se conserve 12 mois.",
+    storage_ht: "Kenbe nan tanperati chanm nan yon kote ki fre epi sèk. Ka konsève 12 mwa.",
+    usage: "À déguster sur de la cassave chaude, du pain grillé ou dans vos recettes créoles.",
+    usage_ht: "Bon anpil sou kasav cho, pen griye oswa nan sòs ak manje kreyòl.",
+    shippingInfo: "Expédition rapide sous 24-48h dans toute la France et l'Europe.",
+    crossSellIds: ["cassave-traditionnelle-artisanale", "pack-mamba-lover", "chocolat-cacao-haitien-baton"]
   },
   {
-    id: "mamba-pimente-grand-format-32oz",
-    slug: "mamba-pimente-grand-format-32oz",
-    name: "Mamba Piman Bouk — Grand Format 32 oz",
-    name_ht: "Mamba Piman Bouk — Gwo Fòma 32 oz",
-    subtitle: "Le frisson authentique du piment haïtien combiné à la douceur de la cacahuète",
-    subtitle_ht: "Vrè gou piman bouk peyi a melanje ak dousè pistach la",
+    id: "mamba-non-pimente-sale",
+    slug: "mamba-non-pimente-sale",
+    name: "Mamba Haïtien Non Pimenté Salé",
+    name_ht: "Mamba Ayisyen San Piman ak Sèl",
+    subtitle: "Beurre de cacahuètes artisanal au sel marin pur, doux et crémeux sans piment",
+    subtitle_ht: "Bè pistach atizanal ak sèl lanmè, dous san piman",
     category: "mamba",
     categoryName: "Mamba",
     categoryName_ht: "Mamba",
-    price: 21.50,
-    originalPrice: 24.00,
-    rating: 5.0,
-    reviewCount: 96,
+    spiciness: "non-pimente",
+    taste: "sale",
+    price: 11.90,
+    originalPrice: 13.50,
+    rating: 4.9,
+    reviewCount: 142,
     isBestseller: true,
     isNew: false,
+    isFavorite: true,
+    badge: "Traditionnel",
+    badge_ht: "Tradisyonèl",
+    inStock: true,
+    stockCount: 45,
+    images: [
+      "./images/product-mamba-pot.png",
+      "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=1000&q=85"
+    ],
+    formats: [
+      { id: "16oz", name: "16 oz (454g)", price: 11.90, isDefault: true },
+      { id: "32oz", name: "32 oz (908g)", price: 19.90, isDefault: false }
+    ],
+    variants: [
+      { id: "non-pimente-sale", name: "Non Pimenté & Salé", name_ht: "San Piman & Sèl" }
+    ],
+    description: "Pour les adeptes du goût authentique de la cacahuète torréfiée. Une recette naturelle sans aucun piment, rehaussée d'une touche de sel marin pour un équilibre parfait.",
+    description_ht: "Pou moun ki renmen vrè gou pistach griye a san piman. Yon resèt natirèl ak yon ti sèl lanmè pou yon balans pafè.",
+    ingredients: "100% Cacahuètes sélectionnées torréfiées, sel marin pur. Sans aucun additif.",
+    ingredients_ht: "100% Pistach byen chwazi epi griye, sèl lanmè natirèl.",
+    storage: "Conserver à température ambiante à l'abri de l'humidité.",
+    storage_ht: "Kenbe nan tanperati chanm lwen imidite.",
+    usage: "Parfait pour le petit-déjeuner sur une cassave ou tartine de pain.",
+    usage_ht: "Bon pou maten sou kasav oswa bèl tranch pen.",
+    shippingInfo: "Expédié sous 24-48h.",
+    crossSellIds: ["cassave-traditionnelle-artisanale", "pack-mamba-lover"]
+  },
+  {
+    id: "mamba-pimente-sucre",
+    slug: "mamba-pimente-sucre",
+    name: "Mamba Haïtien Pimenté Sucré",
+    name_ht: "Mamba Ayisyen Pike ak Sik",
+    subtitle: "L'alliance audacieuse du sucre de canne brut et d'une pointe de piment bouk",
+    subtitle_ht: "Bèl maryaj ant sik kann ak chalè piman bouk la",
+    category: "mamba",
+    categoryName: "Mamba",
+    categoryName_ht: "Mamba",
+    spiciness: "pimente",
+    taste: "sucre",
+    price: 11.90,
+    originalPrice: 13.50,
+    rating: 4.9,
+    reviewCount: 98,
+    isBestseller: false,
+    isNew: true,
     isFavorite: true,
     badge: "Coup de cœur",
     badge_ht: "Kout Kè",
     inStock: true,
-    stockCount: 28,
+    stockCount: 35,
     images: [
-      "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=1000&q=85",
+      "./images/product-mamba-pot.png",
+      "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=1000&q=85"
+    ],
+    formats: [
+      { id: "16oz", name: "16 oz (454g)", price: 11.90, isDefault: true },
+      { id: "32oz", name: "32 oz (908g)", price: 21.50, isDefault: false }
+    ],
+    variants: [
+      { id: "pimente-sucre", name: "Pimenté & Sucré", name_ht: "Pike & Sik" }
+    ],
+    description: "Une création exclusive Miam’Icieuse : une première note douce et sucrée qui caresse le palais, suivie de la douce chaleur du piment bouk haïtien. Une expérience gustative inoubliable.",
+    description_ht: "Yon kreyasyon espesyal Miam’Icieuse: yon premye gou dous ak bon sik kann, ki swiv ak chalè piman bouk la. Yon plezi san parèy.",
+    ingredients: "Cacahuètes torréfiées 96%, sucre brut de canne 2.5%, piment bouk 1%, sel marin 0.5%.",
+    ingredients_ht: "Pistach griye 96%, sik kann 2.5%, piman bouk 1%, sèl lanmè 0.5%.",
+    storage: "Conserver à température ambiante, remuer avant dégustation.",
+    storage_ht: "Konsève nan tanperati chanm, brase l avan w manje.",
+    usage: "Gourmandise ultime à savourer avec de la cassave ou directement à la cuillère.",
+    usage_ht: "Pou moun ki renmen bon dousè ak kiyè oswa sou kasav.",
+    shippingInfo: "Expédié sous 24-48h.",
+    crossSellIds: ["cassave-traditionnelle-artisanale", "chocolat-cacao-haitien-baton"]
+  },
+  {
+    id: "mamba-non-pimente-sucre",
+    slug: "mamba-non-pimente-sucre",
+    name: "Mamba Haïtien Non Pimenté Sucré",
+    name_ht: "Mamba Ayisyen San Piman ak Sik",
+    subtitle: "Beurre de cacahuètes doux et sucré, ultra onctueux pour toute la famille",
+    subtitle_ht: "Bè pistach dous ak sik, trè krèm pou tout fanmi an",
+    category: "mamba",
+    categoryName: "Mamba",
+    categoryName_ht: "Mamba",
+    spiciness: "non-pimente",
+    taste: "sucre",
+    price: 11.90,
+    originalPrice: 13.50,
+    rating: 4.9,
+    reviewCount: 115,
+    isBestseller: false,
+    isNew: true,
+    isFavorite: false,
+    badge: "Douceur",
+    badge_ht: "Dousè",
+    inStock: true,
+    stockCount: 40,
+    images: [
+      "./images/product-mamba-pot.png",
       "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=1000&q=85"
     ],
     formats: [
-      { id: "32oz", name: "32 oz (908g)", price: 21.50, isDefault: true },
-      { id: "16oz", name: "16 oz (454g)", price: 12.50, isDefault: false }
+      { id: "16oz", name: "16 oz (454g)", price: 11.90, isDefault: true },
+      { id: "32oz", name: "32 oz (908g)", price: 19.90, isDefault: false }
     ],
     variants: [
-      { id: "pimente", name: "Pimenté Tradition (Piman Bouk)", name_ht: "Piman Bouk (Pike)" },
-      { id: "extra-pimente", name: "Extra Pimenté", name_ht: "Sipè Pike" }
+      { id: "non-pimente-sucre", name: "Non Pimenté & Sucré", name_ht: "San Piman & Sik" }
     ],
-    description: "Pour les vrais connaisseurs ! Le Mamba Pimenté Miam'cieuse réveille les papilles avec une harmonie parfaite entre le crémeux des cacahuètes torréfiées et la chaleur subtile du piment bouk haïtien.",
-    description_ht: "Pou tout moun ki renmen bon gou ! Mamba Piman Bouk Miam'cieuse la pote yon balans pafè ant krèm pistach griye ak chalè piman bouk natif natal.",
-    ingredients: "Cacahuètes haïtiennes torréfiées 98%, piment bouk naturel 1.5%, sel marin 0.5%.",
-    ingredients_ht: "Pistach ayisyen griye 98%, piman bouk natirèl 1.5%, sèl lanmè 0.5%.",
-    storage: "Conserver à température ambiante, à l'abri de l'humidité.",
-    storage_ht: "Konsève nan tanperati chanm, lwen imidite.",
-    usage: "Sur une tranche de cassave, du pain grillé ou pour rehausser une sauce épicée.",
-    usage_ht: "Sou yon moso kasav, pen griye oswa pou bay plis gou nan yon sòs.",
-    shippingInfo: "Expédié sous 24h ouvrées.",
-    crossSellIds: ["cassave-traditionnelle-artisanale", "cham-cham-artisanal-gourmand"]
+    description: "La pâte d'arachide douce et sucrée selon la méthode traditionnelle : cacahuètes dorées à souhait et délicatement sucrées au sucre de canne. Le péché mignon des petits et des grands.",
+    description_ht: "Bon pistach dous selon tradisyon an: pistach byen griye epi sikre ak bon sik kann. Trè bon pou timoun ak granmoun.",
+    ingredients: "Cacahuètes torréfiées 97%, sucre pur de canne 2.5%, sel marin 0.5%.",
+    ingredients_ht: "Pistach griye 97%, sik kann 2.5%, sèl lanmè 0.5%.",
+    storage: "Conserver à température ambiante.",
+    storage_ht: "Kenbe nan tanperati chanm.",
+    usage: "Sur du pain frais, des crêpes, des gaufres ou dans un smoothie à la banane.",
+    usage_ht: "Sou pen fre, krèp, gof oswa nan bèl ji smoothie.",
+    shippingInfo: "Expédié sous 24-48h.",
+    crossSellIds: ["cassave-traditionnelle-artisanale", "akasan-traditionnel-haitien"]
   },
   {
     id: "cassave-traditionnelle-artisanale",
     slug: "cassave-traditionnelle-artisanale",
     name: "Cassave Haïtienne Pur Manioc",
     name_ht: "Kasav Tradisyonèl Pi Manyòk",
-    subtitle: "Galette de manioc croustillante cuite sur platine selon la méthode ancestrale",
-    subtitle_ht: "Galèt manyòk kroustiyan kuit sou platin selon koutim zansèt yo",
+    subtitle: "Cassave artisanale : nature, coco/cannelle ou arachide",
+    subtitle_ht: "Kasav atizanal : natirèl, kokoye/kanèl oswa pistach",
     category: "cassave",
     categoryName: "Cassave",
     categoryName_ht: "Kasav",
@@ -133,7 +225,7 @@ export const products = [
     usage: "À réchauffer légèrement au grille-pain ou à la poêle pour réveiller le croustillant, puis tartiner de Mamba généreusement !",
     usage_ht: "Pase l yon ti kras nan griy-pen oswa nan chodyè pou l vin kroustiyan, epi kouvri l ak bon Mamba !",
     shippingInfo: "Conditionnement antichoc renforcé pour préserver les galettes intactes.",
-    crossSellIds: ["mamba-traditionnel-16oz", "akasan-traditionnel-haitien"]
+    crossSellIds: ["mamba-pimente-sale", "akasan-traditionnel-haitien"]
   },
   {
     id: "akasan-traditionnel-haitien",
@@ -168,8 +260,8 @@ export const products = [
       { id: "classique", name: "Recette Classique Parfumée", name_ht: "Resèt Klasik Byen Pafen" },
       { id: "vanille-muscade", name: "Vanille & Muscade des Caraïbes", name_ht: "Vanil & Miskad Karayib" }
     ],
-    description: "L'Akasan Miam'cieuse est préparé avec de la farine de maïs très fine infusée lentement avec des bâtons de cannelle de qualité, de l'anis étoilé et de l'essence d'amande douce, adoucie avec du lait concentré.",
-    description_ht: "Akasan Miam'cieuse la fèt ak farin mayi trè fen ki bouyi dousman ak baton kannèl, aniz zetwal ak sans zanmann, byen melanje ak bon lèt.",
+    description: "L'Akasan Miam’Icieuse est préparé avec de la farine de maïs très fine infusée lentement avec des bâtons de cannelle de qualité, de l'anis étoilé et de l'essence d'amande douce, adoucie avec du lait concentré.",
+    description_ht: "Akasan Miam’Icieuse la fèt ak farin mayi trè fen ki bouyi dousman ak baton kannèl, aniz zetwal ak sans zanmann, byen melanje ak bon lèt.",
     ingredients: "Farine de maïs haïtien moulu fin, eau de source, lait évaporé, sucre de canne, bâton de cannelle, badiane (anis étoilé), extrait de vanille, zeste de citron vert.",
     ingredients_ht: "Farin mayi ayisyen fen, dlo sous, lèt evapore, sik kann, baton kannèl, zetwal aniz, ekstrè vanil, zès sitwon vèt.",
     storage: "À conserver au frais entre 2°C et 6°C après réception. À consommer sous 7 jours.",
@@ -266,7 +358,7 @@ export const products = [
     usage: "À savourer à la cuillère, saupoudré sur un yaourt, une salade de fruits ou en topping de dessert.",
     usage_ht: "Manje l ak kiyè konsa konsa, oswa soupoudre l sou yaout, fwi oswa desè.",
     shippingInfo: "Expédié sous 24-48h.",
-    crossSellIds: ["mamba-traditionnel-16oz", "akasan-traditionnel-haitien"]
+    crossSellIds: ["mamba-pimente-sale", "akasan-traditionnel-haitien"]
   },
   {
     id: "comparette-artisanale-jeremie",
@@ -309,51 +401,7 @@ export const products = [
     usage: "Idéal avec une tasse de chocolat pays fumant ou un verre de jus de corossol frais.",
     usage_ht: "Pi bon toujou ak yon tas chokola peyi cho oswa yon bon vè ji kowosòl.",
     shippingInfo: "Emballage sous atmosphère protectrice garantissant la fraîcheur.",
-    crossSellIds: ["chocolat-cacao-haitien-baton", "mamba-traditionnel-16oz"]
-  },
-  {
-    id: "bon-save-lakay-epices-completes",
-    slug: "bon-save-lakay-epices-completes",
-    name: "Bon Savè Lakay — Épice Complète Traditionnelle",
-    name_ht: "Bon Savè Lakay — Epis Konplè Tradisyonèl",
-    subtitle: "Le secret d'assaisonnement haïtien authentique pour viandes, poissons et riz",
-    subtitle_ht: "Sekrè sezonman ayisyen an pou vyann, pwason ak bon diri kole",
-    category: "bon-save-lakay",
-    categoryName: "Bon Savè Lakay",
-    categoryName_ht: "Bon Savè Lakay",
-    price: 8.50,
-    originalPrice: 10.00,
-    rating: 5.0,
-    reviewCount: 104,
-    isBestseller: true,
-    isNew: false,
-    isFavorite: true,
-    badge: "Signature Lakay",
-    badge_ht: "Siyati Lakay",
-    inStock: true,
-    stockCount: 55,
-    images: [
-      "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=1000&q=85",
-      "https://images.unsplash.com/photo-1509358271058-acd22cc93898?auto=format&fit=crop&w=1000&q=85"
-    ],
-    formats: [
-      { id: "bocal-350g", name: "Bocal en verre 350g", price: 8.50, isDefault: true },
-      { id: "bocal-700g", name: "Bocal en verre 700g", price: 14.90, isDefault: false }
-    ],
-    variants: [
-      { id: "doux", name: "Aromates & Fines Herbes (Doux)", name_ht: "Epis Dous ak Bon Zèb" },
-      { id: "releve", name: "Relevé au Piment Bouk", name_ht: "Pike ak Piman Bouk" }
-    ],
-    description: "La gamme Bon Savè Lakay concentre toute la richesse culinaire d'Haïti : un mélange artisanal d'échalotes pays, poivrons, persil frais, ail, thym sauvage, clous de girofle et jus de citron vert pressé.",
-    description_ht: "Gam Bon Savè Lakay la pote tout richès manje kreyòl la: yon melanj atizanal echalòt peyi, piman dous, pèsi fre, lay, koukoum, tim sovaj, jiwòf ak ji sitwon vèt.",
-    ingredients: "Échalotes pays, ail frais, poivron vert, persil plat, thym séché, clou de girofle, poivre noir, jus de citron vert naturel, huile végétale, sel.",
-    ingredients_ht: "Echalòt peyi, lay fre, piman vèt, pèsi, tim, jiwòf, pwav nwa, ji sitwon vèt, lwil, sèl.",
-    storage: "Après ouverture, conserver au réfrigérateur et consommer dans les 6 mois.",
-    storage_ht: "Lè w fin louvri l, mete nan frijidè epi sèvi avè l nan 6 mwa.",
-    usage: "1 à 2 cuillères à soupe pour mariner vos viandes (Griot, Poulet créole, Tassot) ou parfumer votre riz djon-djon.",
-    usage_ht: "1 a 2 kiyè pou marinen vyann ou (Griyo, Poul kreyòl, Taso) oswa bay gou nan diri djon-djon.",
-    shippingInfo: "Emballage isotherme et bocal en verre scellé hermétiquement.",
-    crossSellIds: ["pack-saveurs-d-haiti", "mamba-traditionnel-16oz"]
+    crossSellIds: ["chocolat-cacao-haitien-baton", "mamba-pimente-sale"]
   },
   {
     id: "pack-decouverte-saveurs",
@@ -382,13 +430,13 @@ export const products = [
       "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1000&q=85"
     ],
     includedItems: [
-      "1x Mamba Haïtien Traditionnel 16 oz",
+      "1x Mamba Haïtien Miam’Icieuse 16 oz",
       "1x Sachet de Cassaves Pur Manioc (3 galettes)",
       "1x Bâton de Chocolat Pays Pur Cacao 100g",
       "1x Sachet de Cham-Cham Artisanal 250g"
     ],
     includedItems_ht: [
-      "1x Mamba Tradisyonèl Ayisyen 16 oz",
+      "1x Mamba Ayisyen Miam’Icieuse 16 oz",
       "1x Sachè Kasav Pi Manyòk (3 galèt)",
       "1x Baton Chokola Peyi Pi Kakawo 100g",
       "1x Sachè Chanm-Chanm Atizanal 250g"
@@ -400,24 +448,24 @@ export const products = [
       { id: "doux", name: "Mamba Doux", name_ht: "Mamba Dous" },
       { id: "pimente", name: "Mamba Pimenté", name_ht: "Mamba Pike" }
     ],
-    description: "Le Pack Découverte Miam'cieuse réunit dans un coffret soigné les 4 emblèmes de la gastronomie haïtienne. Idéal pour offrir ou pour partager un moment convivial en famille autour d'un goûter authentique.",
-    description_ht: "Pak Dekouvèt Miam'cieuse la mete ansanm 4 gwo espesyalite nan kizin ayisyen an nan yon bèl bwat kado. Pafè pou fè kado oswa pou pase yon bèl ti moman dous ak fanmi an.",
+    description: "Le Pack Découverte Miam’Icieuse réunit dans un coffret soigné les 4 emblèmes de la gastronomie haïtienne. Idéal pour offrir ou pour partager un moment convivial en famille autour d'un goûter authentique.",
+    description_ht: "Pak Dekouvèt Miam’Icieuse la mete ansanm 4 gwo espesyalite nan kizin ayisyen an nan yon bèl bwat kado. Pafè pou fè kado oswa pou pase yon bèl ti moman dous ak fanmi an.",
     ingredients: "Voir la composition détaillée de chaque produit inclus dans le pack.",
     ingredients_ht: "Gade konpozisyon chak pwodui ki nan bwat la.",
     storage: "Conserver les produits dans un endroit frais et sec.",
     storage_ht: "Kenbe tout pwodui yo nan yon kote ki fre epi sèk.",
     usage: "Parfait pour un week-end gourmand aux saveurs des Caraïbes.",
     usage_ht: "Pafè pou yon bon wikenn plen gou ak dousè Karayib la.",
-    shippingInfo: "Livré dans une boîte cadeau recyclable premium Miam'cieuse.",
-    crossSellIds: ["bon-save-lakay-epices-completes", "pack-mamba-lover"]
+    shippingInfo: "Livré dans une boîte cadeau recyclable premium Miam’Icieuse.",
+    crossSellIds: ["pack-mamba-lover", "mamba-pimente-sale"]
   },
   {
     id: "pack-mamba-lover",
     slug: "pack-mamba-lover",
-    name: "Pack Mamba Lover — Duo Ultime",
-    name_ht: "Pak Mamba Lover — Duo Siprèm",
+    name: "Pack Mamba Miam’Addict — Duo Ultime",
+    name_ht: "Pak Mamba Miam’Addict — Duo Siprèm",
     subtitle: "Pour les passionnés de Mamba : format doux + format pimenté + cassave offerte",
-    subtitle_ht: "Pou tout fanatik mamba: fòma dous + fòma pike + kasav kado",
+    subtitle_ht: "Pou tout Miam’Addict mamba: fòma dous + fòma pike + kasav kado",
     category: "packs",
     categoryName: "Packs Gourmands",
     categoryName_ht: "Pak Gouman",
@@ -450,8 +498,8 @@ export const products = [
     formats: [
       { id: "pack-duo", name: "Duo Mamba 16 oz + Cassave", price: 32.50, isDefault: true }
     ],
-    description: "Impossible de choisir entre le Mamba doux et le Mamba pimenté ? Le Pack Mamba Lover vous offre le meilleur des deux mondes avec un sachet de cassave traditionnelle en cadeau pour une dégustation immédiate.",
-    description_ht: "Ou pa ka chwazi ant mamba dous ak mamba pike ? Pak Mamba Lover la ba ou tou de ansanm ak yon sachè kasav kado pou w ka kòmanse manje touswit.",
+    description: "Le pack culte dédié à tous les Miam’Addicts ! Impossible de choisir entre le Mamba doux et le Mamba pimenté ? Bénéficiez du meilleur des deux mondes avec un sachet de cassave traditionnelle en cadeau pour une dégustation immédiate.",
+    description_ht: "Pak espesyal pou tout Miam’Addict mamba ! Ou pa ka chwazi ant mamba dous ak mamba pike ? Pak sa a ba ou tou de ansanm ak yon sachè kasav kado pou w ka kòmanse manje touswit.",
     ingredients: "Cacahuètes torréfiées pures, sel marin, piment bouk naturel haïtien, farine de manioc.",
     ingredients_ht: "Pistach griye, sèl lanmè, piman bouk ayisyen, farin manyòk.",
     storage: "Conserver à température ambiante.",
@@ -459,15 +507,15 @@ export const products = [
     usage: "À déguster au quotidien au petit-déjeuner et au goûter.",
     usage_ht: "Pou manje chak jou nan maten oswa nan aprèmidi.",
     shippingInfo: "Expédié sous 24h avec emballage renforcé.",
-    crossSellIds: ["pack-saveurs-d-haiti", "bon-save-lakay-epices-completes"]
+    crossSellIds: ["pack-saveurs-d-haiti", "cassave-traditionnelle-artisanale"]
   },
   {
     id: "pack-saveurs-d-haiti",
     slug: "pack-saveurs-d-haiti",
     name: "Pack Prestige — Saveurs d'Haïti",
     name_ht: "Pak Prestij — Tout Gou Dayiti",
-    subtitle: "Le grand coffret gastronomique réunissant tous les trésors de Miam'cieuse",
-    subtitle_ht: "Gwo bwat kado ki gen tout pi bon trezò Miam'cieuse yo",
+    subtitle: "Le grand coffret gastronomique réunissant tous les trésors de Miam’Icieuse",
+    subtitle_ht: "Gwo bwat kado ki gen tout pi bon trezò Miam’Icieuse yo",
     category: "packs",
     categoryName: "Packs Gourmands",
     categoryName_ht: "Pak Gouman",
@@ -489,16 +537,16 @@ export const products = [
     ],
     includedItems: [
       "1x Mamba Haïtien Grand Format 32 oz",
+      "1x Mamba Haïtien Pimenté Salé 16 oz",
       "1x Sachet de Cassaves Croustillantes (6 galettes)",
-      "1x Bocal Épice Complète Bon Savè Lakay 350g",
       "1x Lot de 2 bâtons Chocolat Pays Pur Cacao",
       "1x Paquet de Comparèttes Artisanales de Jérémie",
       "1x Sachet Cham-Cham 250g"
     ],
     includedItems_ht: [
       "1x Mamba Ayisyen Gwo Fòma 32 oz",
+      "1x Mamba Ayisyen Pike ak Sèl 16 oz",
       "1x Sachè Kasav Kroustiyan (6 galèt)",
-      "1x Bokal Epis Bon Savè Lakay 350g",
       "1x 2 baton Chokola Peyi Pi Kakawo",
       "1x Pake Konparèt Jeremi",
       "1x Sachè Chanm-Chanm 250g"
@@ -520,13 +568,12 @@ export const products = [
 ];
 
 export const categories = [
-  { id: "all", name: "Tous les produits", name_ht: "Tout Pwodui yo", icon: "sparkles", count: 11 },
-  { id: "mamba", name: "Mamba Haïtien", name_ht: "Mamba Ayisyen", icon: "nut", count: 2, image: "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=600&q=80" },
+  { id: "all", name: "Tous les produits", name_ht: "Tout Pwodui yo", icon: "sparkles", count: 12 },
+  { id: "mamba", name: "Mamba Haïtien", name_ht: "Mamba Ayisyen", icon: "nut", count: 4, image: "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=600&q=80" },
   { id: "cassave", name: "Cassave Pur Manioc", name_ht: "Kasav Pi Manyòk", icon: "disc", count: 1, image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80" },
   { id: "akasan", name: "Akasan Traditionnel", name_ht: "Akasan Tradisyonèl", icon: "cup-soda", count: 1, image: "https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=600&q=80" },
   { id: "chocolat", name: "Chocolat Pays & Cacao", name_ht: "Chokola Peyi & Kakawo", icon: "coffee", count: 1, image: "https://images.unsplash.com/photo-1548848221-0c2e497ed557?auto=format&fit=crop&w=600&q=80" },
   { id: "cham-cham", name: "Cham-Cham", name_ht: "Chanm-Chanm", icon: "wheat", count: 1, image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80" },
   { id: "comparette", name: "Comparètte de Jérémie", name_ht: "Konparèt Jeremi", icon: "cookie", count: 1, image: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=600&q=80" },
-  { id: "bon-save-lakay", name: "Gamme Bon Savè Lakay", name_ht: "Gam Bon Savè Lakay", icon: "flame", count: 1, image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=600&q=80" },
   { id: "packs", name: "Packs & Offres Spéciales", name_ht: "Pak & Ofri Espesyal", icon: "gift", count: 3, image: "https://images.unsplash.com/photo-1541832676-9b763b0239ab?auto=format&fit=crop&w=600&q=80" }
 ];

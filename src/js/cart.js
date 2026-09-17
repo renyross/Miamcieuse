@@ -219,9 +219,9 @@ function getSuggestedCrossSellProduct(cartItems) {
 
   // Si le panier a de la cassave mais pas de mamba -> suggérer le Mamba
   if (productIdsInCart.includes('cassave-traditionnelle-artisanale') && !productIdsInCart.some(id => id.includes('mamba'))) {
-    return products.find(p => p.id === 'mamba-traditionnel-16oz');
+    return products.find(p => p.id === 'mamba-pimente-sale');
   }
 
-  // Sinon suggérer le Chocolat Pays ou l'Épice Bon Savè Lakay
-  return products.find(p => !productIdsInCart.includes(p.id) && (p.id === 'chocolat-cacao-haitien-baton' || p.id === 'bon-save-lakay-epices-completes'));
+  // Sinon suggérer le Chocolat Pays ou le Mamba Pimenté Salé
+  return products.find(p => !productIdsInCart.includes(p.id) && (p.id === 'chocolat-cacao-haitien-baton' || p.id === 'mamba-pimente-sale'));
 }

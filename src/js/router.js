@@ -1,4 +1,4 @@
-// Routeur et Moteur de Rendu des Vues de l'Application Miam'cieuse (Style Moderne Inspiré du Mockup)
+// Routeur et Moteur de Rendu des Vues de l'Application Miam’Icieuse (Style Moderne Inspiré du Mockup)
 import { store } from './store.js';
 import { products, categories } from '../data/products.js';
 import { articles } from '../data/recipes.js';
@@ -70,7 +70,7 @@ export function renderApp() {
 function renderHomeView() {
   const state = store.getState();
   const lang = state.lang;
-  const popular6Products = ['mamba-traditionnel-16oz', 'cassave-traditionnelle-artisanale', 'chocolat-cacao-haitien-baton', 'akasan-traditionnel-haitien', 'cham-cham-artisanal-gourmand', 'comparette-artisanale-jeremie'].map(id => products.find(product => product.id === id)).filter(Boolean);
+  const popular6Products = ['mamba-pimente-sale', 'cassave-traditionnelle-artisanale', 'chocolat-cacao-haitien-baton', 'akasan-traditionnel-haitien', 'cham-cham-artisanal-gourmand', 'comparette-artisanale-jeremie'].map(id => products.find(product => product.id === id)).filter(Boolean);
   const packs = products.filter(p => p.category === 'packs');
 
   return `
@@ -84,8 +84,8 @@ function renderHomeView() {
           </button>
 
           <div class="hero-app-greeting">
-            <span class="greeting-subtitle">${lang === 'ht' ? 'Bonjou, Miam Lover! 👋' : 'Hello, Miam Lover! 👋'}</span>
-            <h1 class="greeting-brand"><a href="/" onclick="window.miamApp.handleLogoClick(event)" title="Miam’cieuse — Accueil" style="display:inline-block; text-decoration:none;"><img class="site-brand-logo" src="./images/logo-miamcieuse-horizontal.png" alt="Miam’cieuse" width="2172" height="724"></a></h1>
+            <span class="greeting-subtitle">${lang === 'ht' ? 'Bonjou, Miam’Addict! 👋' : 'Hello, Miam’Addict! 👋'}</span>
+            <h1 class="greeting-brand"><a href="/" onclick="window.miamApp.handleLogoClick(event)" title="Miam’Icieuse — Accueil" style="display:inline-block; text-decoration:none;"><img class="site-brand-logo" src="./images/logo-miam-icieuse-transparent.png" alt="Miam’Icieuse" width="2172" height="724"></a></h1>
             <span class="greeting-slogan">Le goût de la pure satisfaction.</span>
           </div>
 
@@ -119,7 +119,7 @@ function renderHomeView() {
 
             <!-- Slide 1 : Mamba Authentique (Image 1 de l'utilisateur) -->
             <div class="hero-slide is-active" data-slide="0">
-              <img src="./images/hero-slide-1.jpg" alt="Mamba Authentique Miam'cieuse" class="hero-slide-bg">
+              <img src="./images/hero-slide-1.jpg" alt="Mamba Authentique Miam’Icieuse" class="hero-slide-bg">
               <div class="hero-slide-overlay"></div>
               <div class="hero-slide-content">
                 <span class="hero-banner-tag">${lang === 'ht' ? 'ÒF ESPESYAL' : 'OFFRE DU MOMENT'}</span>
@@ -316,7 +316,7 @@ function renderHomeView() {
           <!-- Visuel Découpé à Gauche -->
           <div class="story-cutout-wrap">
             <div class="story-shape-card">
-              <img src="./images/story-portrait.png" alt="Portrait — Miam'cieuse" class="story-person-img" loading="lazy" width="1122" height="1402">
+              <img src="./images/story-portrait.png" alt="Portrait — Miam’Icieuse" class="story-person-img" loading="lazy" width="1122" height="1402">
             </div>
 
             <div class="story-floating-stat stat-top">
@@ -387,7 +387,7 @@ function renderHomeView() {
     <section class="section-padding home-club-section">
       <div class="container">
         <div class="newsletter-card" style="border-radius: var(--radius-xl);">
-          <span class="badge badge-pink" style="margin-bottom: 1rem;">Club Miam'cieuse</span>
+          <span class="badge badge-pink" style="margin-bottom: 1rem;">Club Miam’Addict</span>
           <h2>${store.t('news_title')}</h2>
           <p>${store.t('news_subtitle')}</p>
           
@@ -676,13 +676,13 @@ function renderStoryView() {
   return `
     <div class="shop-header-banner" style="background: linear-gradient(135deg, var(--color-cacao) 0%, #3D2214 100%);">
       <div class="container">
-        <h1>Miam'cieuse, une histoire qui commence par le goût</h1>
+        <h1>Miam’Icieuse, une histoire qui commence par le goût</h1>
         <p>Transmettre la richesse culinaire d'Haïti dans un écrin de gourmandise et de modernité.</p>
       </div>
     </div>
     <div class="container" style="max-width: 860px; padding: 4rem 1.5rem;">
       <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 2rem;">
-        Chez Miam'cieuse, nous voulons faire vivre les saveurs qui nous ressemblent. Celles qui rappellent la famille, les souvenirs d'enfance, les goûters partagés et les traditions vivantes d'Haïti.
+        Chez Miam’Icieuse, nous voulons faire vivre les saveurs qui nous ressemblent. Celles qui rappellent la famille, les souvenirs d'enfance, les goûters partagés et les traditions vivantes d'Haïti.
       </p>
       <button class="btn btn-primary btn-lg" onclick="window.miamApp.navigate('shop')">
         Découvrir nos créations →
@@ -696,7 +696,7 @@ function renderBlogView() {
   return `
     <div class="blog-page-header">
       <div class="container">
-        <h1>Le Journal Miam'cieuse</h1>
+        <h1>Le Journal Miam’Icieuse</h1>
         <p>Secrets culinaires, traditions créoles et recettes authentiques.</p>
       </div>
     </div>
@@ -762,7 +762,7 @@ function renderContactView() {
   return `
     <div class="shop-header-banner">
       <div class="container">
-        <h1>Contactez l'Équipe Miam'cieuse</h1>
+        <h1>Contactez l'Équipe Miam’Icieuse</h1>
       </div>
     </div>
     <div class="container" style="padding: 4rem 1.5rem;">

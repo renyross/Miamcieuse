@@ -1,6 +1,6 @@
 # 🥜 MIAM'CIEUSE — Le goût de la pure satisfaction
 
-Site web e-commerce officiel de **Miam'cieuse**, marque artisanale haïtienne spécialisée dans le véritable Mamba (beurre de cacahuètes torréfié à cœur), la cassave traditionnelle pur manioc, le chocolat pays grand cru et les saveurs authentiques d'Haïti.
+Site web e-commerce officiel de **Miam’Icieuse**, marque artisanale haïtienne spécialisée dans le véritable Mamba (beurre de cacahuètes torréfié à cœur — pimenté / non pimenté, sucré / salé, 16 oz / 32 oz), la cassave traditionnelle pur manioc, le chocolat pays grand cru et les saveurs authentiques d'Haïti.
 
 ---
 
@@ -70,5 +70,5 @@ Les fichiers prêts pour le déploiement seront générés dans le dossier `dist
 ---
 
 ## 🔒 Licence & Droits
-© 2026 **Miam'cieuse**. Tous droits réservés.
+© 2026 **Miam’Icieuse**. Tous droits réservés.
 « Le goût de la pure satisfaction. »

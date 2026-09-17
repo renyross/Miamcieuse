@@ -1,4 +1,4 @@
-// Avis clients authentiques et vérifiés Miam'cieuse
+// Avis clients authentiques et vérifiés Miam’Icieuse
 export const testimonials = [
   {
     id: 1,
@@ -20,9 +20,9 @@ export const testimonials = [
     date: "Il y a 1 semaine",
     date_ht: "Sa gen 1 semèn",
     verified: true,
-    product: "Pack Mamba Lover + Cassave",
-    text: "J'ai commandé le Pack Mamba Lover pour faire découvrir les spécialités à ma compagne : elle est devenue totalement accro au Mamba pimenté ! Livraison ultra soignée et rapide en 48h.",
-    text_ht: "Mwen te kòmande Pak Mamba Lover la pou fè madanm mwen goute espesyalite yo: li vin renmen mamba pike a anpil ! Livrezon an te fèt trè byen e rapid nan 48h."
+    product: "Pack Mamba Miam’Addict + Cassave",
+    text: "J'ai commandé le Pack Mamba Miam’Addict pour faire découvrir les spécialités à ma compagne : elle est devenue totalement accro au Mamba pimenté ! Livraison ultra soignée et rapide en 48h.",
+    text_ht: "Mwen te kòmande Pak Mamba Miam’Addict la pou fè madanm mwen goute espesyalite yo: li vin renmen mamba pike a anpil ! Livrezon an te fèt trè byen e rapid nan 48h."
   },
   {
     id: 3,
@@ -45,8 +45,8 @@ export const testimonials = [
     date_ht: "Sa gen 3 semèn",
     verified: true,
     product: "Pack Prestige — Saveurs d'Haïti",
-    text: "J'ai commandé pour toute la famille lors d'un repas de fête. Le pot d'épices Bon Savè Lakay a transformé mon griot ! Et le service client sur WhatsApp est hyper réactif et bienveillant.",
-    text_ht: "M te pase kòmand pou tout fanmi an nan yon fèt. Bokal epis Bon Savè Lakay la transfòme griyo m nan ! E sèvis sou WhatsApp la reponn vit anpil ak anpil respè."
+    text: "J'ai commandé pour toute la famille lors d'un repas de fête. Le Mamba Miam’Icieuse a fait l'unanimité ! Et le service client sur WhatsApp est hyper réactif et bienveillant.",
+    text_ht: "M te pase kòmand pou tout fanmi an nan yon fèt. Mamba Miam’Icieuse a te fè tout moun kontan nèt ! E sèvis sou WhatsApp la reponn vit anpil ak anpil respè."
   }
 ];
 
@@ -80,7 +80,7 @@ export const instagramPosts = [
     handle: "@miamcieuse",
     image: "https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=600&q=80",
     likes: "1.2k",
-    caption: "L'Akasan traditionnel Miam'cieuse, préparé avec amour et épices douces 💛",
-    caption_ht: "Akasan tradisyonèl Miam'cieuse, prepare ak lanmou ak bon epis dous 💛"
+    caption: "L'Akasan traditionnel Miam’Icieuse, préparé avec amour et épices douces 💛",
+    caption_ht: "Akasan tradisyonèl Miam’Icieuse, prepare ak lanmou ak bon epis dous 💛"
   }
 ];

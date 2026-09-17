@@ -27,7 +27,7 @@ export const translations = {
     // Hero
     hero_badge: "🇭🇹 Saveurs Artisanales & Authentiques d'Haïti",
     hero_title: "Les saveurs authentiques d'Haïti",
-    hero_subtitle: "Découvrez Miam'cieuse, une sélection de produits haïtiens authentiques et raffinés : Mamba artisanal, cassave croustillante, akasan onctueux, chocolat pays grand cru et épices traditionnelles.",
+    hero_subtitle: "Découvrez Miam’Icieuse, une sélection de produits haïtiens authentiques et raffinés : Mamba artisanal (pimenté, doux, salé, sucré), cassave croustillante, akasan onctueux et chocolat pays grand cru.",
     hero_cta_primary: "Découvrir nos produits",
     hero_cta_secondary: "Commander maintenant",
     hero_tagline: "Le goût de la pure satisfaction.",
@@ -69,16 +69,16 @@ export const translations = {
     // Histoire
     story_badge: "Notre Passion",
     story_title: "Une histoire de saveurs et de partage",
-    story_p1: "Chez Miam'cieuse, nous voulons faire vivre les saveurs qui nous ressemblent. Celles qui rappellent la famille, les souvenirs d'enfance, les goûters partagés et les traditions vivantes d'Haïti.",
+    story_p1: "Chez Miam’Icieuse, nous voulons faire vivre les saveurs qui nous ressemblent. Celles qui rappellent la famille, les souvenirs d'enfance, les goûters partagés et les traditions vivantes d'Haïti.",
     story_p2: "À travers nos produits, nous mettons à l'honneur des recettes et des saveurs profondément ancrées dans notre culture, tout en proposant une expérience moderne, simple, élégante et accessible partout.",
     story_cta: "Découvrir notre histoire",
 
-    // Bon Save Lakay
+    // Miam’Icieuse Signature
     bon_save_badge: "Gamme Signature",
-    bon_save_title: "Bon Savè Lakay",
-    bon_save_subtitle: "Le bon goût de chez nous.",
-    bon_save_text: "L'art culinaire haïtien repose sur l'équilibre parfait de ses assaisonnements. Notre gamme Bon Savè Lakay sublime vos plats du quotidien avec des herbes fraîches, échalotes pays et épices savamment dosées.",
-    bon_save_cta: "Découvrir la collection",
+    bon_save_title: "Mamba Miam’Icieuse",
+    bon_save_subtitle: "Le bon goût authentique d'Haïti.",
+    bon_save_text: "Notre Mamba signature se décline selon vos envies : pimenté ou non pimenté, sucré ou salé, en pot 16 oz ou généreux 32 oz. Torréfié à cœur selon la pure tradition haïtienne.",
+    bon_save_cta: "Découvrir nos beurres de cacahuètes",
 
     // Packs
     packs_badge: "Offres Avantageuses",
@@ -99,18 +99,18 @@ export const translations = {
 
     // Reviews
     reviews_badge: "Avis Vérifiés",
-    reviews_title: "Ils ont goûté Miam'cieuse",
-    reviews_subtitle: "Découvrez ce que nos clients pensent de nos produits et de notre service.",
+    reviews_title: "Ils ont goûté Miam’Icieuse",
+    reviews_subtitle: "Découvrez les retours authentiques de notre communauté de gourmands.",
     rating_score: "4.9 / 5 sur plus de 350 commandes vérifiées",
 
     // Instagram
-    social_badge: "Rejoignez la communauté",
+    social_badge: "Communauté Gourmande",
     social_title: "Partagez la gourmandise sur @miamcieuse",
-    social_subtitle: "Identifiez-nous dans vos créations culinaires et moments de dégustation !",
-    social_cta: "Suivre Miam'cieuse sur Instagram",
+    social_subtitle: "Rejoignez des milliers de passionnés de gastronomie haïtienne sur Instagram et TikTok.",
+    social_cta: "Suivre Miam’Icieuse sur Instagram",
 
     // Newsletter
-    news_badge: "Club Miam'cieuse",
+    news_badge: "Club Miam’Addict",
     news_title: "Une petite dose de gourmandise ?",
     news_subtitle: "Recevez nos nouveautés, promotions exclusives et recettes traditionnelles directement dans votre boîte mail. -10% offerts sur votre première commande !",
     news_placeholder: "Entrez votre adresse email...",
@@ -187,7 +187,7 @@ export const translations = {
     // Hero
     hero_badge: "🇭🇹 Gou Atizanal & Natif Natal Peyi Dayiti",
     hero_title: "Saveur natif natal peyi Dayiti",
-    hero_subtitle: "Dekouvri Miam'cieuse, yon bèl seleksyon espesyalite ayisyen natif natal: Mamba atizanal, kasav kroustiyan, akasan krèm, chokola peyi grand cru ak bon epis tradisyonèl.",
+    hero_subtitle: "Dekouvri Miam’Icieuse, yon bèl seleksyon espesyalite ayisyen natif natal: Mamba atizanal (pike, dous, sale, sikre), kasav kroustiyan, akasan krèm ak chokola peyi grand cru.",
     hero_cta_primary: "Dekouvri pwodui nou yo",
     hero_cta_secondary: "Kòmande kounye a",
     hero_tagline: "Bon gou satisfaksyon total la.",
@@ -229,16 +229,16 @@ export const translations = {
     // Histoire
     story_badge: "Pasyon Nou",
     story_title: "Yon istwa gou, lanmou ak pataj",
-    story_p1: "Nan Miam'cieuse, nou vle fè tout moun viv gou ki sanble avèk nou. Sa ki fè w sonje fanmi, bèl souvni anfans, ti goute pataje ak tout bèl koutim peyi Dayiti.",
+    story_p1: "Nan Miam’Icieuse, nou vle fè tout moun viv gou ki sanble avèk nou. Sa ki fè w sonje fanmi, bèl souvni anfans, ti goute pataje ak tout bèl koutim peyi Dayiti.",
     story_p2: "Atravè pwodui nou yo, nou mete an valè resèt ki chita byen fon nan kilti nou, tout pandan n ap ofri yon bèl eksperyans modèn, senp, pwòp epi fasil pou jwenn tout kote.",
     story_cta: "Dekouvri istwa nou",
 
-    // Bon Save Lakay
+    // Miam’Icieuse Signature
     bon_save_badge: "Gam Siyati",
-    bon_save_title: "Bon Savè Lakay",
-    bon_save_subtitle: "Bon gou lakay nou.",
-    bon_save_text: "Kizin ayisyen an chita sou bon jan sezonman. Gam Bon Savè Lakay la bay manje w yo plis gou ak bèl fèy fre, echalòt peyi ak bon epis byen mezire.",
-    bon_save_cta: "Dekouvri koleksyon an",
+    bon_save_title: "Mamba Miam’Icieuse",
+    bon_save_subtitle: "Bon gou natif natal Ayiti.",
+    bon_save_text: "Mamba siyati nou an fèt jan w renmen l lan : piman ou san piman, sikre ou sale, nan fòma 16 oz oswa gwo fòma 32 oz. Griye ak pasyon selon tradisyon ayisyen.",
+    bon_save_cta: "Dekouvri bè pistach nou yo",
 
     // Packs
     packs_badge: "Bèl Ofri Espesyal",
@@ -259,18 +259,18 @@ export const translations = {
 
     // Reviews
     reviews_badge: "Kliyan Kontan",
-    reviews_title: "Yo goute Miam'cieuse",
-    reviews_subtitle: "Gade sa kliyan nou yo di sou bon kalite pwodui ak sèvis nou an.",
+    reviews_title: "Yo goute Miam’Icieuse",
+    reviews_subtitle: "Dekouvri sa kliyan nou yo panse de espesyalite nou yo.",
     rating_score: "4.9 / 5 sou plis pase 350 kòmand vérifié",
 
     // Instagram
-    social_badge: "Fè pati fanmi an",
+    social_badge: "Kominote Gouman",
     social_title: "Pataje gou a sou @miamcieuse",
-    social_subtitle: "Tag nou lè w ap prepare oswa manje bon ti bagay sa yo !",
-    social_cta: "Swiv Miam'cieuse sou Instagram",
+    social_subtitle: "Vin jwenn plizyè milye moun ki renmen bon manje ayisyen sou Instagram ak TikTok.",
+    social_cta: "Swiv Miam’Icieuse sou Instagram",
 
     // Newsletter
-    news_badge: "Klib Miam'cieuse",
+    news_badge: "Klib Miam’Addict",
     news_title: "Ou vle yon ti dousè an plis ?",
     news_subtitle: "Resevwa nouvo pwodui, bèl rabè ak bon resèt tradisyonèl dirèkteman nan bwat imèl ou. -10% kado sou premye kòmand ou !",
     news_placeholder: "Mete imèl ou la...",

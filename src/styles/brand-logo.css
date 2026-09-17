@@ -4,6 +4,7 @@
   max-width: 100%;
   height: auto;
   object-fit: contain;
+  mix-blend-mode: multiply;
   cursor: pointer;
 }
 .greeting-brand a,
@@ -35,6 +36,7 @@
 .footer-brand a.footer-logo-link .site-brand-logo {
   width: 230px;
   margin-bottom: 18px;
+  mix-blend-mode: normal;
 }
 .greeting-slogan {
   display: block;

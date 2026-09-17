@@ -1,4 +1,4 @@
-// Gestion de l'état global réactif de l'application Miam'cieuse
+// Gestion de l'état global réactif de l'application Miam’Icieuse
 import { products } from '../data/products.js';
 import { translations } from '../data/translations.js';
 
@@ -153,11 +153,11 @@ class Store {
       this.state.promoDiscount = 0.10; // 10% de réduction
       this.notify();
       return { success: true, message: 'Code promo -10% appliqué avec succès !' };
-    } else if (cleanCode === 'MAMBALOVER') {
+    } else if (cleanCode === 'MIAMADDICT' || cleanCode === 'MAMBAADDICT' || cleanCode === 'MAMBALOVER') {
       this.state.appliedPromoCode = cleanCode;
       this.state.promoDiscount = 0.15; // 15% de réduction
       this.notify();
-      return { success: true, message: 'Code promo Mamba Lover -15% appliqué !' };
+      return { success: true, message: 'Code promo Club Miam’Addict -15% appliqué !' };
     }
     return { success: false, message: 'Code promo invalide.' };
   }

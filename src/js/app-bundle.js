@@ -1,20 +1,20 @@
-// Application Miam'cieuse autonome (Fonctionne en direct double-clic ET via serveur)
+// Application Miam’Icieuse autonome (Fonctionne en direct double-clic ET via serveur)
 (function() {
   const products = [
     {
-      id: "mamba-traditionnel-16oz",
-      name: "Mamba Haïtien Traditionnel",
-      cardTitle: "Mamba Haïtien",
-      cardDesc: "Beurre de cacahuètes artisanal torréfié à cœur",
-      name_ht: "Mamba Tradisyonèl Ayisyen",
-      subtitle: "Le beurre de cacahuètes artisanal au goût unique d'Haïti",
+      id: "mamba-pimente-sale",
+      name: "Mamba Haïtien Pimenté Salé",
+      cardTitle: "Mamba Pimenté Salé",
+      cardDesc: "L'authentique Mamba haïtien relevé au piment bouk et sel marin",
+      name_ht: "Mamba Ayisyen Pike ak Sèl",
+      subtitle: "Le grand classique haïtien relevé au piment bouk et sel marin pur",
       category: "mamba",
       price: 11.90,
       originalPrice: 13.50,
-      rating: 4.9,
-      reviewCount: 148,
+      rating: 5.0,
+      reviewCount: 168,
       isBestseller: true,
-      badge: "Best-seller",
+      badge: "Best-seller 🌶️",
       images: [
         "./images/product-mamba-pot.png",
         "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=800&q=85",
@@ -22,38 +22,97 @@
       ],
       formats: [
         { id: "16oz", name: "16 oz (454g)", price: 11.90 },
-        { id: "32oz", name: "32 oz (908g)", price: 19.90 }
+        { id: "32oz", name: "32 oz (908g)", price: 21.50 }
       ],
-      description: "Notre Mamba est élaboré selon la pure tradition haïtienne : des cacahuètes premium torréfiées à cœur à la perfection, broyées finement pour une texture ultra onctueuse et gourmande."
+      spiciness: "pimente",
+      taste: "sale",
+      description: "Le véritable Mamba haïtien dans toute sa splendeur : cacahuètes d'Haïti torréfiées à cœur au feu doux, relevées de piment bouk frais et assaisonnées au sel marin pur. Texture onctueuse, saveur explosive."
     },
     {
-      id: "mamba-pimente-grand-format-32oz",
-      name: "Mamba Piman Bouk — 32 oz",
-      cardTitle: "Mamba Piman Bouk",
-      cardDesc: "Le frisson authentique du piment haïtien et cacahuète torréfiée",
-      name_ht: "Mamba Piman Bouk — 32 oz",
-      subtitle: "Le frisson authentique du piment haïtien et cacahuète torréfiée",
+      id: "mamba-non-pimente-sale",
+      name: "Mamba Haïtien Non Pimenté Salé",
+      cardTitle: "Mamba Non pimenté Salé",
+      cardDesc: "Cacahuètes torréfiées à cœur et pointe de sel marin, doux sans piment",
+      name_ht: "Mamba Ayisyen San Piman ak Sèl",
+      subtitle: "Beurre de cacahuètes artisanal au sel marin pur, doux et crémeux sans piment",
       category: "mamba",
-      price: 21.50,
-      originalPrice: 24.00,
-      rating: 5.0,
-      reviewCount: 96,
+      price: 11.90,
+      originalPrice: 13.50,
+      rating: 4.9,
+      reviewCount: 142,
       isBestseller: true,
+      badge: "Traditionnel",
+      images: [
+        "./images/product-mamba-pot.png",
+        "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=800&q=85"
+      ],
+      formats: [
+        { id: "16oz", name: "16 oz (454g)", price: 11.90 },
+        { id: "32oz", name: "32 oz (908g)", price: 19.90 }
+      ],
+      spiciness: "non-pimente",
+      taste: "sale",
+      description: "Pour les adeptes du goût authentique de la cacahuète torréfiée. Une recette naturelle sans aucun piment, rehaussée d'une touche de sel marin pour un équilibre parfait."
+    },
+    {
+      id: "mamba-pimente-sucre",
+      name: "Mamba Haïtien Pimenté Sucré",
+      cardTitle: "Mamba Pimenté Sucré",
+      cardDesc: "Alliance gourmande du sucre brut de canne et du piment bouk haïtien",
+      name_ht: "Mamba Ayisyen Pike ak Sik",
+      subtitle: "L'alliance audacieuse du sucre de canne brut et d'une pointe de piment bouk",
+      category: "mamba",
+      price: 11.90,
+      originalPrice: 13.50,
+      rating: 4.9,
+      reviewCount: 98,
+      isBestseller: false,
       badge: "Coup de cœur",
       images: [
         "./images/product-mamba-pot.png",
         "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=800&q=85"
       ],
-      formats: [{ id: "32oz", name: "32 oz (908g)", price: 21.50 }],
-      description: "L'harmonie parfaite entre le crémeux des cacahuètes torréfiées et la chaleur subtile du piment bouk haïtien."
+      formats: [
+        { id: "16oz", name: "16 oz (454g)", price: 11.90 },
+        { id: "32oz", name: "32 oz (908g)", price: 21.50 }
+      ],
+      spiciness: "pimente",
+      taste: "sucre",
+      description: "Une création exclusive Miam’Icieuse : une première note douce et sucrée qui caresse le palais, suivie de la douce chaleur du piment bouk haïtien. Une expérience gustative inoubliable."
+    },
+    {
+      id: "mamba-non-pimente-sucre",
+      name: "Mamba Haïtien Non Pimenté Sucré",
+      cardTitle: "Mamba Non pimenté Sucré",
+      cardDesc: "Beurre de cacahuètes doux et sucré, texture fondante et réconfortante",
+      name_ht: "Mamba Ayisyen San Piman ak Sik",
+      subtitle: "Beurre de cacahuètes doux et sucré, ultra onctueux pour toute la famille",
+      category: "mamba",
+      price: 11.90,
+      originalPrice: 13.50,
+      rating: 4.9,
+      reviewCount: 115,
+      isBestseller: false,
+      badge: "Douceur",
+      images: [
+        "./images/product-mamba-pot.png",
+        "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=800&q=85"
+      ],
+      formats: [
+        { id: "16oz", name: "16 oz (454g)", price: 11.90 },
+        { id: "32oz", name: "32 oz (908g)", price: 19.90 }
+      ],
+      spiciness: "non-pimente",
+      taste: "sucre",
+      description: "La pâte d'arachide douce et sucrée selon la méthode traditionnelle : cacahuètes dorées à souhait et délicatement sucrées au sucre de canne. Le péché mignon des petits et des grands."
     },
     {
       id: "cassave-traditionnelle-artisanale",
       name: "Cassave Haïtienne Pur Manioc",
       cardTitle: "Cassave Manioc",
-      cardDesc: "Galette croustillante dorée sur platine traditionnelle",
+      cardDesc: "Nature, coco/cannelle ou arachide",
       name_ht: "Kasav Tradisyonèl Pi Manyòk",
-      subtitle: "Galette de manioc croustillante cuite sur platine traditionnelle",
+      subtitle: "Cassave artisanale : nature, coco/cannelle ou arachide",
       category: "cassave",
       price: 6.90,
       originalPrice: 8.00,
@@ -63,7 +122,7 @@
       badge: "Incontournable",
       images: ["./images/product-cassave-mamba.png"],
       formats: [{ id: "pack-3", name: "Sachet de 3 galettes", price: 6.90 }],
-      description: "Véritable trésor du terroir haïtien, notre cassave est confectionnée artisanalement à partir de manioc frais râpé."
+      description: "Véritable trésor du terroir haïtien, notre cassave est confectionnée artisanalement à partir de manioc frais râpé. Découvrez nos différentes saveurs : nature traditionnelle, fourrée coco/cannelle et fourrée arachide."
     },
     {
       id: "chocolat-cacao-haitien-baton",
@@ -138,30 +197,12 @@
       description: "Spécialité légendaire de Jérémie au gingembre frais et mélasse de canne."
     },
     {
-      id: "bon-save-lakay-epices-completes",
-      name: "Bon Savè Lakay — Épice Complète",
-      cardTitle: "Bon Savè Lakay",
-      cardDesc: "L'assaisonnement secret haïtien pour viandes et riz créole",
-      name_ht: "Bon Savè Lakay — Epis Konplè",
-      subtitle: "L'assaisonnement secret haïtien pour viandes et riz créole",
-      category: "bon-save-lakay",
-      price: 8.50,
-      originalPrice: 10.00,
-      rating: 5.0,
-      reviewCount: 104,
-      isBestseller: false,
-      badge: "Signature",
-      images: ["https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=800&q=85"],
-      formats: [{ id: "350g", name: "Bocal 350g", price: 8.50 }],
-      description: "Échalotes pays, ail, thym sauvage, clous de girofle et jus de citron vert."
-    },
-    {
       id: "pack-mamba-lover",
-      name: "Pack Mamba Lover + Cassave",
-      cardTitle: "Pack Mamba Lover",
-      cardDesc: "1 Mamba Doux + 1 Mamba Pimenté + Cassave Traditionnelle Offerte !",
-      name_ht: "Pak Mamba Lover + Kasav",
-      subtitle: "1 Mamba Doux + 1 Mamba Pimenté + Cassave Traditionnelle Offerte !",
+      name: "Pack Mamba Miam’Addict + Cassave",
+      cardTitle: "Pack Miam’Addict",
+      cardDesc: "1 Mamba Doux 16 oz + 1 Mamba Pimenté 16 oz + Cassave Offerte !",
+      name_ht: "Pak Mamba Miam’Addict + Kasav",
+      subtitle: "1 Mamba Doux 16 oz + 1 Mamba Pimenté 16 oz + Cassave Offerte !",
       category: "packs",
       price: 32.50,
       originalPrice: 38.80,
@@ -171,7 +212,7 @@
       isBestseller: false,
       badge: "Cassave Offerte",
       images: ["./images/hero-slide-2.jpg"],
-      description: "Le duo ultime de Mamba accompagné de sa galette de cassave offerte."
+      description: "Le pack exclusif dédié aux Miam’Addicts : le duo ultime de Mamba (Doux & Pimenté) accompagné de sa galette de cassave offerte."
     },
     {
       id: "pack-decouverte-saveurs",
@@ -189,7 +230,25 @@
       isBestseller: false,
       badge: "Offre Spéciale -18%",
       images: ["./images/hero-slide-2.jpg"],
-      description: "Le coffret idéal pour découvrir ou faire découvrir les trésors gastronomiques d'Haïti."
+      description: "Le coffret idéal pour découvrir ou faire découvrir les trésors gastronomiques d'Haïti signés Miam’Icieuse."
+    },
+    {
+      id: "pack-saveurs-d-haiti",
+      name: "Pack Prestige — Saveurs d'Haïti",
+      cardTitle: "Pack Prestige",
+      cardDesc: "Grand coffret 6 spécialités haïtiennes d'exception",
+      name_ht: "Pak Prestij — Tout Gou Dayiti",
+      subtitle: "Le grand coffret gastronomique réunissant tous les trésors de Miam’Icieuse",
+      category: "packs",
+      price: 54.90,
+      originalPrice: 66.80,
+      savingsPercentage: 18,
+      rating: 5.0,
+      reviewCount: 74,
+      isBestseller: true,
+      badge: "Coffret Prestige",
+      images: ["./images/hero-slide-2.jpg"],
+      description: "Le summum de l'authenticité haïtienne dans un écrin d'exception : 2 pots de Mamba (32 oz et 16 oz), cassaves, chocolat pays, comparèttes et chanm-chanm."
     }
   ];
 
@@ -199,7 +258,7 @@
       id: "vid-1",
       author: "Miam'Icieuse",
       handle: "@miamicieuse",
-      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80",
+      avatar: "./images/story-portrait.png",
       image: "./images/hero-slide-2.jpg",
       quote: "« N’attendez pas demain pour goûter ! Le goût de la pure satisfaction avec nos authentiques Kasav Okap et douceurs artisanales. »",
       productName: "Kasav Okap & Mamba",
@@ -211,11 +270,11 @@
       id: "vid-2",
       author: "Jean-Marc L.",
       handle: "@jm_ayiti",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80",
+      avatar: "./images/avis-portrait-2.jpg",
       image: "./images/hero-slide-1.jpg",
       quote: "« Le piment bouk est dosé à la perfection ! Un vrai coup de foudre gourmand avec la cassave croustillante. Livraison rapide et soignée. »",
       productName: "Mamba Piman Bouk 32 oz",
-      productId: "mamba-pimente-grand-format-32oz",
+      productId: "mamba-pimente-sale",
       instagramUrl: "https://www.instagram.com/miamicieuse/reel/DVgZwcdjq-8/",
       embedUrl: "https://www.instagram.com/reel/DVgZwcdjq-8/embed/"
     },
@@ -223,7 +282,7 @@
       id: "vid-3",
       author: "Marie-Ange B.",
       handle: "@marieange_food",
-      avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80",
+      avatar: "./images/avis-portrait-3.jpg",
       image: "./images/hero-slide-3.jpg",
       quote: "« Le chocolat pays au lait le matin, c'est un réconfort inégalable ! Du vrai cacao brut d'Haïti roulé à la main, un goût boisé unique. »",
       productName: "Chocolat Pays Pur Cacao",
@@ -235,7 +294,7 @@
       id: "vid-4",
       author: "Samuel T.",
       handle: "@samuel_lakay",
-      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80",
+      avatar: "./images/avis-portrait-4.jpg",
       image: "./images/product-akasan.png",
       quote: "« Rien ne vaut un bon Akasan crémeux bien chaud à l'anis étoilé et cannelle douce pour démarrer la journée en pleine forme ! »",
       productName: "Akasan Cho Traditionnel",
@@ -374,7 +433,7 @@
     const waCartBtn = document.getElementById('cart-whatsapp-checkout-btn');
     if (waCartBtn) {
       const itemsText = cart.map(i => `- ${i.quantity}x ${i.name} (${(i.price * i.quantity).toFixed(2)} €)`).join('%0A');
-      const text = `Bonjour Miam'cieuse 👋%0AJe souhaite finaliser ma commande sur WhatsApp :%0A${itemsText}%0ATotal : ${totalPrice.toFixed(2)} €`;
+      const text = `Bonjour Miam’Icieuse 👋%0AJe souhaite finaliser ma commande sur WhatsApp :%0A${itemsText}%0ATotal : ${totalPrice.toFixed(2)} €`;
       waCartBtn.href = `https://wa.me/50939424419?text=${text}`;
     }
   }
@@ -651,7 +710,7 @@
     {
       id: "comment-passer-commande",
       category: "order",
-      question: "Comment passer une commande sur le site Miam'cieuse ?",
+      question: "Comment passer une commande sur le site Miam’Icieuse ?",
       answer: "Vous pouvez commander directement en ligne en ajoutant vos spécialités au panier et en validant votre commande. Vous pouvez également commander en 1 clic via WhatsApp grâce au bouton présent sur chaque fiche produit : un message pré-rempli avec votre sélection de délices est instantanément transmis à notre équipe."
     },
     {
@@ -673,10 +732,28 @@
       answer: "Notre Mamba se conserve à température ambiante dans un endroit sec, à l'abri du soleil direct. Il n'a absolument pas besoin d'être placé au réfrigérateur. Une légère pellicule d'huile naturelle de cacahuète peut remonter à la surface : c'est le gage d'un produit 100% pur, sans additif ni huile hydrogénée ! Il suffit de remuer délicatement avant de déguster. Il se conserve 12 mois."
     },
     {
+      id: "conservation-cassave",
+      category: "products",
+      question: "Comment conserver les cassaves après ouverture ?",
+      answer: "Après ouverture, refermez soigneusement le sachet ou placez vos cassaves dans une boîte hermétique, à l'abri de l'humidité. Respectez les consignes de conservation figurant sur l'emballage de la saveur choisie."
+    },
+    {
+      id: "duree-conservation-cassave",
+      category: "products",
+      question: "Combien de temps peut-on conserver les cassaves ?",
+      answer: "Reportez-vous à la date et aux indications figurant sur l'emballage de vos cassaves. Pour connaître la durée de conservation d'une saveur avant de commander, contactez-nous sur WhatsApp."
+    },
+    {
+      id: "saveurs-cassave",
+      category: "products",
+      question: "Quelles saveurs de cassaves proposez-vous ?",
+      answer: "Nos cassaves artisanales se déclinent en plusieurs saveurs : nature traditionnelle, fourrée coco/cannelle et fourrée arachide. Contactez-nous pour connaître les saveurs disponibles au moment de votre commande."
+    },
+    {
       id: "formats-disponibles",
       category: "products",
-      question: "Quels sont les formats de Mamba disponibles ?",
-      answer: "Nous proposons deux formats généreux : le pot standard 16 oz (environ 454g), idéal pour la consommation quotidienne, et le grand pot familial 32 oz (environ 908g), parfait pour toute la maison et les passionnés de Mamba."
+      question: "Quels sont les catégories et formats de Mamba disponibles ?",
+      answer: "Nos beurres de cacahuètes Mamba se déclinent selon vos préférences : Pimenté ou Non pimenté, Sucré ou Salé, et sont disponibles en deux formats généreux : 16 oz (environ 454g) et grand format familial 32 oz (environ 908g)."
     },
     {
       id: "mamba-pimente-degre",
@@ -699,7 +776,7 @@
       category: "Culture & Terroir",
       readTime: "4 min de lecture",
       date: "10 Septembre 2026",
-      author: "L'Équipe Miam'cieuse",
+      author: "L'Équipe Miam’Icieuse",
       image: "./images/product-mamba-pot.jpg",
       summary: "Découvrez l'histoire fascinante du Mamba haïtien, ce beurre de cacahuète artisanal torréfié au goût inimitable, décliné en version douce ou relevée au piment bouk.",
       content: `
@@ -718,20 +795,56 @@
       id: "comment-manger-la-cassave-haitienne",
       title: "Comment déguster la Cassave haïtienne : 5 façons traditionnelles et modernes",
       category: "Guides & Recettes",
-      readTime: "5 min de lecture",
+      readTime: "7 min de lecture",
       date: "5 Septembre 2026",
-      author: "Chef Kreyòl Miam'cieuse",
+      author: "Miam’Icieuse",
       image: "./images/product-cassave-mamba.jpg",
       summary: "Héritage direct des Taïnos, la galette de manioc pur est le compagnon idéal du Mamba. Découvrez nos meilleures astuces pour la savourer chaude, croustillante et gourmande.",
       content: `
-        <h2>La reine du manioc depuis des siècles</h2>
-        <p>La <strong>cassave</strong> (<em>kasav</em> en créole) est l'un des aliments les plus anciens et résilients de la Caraïbe. Faite à 100% de racine de manioc doux râpée, pressée pour éliminer l'amidon liquide puis cuite à sec sur une grande platine en fonte, elle est naturellement <strong>sans gluten</strong> et d'une richesse nutritive remarquable.</p>
-        <h3>1. Le classique incontournable : Cassave & Mamba chaud</h3>
-        <p>Faites dorer votre galette de cassave 2 minutes au grille-pain ou dans une poêle sans matière grasse. Dès qu'elle redevient croustillante, étalez une généreuse couche de Mamba Miam'cieuse. La chaleur de la cassave fait fondre délicatement le beurre de cacahuète...</p>
-        <h3>2. La version gourmande au Chocolat chaud pays</h3>
-        <p>Trempez un morceau de cassave bien chaude directement dans une tasse fumante de chocolat pays préparé avec notre cacao grand cru. Une alliance réconfortante incomparable.</p>
-        <h3>3. En version apéritif salé créole</h3>
-        <p>Cassez la cassave en triangles croustillants et servez-les en dips avec du chiktay de hareng ou une sauce relevée Bon Savè Lakay.</p>
+      <p><strong>Comment manger la cassave haïtienne ?</strong> Avec du manba, accompagnée d'un chocolat chaud ou garnie pour l'apéritif, cette galette de manioc se prête à des envies très différentes. Que vous la découvriez pour la première fois ou que vous cherchiez une nouvelle façon de la servir, voici cinq idées pour composer un petit-déjeuner, un goûter ou une assiette à partager.</p>
+      <p>Chez Miam’Icieuse, nos cassaves se déclinent en plusieurs saveurs : nature, coco/cannelle et arachide. Pour les accompagner, notre manba est proposé pimenté ou non pimenté, sucré ou salé, en pots de 16 oz et 32 oz. Le choix de la cassave et de sa garniture permet de varier les associations sans multiplier les préparations.</p>
+
+      <h2>Quelle cassave choisir pour votre préparation ?</h2>
+      <p>La cassave nature est un bon point de départ pour découvrir le goût du manioc et essayer plusieurs accompagnements. Elle laisse une place généreuse à la garniture : manba, avocat, légumes ou préparation sucrée. Pour une première dégustation à plusieurs, coupez-la en portions et proposez les accompagnements séparément. Chacun pourra composer sa bouchée.</p>
+      <p>La cassave coco/cannelle convient à une pause gourmande avec une boisson chaude. Goûtez-la d'abord seule pour apprécier sa garniture avant d'ajouter autre chose. La version arachide peut également se déguster telle quelle. Pour comparer les saveurs, servez de petits morceaux de chaque variété sur une même assiette, avec les noms indiqués à côté.</p>
+
+      <h2>Comment réchauffer une cassave avant de la servir ?</h2>
+      <p>Suivez en priorité les indications de préparation présentes sur l'emballage. Si la cassave peut être réchauffée à la poêle, utilisez une chaleur douce et surveillez-la en la retournant : l'objectif est de la tiédir sans brûler sa surface. La durée dépend de son épaisseur, de sa garniture et de votre appareil. Commencez par un court passage, puis vérifiez sa texture.</p>
+      <p>Préparez les accompagnements avant de réchauffer les portions afin de servir aussitôt. Ajoutez les garnitures fraîches après le réchauffage. Pour une cassave fourrée, respectez les instructions propres à cette saveur ; une méthode adaptée à une galette nature ne convient pas nécessairement à toutes les garnitures.</p>
+
+      <h2>5 façons de déguster la cassave haïtienne</h2>
+      <h3>1. La cassave au manba, à composer selon vos goûts</h3>
+      <p>Étalez une fine couche de manba sur une portion de cassave légèrement tiède. Commencez avec une petite quantité, puis ajustez selon vos préférences. Pour une version salée, choisissez un manba salé, pimenté ou non pimenté. Pour une pause plus douce, optez pour le manba sucré et ajoutez, si vous le souhaitez, quelques rondelles de banane.</p>
+      <p>Vous découvrez le manba pimenté ? Présentez-le à côté de la cassave pour que chacun dose sa tartine. Les deux choix sont indépendants : un manba sucré peut être pimenté, et un manba salé peut être non pimenté. Vous pouvez ainsi retrouver l'association qui vous plaît sans confondre sucre et intensité du piment.</p>
+
+      <h3>2. La cassave accompagnée d'un chocolat chaud pays</h3>
+      <p>Servez quelques morceaux de cassave avec une tasse de chocolat chaud préparé selon votre recette habituelle. Alternez une bouchée et une gorgée, ou trempez brièvement un morceau juste avant de le manger si vous aimez une texture plus tendre. Gardez le reste de la galette à côté de la tasse pour éviter qu'il ne s'imbibe entièrement.</p>
+      <p>La cassave nature permet de découvrir cette association simplement. Avec la version coco/cannelle, goûtez la boisson avant de la sucrer davantage pour trouver l'équilibre qui vous convient. Cette présentation se prête aussi bien à un petit-déjeuner tranquille qu'à un goûter à partager.</p>
+
+      <h3>3. Des bouchées de cassave pour un apéritif salé</h3>
+      <p>Détaillez une cassave nature en morceaux faciles à prendre à la main. Disposez à côté une purée d'avocat citronnée, des légumes finement coupés ou une petite portion de manba salé. Le contraste entre la galette et une garniture crémeuse donne une bouchée agréable sans nécessiter une recette compliquée.</p>
+      <p>Garnissez au dernier moment pour préserver la texture de la cassave. Pour une grande tablée, gardez les sauces dans des bols séparés et proposez une cuillère pour chacune. Prévoyez une option non pimentée et présentez le piment à part : les invités pourront adapter leur assiette à leurs goûts.</p>
+
+      <h3>4. Une tartine de cassave à la banane pour le goûter</h3>
+      <p>Sur une cassave nature, répartissez un peu de manba non pimenté, puis de fines rondelles de banane. Une pincée de cannelle peut compléter l'ensemble si vous aimez cette épice. Ajustez la quantité de garniture à la taille du morceau pour que la tartine reste facile à manger.</p>
+      <p>Préparez les fruits juste avant de servir et évitez de monter toutes les tartines longtemps à l'avance. Vous pouvez aussi servir la banane à côté d'une cassave coco/cannelle ou arachide, sans ajouter de manba. C'est une autre façon de varier le goûter en laissant la saveur de la cassave au premier plan.</p>
+
+      <h3>5. Une assiette de dégustation autour des cassaves</h3>
+      <p>Pour découvrir plusieurs saveurs, réunissez des portions de cassave nature, coco/cannelle et arachide. Ajoutez un peu de manba sucré et de manba salé dans des coupelles distinctes, avec des fruits frais à côté. Présentez les versions pimentées séparément et identifiez-les clairement.</p>
+      <p>Commencez par goûter les cassaves seules, puis essayez une petite quantité d'accompagnement. Cette formule convient à un brunch ou à une pause entre proches : elle permet de comparer les textures et de trouver ses associations préférées. Servez de petites quantités et complétez l'assiette au fur et à mesure.</p>
+
+      <h2>Comment conserver les cassaves après ouverture ?</h2>
+      <p>Refermez soigneusement le sachet après avoir prélevé vos portions, ou utilisez une boîte hermétique adaptée. Respectez les consignes de conservation inscrites sur l'emballage, notamment pour les cassaves garnies. Ne leur attribuez pas une durée unique : la date et les indications du produit choisi restent votre référence.</p>
+      <p>Conservez les garnitures séparément et assemblez vos tartines au moment de les déguster. Si vous souhaitez connaître les conditions de conservation d'une saveur avant votre achat, contactez Miam’Icieuse. Vous pourrez ainsi choisir la quantité adaptée à votre occasion et à votre rythme de consommation.</p>
+
+      <h2>Questions fréquentes sur la dégustation de la cassave</h2>
+      <h3>Faut-il toujours manger la cassave chaude ?</h3>
+      <p>Consultez les indications de votre produit. Lorsqu'elle est prête à consommer, vous pouvez la goûter telle quelle ; un réchauffage adapté permet simplement de varier la dégustation. Il n'est pas nécessaire de préparer une garniture élaborée pour apprécier sa saveur.</p>
+      <h3>Quel manba choisir avec une cassave nature ?</h3>
+      <p>Choisissez d'abord sucré ou salé selon votre accompagnement, puis pimenté ou non pimenté selon votre goût. Les formats 16 oz et 32 oz vous permettent de choisir la quantité. Pour une tartine à la banane, essayez le non pimenté ; pour une bouchée d'apéritif, commencez par le salé.</p>
+      <h3>Quelle saveur de cassave choisir pour commencer ?</h3>
+      <p>La nature permet de tester facilement plusieurs garnitures. La coco/cannelle et l'arachide offrent d'autres expériences de dégustation, y compris sans accompagnement. Découvrez les cassaves Miam’Icieuse dans la boutique et vérifiez les saveurs disponibles au moment de votre commande.</p>
+
       `
     },
     {
@@ -740,7 +853,7 @@
       category: "Recettes Authentiques",
       readTime: "4 min de lecture",
       date: "20 Août 2026",
-      author: "Chef Kreyòl Miam'cieuse",
+      author: "Miam’Icieuse",
       image: "./images/product-chocolat-cacao.jpg",
       summary: "Oubliez le chocolat en poudre industriel ! Apprenez à préparer le véritable chocolat pays haïtien au bâton de cacao pur, muscade, cannelle et zeste d'agrume.",
       content: `
@@ -748,7 +861,7 @@
         <p>En Haïti, les fèves de cacao poussent sous la canopée tropicale de la Grand'Anse et du Nord. Récoltées à maturité, elles sont torréfiées puis broyées à chaud pour former une pâte dense roulée en bâtonnets.</p>
         <h3>Ingrédients pour 4 personnes :</h3>
         <ul>
-          <li>1 bâton de Chocolat Pays Miam'cieuse (environ 100g râpé)</li>
+          <li>1 bâton de Chocolat Pays Miam’Icieuse (environ 100g râpé)</li>
           <li>750 ml d'eau de source + 250 ml de lait concentré ou lait entier</li>
           <li>1 bâton de cannelle et 1/2 cuillère à café de muscade fraîchement râpée</li>
           <li>1 zeste de citron vert bio</li>
@@ -763,7 +876,7 @@
       category: "Traditions & Saveurs",
       readTime: "6 min de lecture",
       date: "28 Août 2026",
-      author: "L'Équipe Miam'cieuse",
+      author: "L'Équipe Miam’Icieuse",
       image: "./images/product-akasan.png",
       summary: "Douce, onctueuse et parfumée à la cannelle, l'Akasan est la boisson chaude préférée des petits-déjeuners haïtiens. Plongez dans ses origines et sa recette.",
       content: `
@@ -779,14 +892,14 @@
       category: "Recettes Créatives",
       readTime: "4 min de lecture",
       date: "02 Août 2026",
-      author: "Chef Kreyòl Miam'cieuse",
+      author: "Miam’Icieuse",
       image: "./images/hero-feast.jpg",
-      summary: "Smoothie énergisant, sauce saté créole pour grillades, cookies au cœur fondant... Sublimez votre pot de Mamba Miam'cieuse avec nos recettes faciles.",
+      summary: "Smoothie énergisant, sauce saté créole pour grillades, cookies au cœur fondant... Sublimez votre pot de Mamba Miam’Icieuse avec nos recettes faciles.",
       content: `
         <h2>Faites entrer le Mamba dans toutes vos créations</h2>
         <p>Le Mamba est d'une polyvalence remarquable en cuisine. Voici des manières faciles d'émerveiller vos convives :</p>
         <h3>1. Le Smoothie Énergie Créole</h3>
-        <p>Mixez 1 banane mûre, 2 cuillères à soupe de Mamba Miam'cieuse doux, 250ml de lait végétal, 1 cuillère à café de miel et une pincée de cannelle.</p>
+        <p>Mixez 1 banane mûre, 2 cuillères à soupe de Mamba Miam’Icieuse doux, 250ml de lait végétal, 1 cuillère à café de miel et une pincée de cannelle.</p>
         <h3>2. Sauce Saté Créole pour Griot ou Grillades</h3>
         <p>Mélangez 3 cuillères de Mamba Pimenté avec un filet de jus de citron vert, une pointe de sauce soja, une gousse d'ail écrasée et un peu d'eau tiède pour émulsionner.</p>
         <h3>3. Cookies fondants cœur Mamba</h3>
@@ -975,7 +1088,7 @@
           </div>
         </div>
 
-        <!-- Avantages & Engagements Miam'cieuse -->
+        <!-- Avantages & Engagements Miam’Icieuse -->
         <div class="delivery-perks-banner">
           <div class="delivery-perk-item">
             <div class="delivery-perk-icon">🎁</div>
@@ -1051,7 +1164,7 @@
           <div class="contact-info-card">
             <div>
               <span class="contact-info-tag">ATELIER ARTISANAL</span>
-              <h2 class="contact-info-title">Miam'cieuse Haïti</h2>
+              <h2 class="contact-info-title">Miam’Icieuse Haïti</h2>
               <p class="contact-info-tagline">
                 « Le goût de la pure satisfaction. »<br>
                 Nous préparons chaque commande avec amour et le respect rigoureux de nos traditions culinaires haïtiennes.
@@ -1181,7 +1294,7 @@
             <span class="story-num-badge">01</span>
             <h2>La Genèse : Faire revivre le goût vrai</h2>
           </div>
-          <p class="story-lead">Miam'cieuse est née d'un souvenir d'enfance profondément enraciné : l'odeur envoûtante des arachides fraîches que l'on torréfiait au lever du soleil dans la cour familiale en Haïti. Ce parfum chaud, boisé et toasté qui annonçait les plus doux petits-déjeuners.</p>
+          <p class="story-lead">Miam’Icieuse est née d'un souvenir d'enfance profondément enraciné : l'odeur envoûtante des arachides fraîches que l'on torréfiait au lever du soleil dans la cour familiale en Haïti. Ce parfum chaud, boisé et toasté qui annonçait les plus doux petits-déjeuners.</p>
           <p>Face à l'omniprésence des pâtes industrielles saturées d'huiles hydrogénées et de conservateurs, nous avons pris un engagement solennel : <strong>rendre hommage au terroir haïtien en proposant des spécialités 100% artisanales, pures et généreuses.</strong></p>
         </div>
 
@@ -1203,7 +1316,7 @@
             <h2>La Kasav : Héritage sacré des Taïnos</h2>
           </div>
           <p>La cassave (kasav) est le trésor le plus résilient de la gastronomie des Caraïbes. Travaillée à partir de la racine de manioc doux, pressée dans les règles de l'art pour éliminer l'amidon liquide puis cuite à sec sur de grandes platines fumantes, elle est naturellement sans gluten et croustille sous la dent.</p>
-          <p>Manger une cassave chaude tartinée de Mamba Miam'cieuse, c'est renouer avec des siècles d'artisanat culinaire transmis de génération en génération.</p>
+          <p>Manger une cassave chaude tartinée de Mamba Miam’Icieuse, c'est renouer avec des siècles d'artisanat culinaire transmis de génération en génération.</p>
 
           <div class="story-values-grid">
             <div class="story-value-card">
@@ -1274,7 +1387,7 @@
         <div class="subpage-hero-container blog-hero-container">
           <div class="subpage-hero-content blog-hero-content">
             <span class="hero-banner-tag">JOURNAL GOURMAND</span>
-            <h1 class="subpage-hero-title blog-hero-title">Le Blog & Les Recettes <span>Miam'cieuse</span></h1>
+            <h1 class="subpage-hero-title blog-hero-title">Le Blog & Les Recettes <span>Miam’Icieuse</span></h1>
             <p class="subpage-hero-desc blog-hero-desc">Secrets de fabrication, histoires du terroir caribéen et idées de recettes faciles pour sublimer votre quotidien.</p>
             <div class="subpage-hero-badges blog-hero-badges">
               <span class="subpage-hero-stat blog-hero-stat">📚 <strong>5</strong> Articles & Recettes</span>
@@ -1811,27 +1924,33 @@
       this.viewProduct(id);
     },
 
-    addToCart: function(id) {
+    addToCart: function(id, customData) {
       const p = products.find(prod => prod.id === id);
-      if (!p) return;
-      const exist = cart.find(item => item.id === id);
+      if (!p && !customData) return;
+      
+      const itemId = (customData && customData.id) || id;
+      const itemName = (customData && customData.name) || (p && (p.cardTitle || p.name));
+      const itemPrice = (customData && customData.price) !== undefined ? customData.price : (p && p.price);
+      const itemImage = (customData && customData.image) || (p && p.images && p.images[0]) || './images/product-mamba-pot.png';
+
+      const exist = cart.find(item => item.id === itemId);
       if (exist) {
         exist.quantity += 1;
       } else {
         cart.push({
-          id: p.id,
-          name: p.name,
-          price: p.price,
-          image: p.images[0],
+          id: itemId,
+          name: itemName,
+          price: itemPrice,
+          image: itemImage,
           quantity: 1
         });
       }
       saveCart();
-      showToast(`« ${p.cardTitle || p.name} » ajouté au panier ! 🥜`);
+      showToast(`« ${itemName} » ajouté au panier ! 🥜`);
     },
 
-    addProductDirectly: function(id) {
-      this.addToCart(id);
+    addProductDirectly: function(id, customData) {
+      this.addToCart(id, customData);
       openDrawer();
     },
 
@@ -1856,6 +1975,97 @@
       this.openQuickProduct(id);
     },
 
+    // État temporaire du sélecteur rapide de produit
+    quickProductState: {
+      productId: null,
+      format: '16oz',
+      spicy: 'pimente',
+      taste: 'sale',
+      variant: null
+    },
+
+    setQuickOption: function(type, value) {
+      if (!this.quickProductState.productId) return;
+      this.quickProductState[type] = value;
+      this.updateQuickModalUI();
+    },
+
+    updateQuickModalUI: function() {
+      const st = this.quickProductState;
+      const p = products.find(prod => prod.id === st.productId);
+      if (!p) return;
+
+      const isMamba = p.category === 'mamba';
+      let price = p.price;
+      let variantName = p.name;
+      let variantId = p.id;
+
+      if (isMamba) {
+        const is32 = st.format === '32oz';
+        const isSpicy = st.spicy === 'pimente';
+        const isSweet = st.taste === 'sucre';
+
+        // Calcul du prix : 16 oz = 11.90 € ; 32 oz = 21.50 € (pimenté) ou 19.90 € (doux)
+        price = is32 ? (isSpicy ? 21.50 : 19.90) : 11.90;
+
+        const spicyLabel = isSpicy ? 'Pimenté' : 'Non pimenté';
+        const tasteLabel = isSweet ? 'Sucré' : 'Salé';
+        const formatLabel = is32 ? '32 oz (908g)' : '16 oz (454g)';
+
+        variantName = `Mamba Haïtien — ${isSpicy ? 'Pimenté' : 'Non pimenté'} ${tasteLabel} (${formatLabel})`;
+        variantId = `mamba-${st.spicy}-${st.taste}-${st.format}`;
+
+        // Mettre à jour les puces actives
+        document.querySelectorAll('#quickview-format-chips .option-chip').forEach(btn => {
+          btn.classList.toggle('is-selected', btn.getAttribute('data-val') === st.format);
+        });
+        document.querySelectorAll('#quickview-spicy-chips .option-chip').forEach(btn => {
+          btn.classList.toggle('is-selected', btn.getAttribute('data-val') === st.spicy);
+        });
+        document.querySelectorAll('#quickview-taste-chips .option-chip').forEach(btn => {
+          btn.classList.toggle('is-selected', btn.getAttribute('data-val') === st.taste);
+        });
+
+        const subEl = document.getElementById('quickview-subtitle-display');
+        if (subEl) subEl.textContent = `${spicyLabel} • ${tasteLabel} • ${formatLabel}`;
+      } else if (p.formats && p.formats.length > 1) {
+        const fmt = p.formats.find(f => f.id === st.format) || p.formats[0];
+        if (fmt) {
+          price = fmt.price;
+          variantId = `${p.id}-${fmt.id}`;
+          variantName = `${p.name} (${fmt.name})`;
+        }
+        document.querySelectorAll('#quickview-format-chips .option-chip').forEach(btn => {
+          btn.classList.toggle('is-selected', btn.getAttribute('data-val') === st.format);
+        });
+      }
+
+      // Mise à jour de l'affichage du prix
+      const priceEl = document.getElementById('quickview-price-display');
+      if (priceEl) priceEl.textContent = `${price.toFixed(2)} €`;
+
+      // Mise à jour du bouton d'ajout au panier
+      const addBtn = document.getElementById('quickview-add-btn');
+      if (addBtn) {
+        addBtn.onclick = function() {
+          window.miamApp.addProductDirectly(variantId, {
+            id: variantId,
+            name: variantName,
+            price: price,
+            image: (p.images && p.images[0]) || './images/product-mamba-pot.png'
+          });
+          window.miamApp.closeQuickView();
+        };
+      }
+
+      // Mise à jour du lien WhatsApp
+      const waBtn = document.getElementById('quickview-whatsapp-btn');
+      if (waBtn) {
+        const msg = `Bonjour Miam’Icieuse 👋\nJe souhaite commander :\n📦 ${variantName}\nPrix : ${price.toFixed(2)} €\nEst-il disponible pour livraison s'il vous plaît ?`;
+        waBtn.href = `https://wa.me/50939424419?text=${encodeURIComponent(msg)}`;
+      }
+    },
+
     openQuickProduct: function(id) {
       const p = products.find(prod => prod.id === id);
       if (!p) return;
@@ -1863,34 +2073,104 @@
       const content = document.getElementById('quickview-modal-content');
       if (!backdrop || !content) return;
 
+      const isMamba = p.category === 'mamba';
+      const initialSpicy = p.spiciness || (p.id.includes('non-pimente') ? 'non-pimente' : 'pimente');
+      const initialTaste = p.taste || (p.id.includes('sucre') ? 'sucre' : 'sale');
+      const initialFormat = p.id.includes('32oz') ? '32oz' : '16oz';
+
+      this.quickProductState = {
+        productId: p.id,
+        format: initialFormat,
+        spicy: initialSpicy,
+        taste: initialTaste,
+        variant: null
+      };
+
+      const imgSrc = (p.images && p.images[0]) || './images/product-mamba-pot.png';
+
       content.innerHTML = `
-        <button class="modal-close-btn" onclick="window.miamApp.closeQuickView()">✕</button>
-        <div style="padding: 2.5rem; display: grid; grid-template-columns: 1fr 1.1fr; gap: 2rem;">
-          <div style="border-radius: var(--radius-lg); overflow: hidden; background: #FFF5EC; aspect-ratio: 1/1;">
-            <img src="${p.images[0]}" alt="${p.name}" style="width: 100%; height: 100%; object-fit: cover;">
+        <button class="modal-close-btn" onclick="window.miamApp.closeQuickView()" aria-label="Fermer la vue rapide">✕</button>
+        <div style="padding: 2.2rem; display: grid; grid-template-columns: 1fr 1.15fr; gap: 2rem; align-items: start;">
+          <div style="border-radius: var(--radius-lg); overflow: hidden; background: #FFF5EC; aspect-ratio: 1/1; position: sticky; top: 0; box-shadow: 0 8px 24px rgba(0,0,0,0.06);">
+            <img src="${imgSrc}" alt="${p.name}" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div>
-            <span class="badge badge-pink" style="margin-bottom: 0.5rem;">${p.badge || 'Spécialité'}</span>
-            <h2 style="font-size: 1.8rem; margin-bottom: 0.35rem; color: var(--color-dark);">${p.name}</h2>
-            <p style="color: var(--color-pink); font-weight: 700; margin-bottom: 0.75rem;">${p.subtitle}</p>
-            <div style="color: #F59E0B; margin-bottom: 1rem;">★★★★★ <span style="color: #333; font-weight: 700;">${p.rating}</span></div>
-            <div style="font-size: 2rem; font-weight: 900; color: var(--color-dark); margin-bottom: 1.25rem;">
-              ${p.price.toFixed(2)} €
+            <span class="badge badge-pink" style="margin-bottom: 0.5rem; display: inline-block;">${p.badge || 'Miam’Icieuse'}</span>
+            <h2 style="font-size: 1.65rem; margin-bottom: 0.35rem; color: var(--color-dark); font-family: 'Playfair Display', serif; line-height: 1.2;">${p.name}</h2>
+            <p id="quickview-subtitle-display" style="color: var(--color-pink); font-weight: 700; margin-bottom: 0.65rem; font-size: 0.95rem;">${p.subtitle}</p>
+            <div style="color: #F59E0B; margin-bottom: 0.85rem; font-size: 0.95rem;">★★★★★ <span style="color: #333; font-weight: 700;">${p.rating}</span> <span style="color: #888; font-size: 0.85rem;">(${p.reviewCount} avis vérifiés)</span></div>
+            
+            <div style="font-size: 1.95rem; font-weight: 900; color: var(--color-dark); margin-bottom: 1.15rem; display: flex; align-items: baseline; gap: 8px;">
+              <span id="quickview-price-display">${p.price.toFixed(2)} €</span>
+              ${p.originalPrice ? `<span style="font-size: 1.05rem; color: #999; text-decoration: line-through; font-weight: 500;">${p.originalPrice.toFixed(2)} €</span>` : ''}
             </div>
-            <p style="font-size: 0.95rem; line-height: 1.6; color: #555; margin-bottom: 1.75rem;">
+
+            ${isMamba ? `
+              <div style="background: #FDF9F4; border: 1px solid rgba(207,0,114,0.15); border-radius: 12px; padding: 1rem; margin-bottom: 1.25rem;">
+                <!-- 1. Format : 16 oz ou 32 oz -->
+                <div style="margin-bottom: 0.85rem;">
+                  <div style="display:flex; justify-content:space-between; margin-bottom: 0.35rem;">
+                    <span style="font-size: 0.85rem; font-weight: 800; color: var(--color-dark); text-transform: uppercase; letter-spacing: 0.04em;">Format du pot</span>
+                    <span style="font-size: 0.78rem; color: #777;">16 oz (454g) / 32 oz (908g)</span>
+                  </div>
+                  <div class="option-chips-list" id="quickview-format-chips" style="display:flex; gap:0.5rem;">
+                    <button type="button" class="option-chip ${initialFormat === '16oz' ? 'is-selected' : ''}" data-val="16oz" onclick="window.miamApp.setQuickOption('format', '16oz')">16 oz (454g)</button>
+                    <button type="button" class="option-chip ${initialFormat === '32oz' ? 'is-selected' : ''}" data-val="32oz" onclick="window.miamApp.setQuickOption('format', '32oz')">32 oz (908g)</button>
+                  </div>
+                </div>
+
+                <!-- 2. Piquant : Non pimenté ou Pimenté -->
+                <div style="margin-bottom: 0.85rem;">
+                  <div style="display:flex; justify-content:space-between; margin-bottom: 0.35rem;">
+                    <span style="font-size: 0.85rem; font-weight: 800; color: var(--color-dark); text-transform: uppercase; letter-spacing: 0.04em;">Piquant</span>
+                  </div>
+                  <div class="option-chips-list" id="quickview-spicy-chips" style="display:flex; gap:0.5rem;">
+                    <button type="button" class="option-chip ${initialSpicy === 'non-pimente' ? 'is-selected' : ''}" data-val="non-pimente" onclick="window.miamApp.setQuickOption('spicy', 'non-pimente')">Non pimenté</button>
+                    <button type="button" class="option-chip ${initialSpicy === 'pimente' ? 'is-selected' : ''}" data-val="pimente" onclick="window.miamApp.setQuickOption('spicy', 'pimente')">Pimenté</button>
+                  </div>
+                </div>
+
+                <!-- 3. Saveur : Salé ou Sucré -->
+                <div>
+                  <div style="display:flex; justify-content:space-between; margin-bottom: 0.35rem;">
+                    <span style="font-size: 0.85rem; font-weight: 800; color: var(--color-dark); text-transform: uppercase; letter-spacing: 0.04em;">Saveur</span>
+                  </div>
+                  <div class="option-chips-list" id="quickview-taste-chips" style="display:flex; gap:0.5rem;">
+                    <button type="button" class="option-chip ${initialTaste === 'sale' ? 'is-selected' : ''}" data-val="sale" onclick="window.miamApp.setQuickOption('taste', 'sale')">Salé</button>
+                    <button type="button" class="option-chip ${initialTaste === 'sucre' ? 'is-selected' : ''}" data-val="sucre" onclick="window.miamApp.setQuickOption('taste', 'sucre')">Sucré</button>
+                  </div>
+                </div>
+              </div>
+            ` : (p.formats && p.formats.length > 1 ? `
+              <div style="margin-bottom: 1.25rem;">
+                <label style="display: block; font-size: 0.85rem; font-weight: 800; color: var(--color-dark); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.4rem;">Format :</label>
+                <div class="option-chips-list" id="quickview-format-chips" style="display:flex; flex-wrap:wrap; gap:0.5rem;">
+                  ${p.formats.map((fmt, idx) => `
+                    <button type="button" class="option-chip ${idx === 0 ? 'is-selected' : ''}" data-val="${fmt.id}" onclick="window.miamApp.setQuickOption('format', '${fmt.id}')">
+                      ${fmt.name} — ${fmt.price.toFixed(2)} €
+                    </button>
+                  `).join('')}
+                </div>
+              </div>
+            ` : '')}
+
+            <p style="font-size: 0.92rem; line-height: 1.6; color: #555; margin-bottom: 1.5rem;">
               ${p.description}
             </p>
-            <div style="display: flex; gap: 0.75rem;">
-              <button class="btn btn-primary btn-lg" onclick="window.miamApp.addProductDirectly('${p.id}'); window.miamApp.closeQuickView();">
+
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <button type="button" id="quickview-add-btn" class="btn btn-primary btn-lg" style="flex: 1.2; min-width: 170px;">
                 <span>🛒</span> Ajouter au panier
               </button>
-              <a href="https://wa.me/50939424419?text=Bonjour%20Miam'cieuse%20👋%20Je%20souhaite%20commander%20:%20${encodeURIComponent(p.name)}" target="_blank" rel="noopener" class="btn btn-whatsapp btn-lg">
+              <a href="#" id="quickview-whatsapp-btn" target="_blank" rel="noopener" class="btn btn-whatsapp btn-lg" style="flex: 1; min-width: 150px;">
                 <span>💬</span> WhatsApp
               </a>
             </div>
           </div>
         </div>
       `;
+
+      this.updateQuickModalUI();
       backdrop.classList.add('is-open');
       document.body.style.overflow = 'hidden';
     },
