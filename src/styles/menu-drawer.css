@@ -592,7 +592,7 @@
   #site-header.merlie-navbar { background: #f7faf5 !important; border-bottom: 1px solid #dce5d7 !important; box-shadow: none; }
   #site-header .merlie-nav-container { height: 88px !important; padding: 0 20px !important; gap: 12px; background: transparent !important; }
   #site-header .nav-logo-wrap { display: flex; align-items: center; gap: 12px; min-width: 0; margin: 0; flex: 1; }
-  #site-header .nav-brand-img { width: 68px !important; height: 68px !important; max-height: none !important; object-fit: contain; padding: 0; border: 0; border-radius: 0; background: transparent; flex-shrink: 0; }
+  #site-header .nav-brand-img { width: 84px !important; height: auto !important; max-height: 52px !important; object-fit: contain; padding: 0; border: 0; border-radius: 0; background: transparent; flex-shrink: 0; }
   #site-header .nav-actions-right { flex-shrink: 0; gap: 8px !important; }
   #site-header .nav-actions-right > :not(.nav-burger-btn):not(.nav-account-btn):not(.nav-cart-btn) { display: none !important; }
   #site-header .nav-actions-right > .nav-account-btn,
@@ -609,7 +609,7 @@
 @media (max-width: 360px) {
   #site-header .merlie-nav-container { padding-inline: 12px !important; gap: 8px; }
   #site-header .nav-logo-wrap { gap: 8px; }
-  #site-header .nav-brand-img { width: 58px !important; height: 58px !important; }
+  #site-header .nav-brand-img { width: 72px !important; height: auto !important; max-height: 44px !important; }
 }
 
 /* Menu plein écran : structure éditoriale, palette Merlie. */
@@ -628,7 +628,7 @@
   border-bottom: 1px solid #dce5d7;
 }
 .mobile-menu-brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
-.mobile-nav-drawer .mobile-menu-brand img { width: 96px; height: 64px; object-fit: contain; flex-shrink: 0; border: 0; border-radius: 0; }
+.mobile-nav-drawer .mobile-menu-brand img { width: 110px !important; height: auto !important; max-height: 68px !important; object-fit: contain; flex-shrink: 0; border: 0; border-radius: 0; }
 .mobile-nav-drawer .mobile-nav-close-btn { position: static; width: 42px; height: 42px; flex-shrink: 0; padding: 10px; border: 1px solid #d3dfce; border-radius: 10px; color: #07521c; background: #eef3ea; }
 .mobile-nav-drawer .mobile-nav-close-btn svg { width: 22px; height: 22px; }
 .mobile-nav-drawer .mobile-nav-links { flex: 1 0 auto; overflow: visible; padding: 16px 24px 28px; background: transparent; }
