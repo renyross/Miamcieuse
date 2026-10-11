@@ -16,12 +16,20 @@
  padding-inline: 1.25rem !important;
 }
 @media (max-width: 767px) {
- #story-anchor > .container,
-#testimonials-anchor > .container,
-#best-products-anchor > .container,
- .home-offer-section.trio-logo > .container {
-  padding-inline: 8px !important;
- }
+  #story-anchor > .container,
+  #testimonials-anchor > .container,
+  #best-products-anchor > .container,
+  .home-offer-section.trio-logo > .container {
+    padding-inline: 8px !important;
+  }
+  #best-products-anchor .popular-header-bar,
+  #best-products-anchor .popular-header-left,
+  #best-products-anchor .popular-title {
+    text-align: left !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    margin-left: 0 !important;
+  }
 }
 
 /* Keep the testimonial introduction on the shared section left edge. */

@@ -25,7 +25,28 @@
 #best-products-anchor .popular-heart-btn.is-active svg { stroke:#cc211c !important; fill:#cc211c !important; }
 #best-products-anchor button:focus-visible, #best-products-anchor a:focus-visible { outline:2px solid #07521c; outline-offset:3px; }
 @media(max-width:1000px) { #best-products-anchor .popular-card { flex-basis:calc((100% - 40px)/3) !important; } }
-@media(max-width:760px) { #best-products-anchor { padding:32px 20px !important; } #best-products-anchor .popular-header-bar { align-items:flex-start; flex-direction:column; gap:16px; } #best-products-anchor .popular-header-right { width:100%; justify-content:space-between; } #best-products-anchor .popular-card { flex-basis:calc((100% - 20px)/2) !important; } }
+@media(max-width:760px) {
+  #best-products-anchor { padding:32px 20px !important; }
+  #best-products-anchor .popular-header-bar {
+    align-items: flex-start !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    text-align: left !important;
+  }
+  #best-products-anchor .popular-header-left {
+    width: 100% !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+  }
+  #best-products-anchor .popular-title {
+    text-align: left !important;
+    align-self: flex-start !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+  #best-products-anchor .popular-header-right { width:100%; justify-content:space-between; }
+  #best-products-anchor .popular-card { flex-basis:calc((100% - 20px)/2) !important; }
+}
 @media (max-width: 500px) {
   #best-products-anchor #popular-items-track { gap: 10px !important; }
   #best-products-anchor .popular-card {
