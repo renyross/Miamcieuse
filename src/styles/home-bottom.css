@@ -11,7 +11,7 @@
 }
 .home-packs-section .section-title-clean span { color: inherit; }
 .home-packs-section .view-all-link {
-  color: #aa005e; font-size: 11px; font-weight: 800; white-space: nowrap;
+  color: #CC211C; font-size: 11px; font-weight: 800; white-space: nowrap;
 }
 .home-packs-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
 .home-packs-section .pack-card {
@@ -21,21 +21,21 @@
   color: #12351c; cursor: pointer;
 }
 .home-packs-section .pack-card.is-featured {
-  background: #fdf0f7; border-color: #e7a8cb;
+  background: #FDF2F0; border-color: #E8A2A0;
 }
 .home-packs-section .badge {
-  background: #fce8f3; color: #aa005e; padding: 6px 10px;
+  background: #FDF2F0; color: #CC211C; padding: 6px 10px;
   border-radius: 20px; font-size: 10px; font-weight: 800;
 }
 .home-packs-section .pack-name { font: 800 21px/1.25 var(--font-sans), sans-serif; margin: 10px 0; color: #12351c; }
 .home-packs-section .pack-card p { line-height: 1.6; margin: 0 0 20px; }
 .home-packs-section .pack-price-wrap { margin-top: auto; padding-block: 12px 18px; }
-.home-packs-section .pack-current-price { font-size: 27px; font-weight: 800; color: #aa005e; }
+.home-packs-section .pack-current-price { font-size: 27px; font-weight: 800; color: #CC211C; }
 .home-packs-section .pack-card .btn {
   width: 100%; min-height: 44px; border: 0; border-radius: 12px;
-  background: #cf0072; color: #321708; font-size: 12px; font-weight: 800;
+  background: #CC211C; color: #321708; font-size: 12px; font-weight: 800;
 }
-.home-packs-section .pack-card .btn:hover { background: #aa005e; }
+.home-packs-section .pack-card .btn:hover { background: #CC211C; }
 .home-club-section { background: #f7faf6; padding: 12px 0 48px; }
 .home-club-section .newsletter-card {
   padding: 42px; text-align: center; background: radial-gradient(ellipse at top right, #16662c, transparent 65%), #092f15;
@@ -49,8 +49,8 @@
   flex: 1; min-width: 0; min-height: 48px; border: 1px solid #dce7da;
   border-radius: 12px; padding: 12px 16px; background: #ffffff; color: #12351c; font: inherit; font-size: 13px;
 }
-.home-club-section .newsletter-form .btn { background: #cf0072; color: #321708; border: 0; border-radius: 12px; padding: 12px 20px; font-size: 13px; white-space: nowrap; }
-.home-club-section .newsletter-input:focus-visible { outline: 3px solid #cf0072; outline-offset: 2px; }
+.home-club-section .newsletter-form .btn { background: #CC211C; color: #321708; border: 0; border-radius: 12px; padding: 12px 20px; font-size: 13px; white-space: nowrap; }
+.home-club-section .newsletter-input:focus-visible { outline: 3px solid #CC211C; outline-offset: 2px; }
 .site-footer { background: #071f10; color: #c4d8c8; padding-top: 44px; }
 .footer-top-grid { grid-template-columns: 1.3fr 1fr 1fr 1fr; gap: 32px; }
 .footer-brand-accent { color: #ff9bd2; }
@@ -88,3 +88,18 @@
   .site-footer .footer-brand { grid-column: 1 / -1; }
   .site-footer .footer-bottom { flex-direction: column; text-align: left; align-items: flex-start; }
 }
+
+
+/* ==========================================================================
+   5. SECTION CLUB NEWSLETTER : AUCUN ARRONDIS (CARRÉS / BORDS DROITS STRICTS)
+   ========================================================================== */
+.home-club-section .newsletter-card,
+.home-club-section .newsletter-card *,
+.home-club-section .badge,
+.home-club-section .badge-pink,
+.home-club-section .newsletter-input,
+.home-club-section .btn,
+.home-club-section .newsletter-form button {
+  border-radius: 0px !important;
+}
+

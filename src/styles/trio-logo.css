@@ -1,0 +1,28 @@
+/* Signature trio: the brand's green and red, with existing typography. */
+.home-offer-section.trio-logo { padding:32px 24px 56px !important; background:#f7faf5 !important; }
+.trio-logo > .container { max-width:1280px !important; width:100% !important; margin-inline:auto !important; padding:0 !important; }
+.trio-logo .home-offer-banner { display:grid !important; grid-template-columns:1fr 1fr; align-items:stretch; position:relative; height:auto !important; min-height:0 !important; padding:0 !important; overflow:hidden; border:1px solid #dce5d7; border-radius:0 !important; background:#fff !important; box-shadow:none !important; }
+.trio-logo .home-offer-banner::before,.trio-logo .home-offer-banner::after,.trio-logo .home-offer-overlay { display:none !important; }
+.trio-logo .home-offer-banner-bg { position:static !important; display:block; width:100% !important; height:100% !important; min-height:380px; max-height:560px; object-fit:cover !important; object-position:center; opacity:1 !important; filter:none !important; transform:none !important; border-radius:0 !important; }
+.trio-logo .home-offer-content { position:relative !important; inset:auto !important; display:flex; flex-direction:column; align-items:flex-start; justify-content:center; width:auto !important; max-width:none !important; padding:clamp(28px,4vw,64px) !important; margin:0 !important; text-align:left !important; color:#153b20 !important; }
+.trio-logo .home-offer-eyebrow { display:block; padding:0 !important; margin:0 0 20px !important; background:none !important; color:#07521c !important; font-size:11px !important; font-weight:800; letter-spacing:.14em; line-height:1.6; border:0 !important; }
+.trio-logo .home-offer-title { color:#153b20 !important; font-size:clamp(30px,3.4vw,48px) !important; font-weight:800; line-height:1.12 !important; letter-spacing:-.04em; margin:0 0 20px !important; text-shadow:none !important; }
+.trio-logo .home-offer-desc { color:#63705f !important; font-size:16px !important; line-height:1.75 !important; max-width:38ch; margin:0 0 24px !important; text-shadow:none !important; }
+.trio-logo .home-offer-circle-badge { position:static !important; inset:auto !important; display:flex !important; align-items:baseline; gap:12px; width:auto !important; height:auto !important; padding:0 !important; margin:0 0 24px !important; background:none !important; color:#07521c !important; border:0 !important; border-radius:0 !important; box-shadow:none !important; transform:none !important; }
+.trio-logo .circle-badge-price { color:#07521c !important; font-size:28px !important; font-weight:800; line-height:1.3; }
+.trio-logo .circle-badge-label { color:#63705f !important; font-size:10px !important; letter-spacing:.12em; }
+.trio-logo .home-offer-cta-btn { display:inline-flex; align-items:center; justify-content:center; gap:24px; width:auto !important; min-height:48px; padding:14px 22px !important; border:0 !important; border-radius:6px !important; background:#cc211c !important; color:#fff !important; box-shadow:none !important; font-size:14px !important; font-weight:700; cursor:pointer; transform:none !important; }
+.trio-logo .home-offer-cta-btn:hover { background:#a81b17 !important; }
+.trio-logo .home-offer-cta-arrow { display:inline-flex; color:inherit !important; background:none !important; padding:0 !important; width:auto !important; height:auto !important; }
+.trio-logo .home-offer-cta-btn:focus-visible { outline:3px solid #07521c; outline-offset:4px; }
+@media(max-width:700px) { .home-offer-section.trio-logo { padding:24px 20px 40px !important; } .trio-logo .home-offer-banner { grid-template-columns:minmax(0,1fr); } .trio-logo .home-offer-banner-bg { height:280px !important; min-height:0; } .trio-logo .home-offer-content { padding:28px 24px !important; } .trio-logo .home-offer-title { font-size:32px !important; } }
+
+/* Square edges throughout the signature banner, desktop and mobile. */
+section.home-offer-section.trio-logo,
+section.home-offer-section.trio-logo > .container,
+section.home-offer-section.trio-logo .home-offer-banner,
+section.home-offer-section.trio-logo .home-offer-banner-bg,
+section.home-offer-section.trio-logo .home-offer-overlay,
+section.home-offer-section.trio-logo .home-offer-content {
+ border-radius: 0 !important;
+}

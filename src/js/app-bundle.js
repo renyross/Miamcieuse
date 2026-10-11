@@ -1,254 +1,436 @@
-// Application Miam’Icieuse autonome (Fonctionne en direct double-clic ET via serveur)
+// Application Le Secret de Merlie autonome (Fonctionne en direct double-clic ET via serveur)
 (function() {
   const products = [
     {
-      id: "mamba-pimente-sale",
-      name: "Mamba Haïtien Pimenté Salé",
-      cardTitle: "Mamba Pimenté Salé",
-      cardDesc: "L'authentique Mamba haïtien relevé au piment bouk et sel marin",
-      name_ht: "Mamba Ayisyen Pike ak Sèl",
-      subtitle: "Le grand classique haïtien relevé au piment bouk et sel marin pur",
-      category: "mamba",
-      price: 11.90,
-      originalPrice: 13.50,
+      id: "epis-authentique",
+      slug: "epis-authentique",
+      name: "L'Épis Authentique (Le Classique)",
+      cardTitle: "L'Épis Authentique",
+      cardDesc: "La recette traditionnelle incontournable d'Haïti — Équilibrée, fraîche et parfumée sans être brûlante",
+      name_ht: "L'Épis Otantik (Klasik)",
+      subtitle: "La recette traditionnelle incontournable d'Haïti — Équilibrée, fraîche et parfumée sans être brûlante",
+      subtitle_ht: "Vrè resèt tradisyonèl peyi Dayiti — Byen balanse, fre epi santi bon san boule bouch",
+      category: "epis",
+      categoryName: "Épis Signatures",
+      categoryName_ht: "Epis Siyati",
+      spiciness: "doux",
+      taste: "authentique",
+      price: 7.90,
+      originalPrice: 8.90,
       rating: 5.0,
-      reviewCount: 168,
+      reviewCount: 194,
       isBestseller: true,
-      badge: "Best-seller 🌶️",
+      badge: "Bestseller Signature",
+      badge_ht: "Pi Mande",
+      inStock: true,
       images: [
-        "./images/product-mamba-pot.png",
-        "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=800&q=85",
-        "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=800&q=85"
+        "./images/product-epis-authentique.jpg",
+        "./images/product-pack-decouverte.jpg"
       ],
       formats: [
-        { id: "16oz", name: "16 oz (454g)", price: 11.90 },
-        { id: "32oz", name: "32 oz (908g)", price: 21.50 }
+        { id: "250g", name: "Bocal 250 g", price: 7.90, isDefault: true },
+        { id: "500g", name: "Grand Format 500 g", price: 13.90, isDefault: false }
       ],
-      spiciness: "pimente",
-      taste: "sale",
-      description: "Le véritable Mamba haïtien dans toute sa splendeur : cacahuètes d'Haïti torréfiées à cœur au feu doux, relevées de piment bouk frais et assaisonnées au sel marin pur. Texture onctueuse, saveur explosive."
+      variants: [
+        { id: "classique", name: "Recette Traditionnelle", name_ht: "Resèt Tradisyonèl" }
+      ],
+      description: "La recette traditionnelle incontournable d'Haïti. Équilibrée, fraîche et parfumée sans être brûlante. Préparée avec des herbes fraîches : cives, ail, poivrons verts, persil plat, thym frais, clou de girofle, citron vert, huile d'olive.",
+      ingredients: "Cives, ail, poivrons verts, persil plat, thym frais, clou de girofle, citron vert, huile d'olive.",
+      storage: "Conserver au réfrigérateur après ouverture. Se conserve plusieurs mois.",
+      usage: "Marinade universelle pour poulet, dinde, tassot de bœuf, et base aromatique pour le riz collé.",
+      shippingInfo: "Expédition soignée sous 24-48h avec protection isotherme.",
+      crossSellIds: ["pikliz-traditionnel-merlie", "pack-decouverte-epis", "coffret-cadeau-saveurs-haiti"]
     },
     {
-      id: "mamba-non-pimente-sale",
-      name: "Mamba Haïtien Non Pimenté Salé",
-      cardTitle: "Mamba Non pimenté Salé",
-      cardDesc: "Cacahuètes torréfiées à cœur et pointe de sel marin, doux sans piment",
-      name_ht: "Mamba Ayisyen San Piman ak Sèl",
-      subtitle: "Beurre de cacahuètes artisanal au sel marin pur, doux et crémeux sans piment",
-      category: "mamba",
-      price: 11.90,
-      originalPrice: 13.50,
-      rating: 4.9,
-      reviewCount: 142,
+      id: "epis-piquant",
+      slug: "epis-piquant",
+      name: "L'Épis Piquant (Au Piment Cabri / Habanero)",
+      cardTitle: "L'Épis Piquant 🌶️",
+      cardDesc: "Pour les amateurs de sensations fortes — Force du piment frais et herbes aromatiques",
+      name_ht: "L'Épis Pikan (Piman Bouk / Cabri)",
+      subtitle: "Pour les amateurs de sensations fortes — La force du piment frais associée aux herbes aromatiques",
+      subtitle_ht: "Pou moun ki renmen chalè — Fòs piman bouk fre melanje ak tout bon zèb santi bon",
+      category: "epis",
+      categoryName: "Épis Signatures",
+      categoryName_ht: "Epis Siyati",
+      spiciness: "pimente",
+      taste: "piquant",
+      price: 8.50,
+      originalPrice: 9.50,
+      rating: 5.0,
+      reviewCount: 148,
       isBestseller: true,
-      badge: "Traditionnel",
+      badge: "Piquant 🌶️",
+      badge_ht: "Pikan 🌶️",
+      inStock: true,
       images: [
-        "./images/product-mamba-pot.png",
-        "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=800&q=85"
+        "./images/product-epis-authentique.jpg",
+        "./images/product-pack-decouverte.jpg"
       ],
       formats: [
-        { id: "16oz", name: "16 oz (454g)", price: 11.90 },
-        { id: "32oz", name: "32 oz (908g)", price: 19.90 }
+        { id: "250g", name: "Bocal 250 g", price: 8.50, isDefault: true }
       ],
-      spiciness: "non-pimente",
-      taste: "sale",
-      description: "Pour les adeptes du goût authentique de la cacahuète torréfiée. Une recette naturelle sans aucun piment, rehaussée d'une touche de sel marin pour un équilibre parfait."
+      variants: [
+        { id: "piquant", name: "Au Piment Cabri Frais", name_ht: "Ak Piman Bouk Fre" }
+      ],
+      description: "Pour les amateurs de sensations fortes. La force du piment frais associée aux herbes aromatiques. Il apporte une chaleur maîtrisée et un parfum incomparable qui révèle viandes et poissons.",
+      ingredients: "Base traditionnelle + piment Habanero / Cabri frais, pointe de vinaigre de canne.",
+      storage: "Conserver au réfrigérateur après ouverture. Se conserve plusieurs mois.",
+      usage: "Marinade de porc (Griyo), poissons grillés, crevettes sautées, sauces pimentées de cuisson.",
+      shippingInfo: "Expédition soignée sous 24-48h avec protection isotherme.",
+      crossSellIds: ["pikliz-traditionnel-merlie", "duo-essentiels-haiti"]
     },
     {
-      id: "mamba-pimente-sucre",
-      name: "Mamba Haïtien Pimenté Sucré",
-      cardTitle: "Mamba Pimenté Sucré",
-      cardDesc: "Alliance gourmande du sucre brut de canne et du piment bouk haïtien",
-      name_ht: "Mamba Ayisyen Pike ak Sik",
-      subtitle: "L'alliance audacieuse du sucre de canne brut et d'une pointe de piment bouk",
-      category: "mamba",
-      price: 11.90,
-      originalPrice: 13.50,
+      id: "epis-doux-vegetal",
+      slug: "epis-doux-vegetal",
+      name: "L'Épis Doux & Végétal (Zéro Piquant)",
+      cardTitle: "L'Épis Doux & Végétal 🌿",
+      cardDesc: "Toute la richesse aromatique sans piquant — Idéal pour les enfants et palais délicats",
+      name_ht: "L'Épis Dous & Végétal (San Piman)",
+      subtitle: "Toute la richesse aromatique sans piquant — Idéal pour les enfants et les palais délicats",
+      subtitle_ht: "Tout richès bon gou a san piman — Pafè pou timoun ak moun ki pa renmen pikan",
+      category: "epis",
+      categoryName: "Épis Signatures",
+      categoryName_ht: "Epis Siyati",
+      spiciness: "zero",
+      taste: "doux",
+      price: 7.90,
+      originalPrice: 8.90,
       rating: 4.9,
-      reviewCount: 98,
-      isBestseller: false,
-      badge: "Coup de cœur",
-      images: [
-        "./images/product-mamba-pot.png",
-        "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=800&q=85"
-      ],
-      formats: [
-        { id: "16oz", name: "16 oz (454g)", price: 11.90 },
-        { id: "32oz", name: "32 oz (908g)", price: 21.50 }
-      ],
-      spiciness: "pimente",
-      taste: "sucre",
-      description: "Une création exclusive Miam’Icieuse : une première note douce et sucrée qui caresse le palais, suivie de la douce chaleur du piment bouk haïtien. Une expérience gustative inoubliable."
-    },
-    {
-      id: "mamba-non-pimente-sucre",
-      name: "Mamba Haïtien Non Pimenté Sucré",
-      cardTitle: "Mamba Non pimenté Sucré",
-      cardDesc: "Beurre de cacahuètes doux et sucré, texture fondante et réconfortante",
-      name_ht: "Mamba Ayisyen San Piman ak Sik",
-      subtitle: "Beurre de cacahuètes doux et sucré, ultra onctueux pour toute la famille",
-      category: "mamba",
-      price: 11.90,
-      originalPrice: 13.50,
-      rating: 4.9,
-      reviewCount: 115,
-      isBestseller: false,
-      badge: "Douceur",
-      images: [
-        "./images/product-mamba-pot.png",
-        "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=800&q=85"
-      ],
-      formats: [
-        { id: "16oz", name: "16 oz (454g)", price: 11.90 },
-        { id: "32oz", name: "32 oz (908g)", price: 19.90 }
-      ],
-      spiciness: "non-pimente",
-      taste: "sucre",
-      description: "La pâte d'arachide douce et sucrée selon la méthode traditionnelle : cacahuètes dorées à souhait et délicatement sucrées au sucre de canne. Le péché mignon des petits et des grands."
-    },
-    {
-      id: "cassave-traditionnelle-artisanale",
-      name: "Cassave Haïtienne Pur Manioc",
-      cardTitle: "Cassave Manioc",
-      cardDesc: "Nature, coco/cannelle ou arachide",
-      name_ht: "Kasav Tradisyonèl Pi Manyòk",
-      subtitle: "Cassave artisanale : nature, coco/cannelle ou arachide",
-      category: "cassave",
-      price: 6.90,
-      originalPrice: 8.00,
-      rating: 4.8,
       reviewCount: 112,
-      isBestseller: true,
-      badge: "Incontournable",
-      images: ["./images/product-cassave-mamba.png"],
-      formats: [{ id: "pack-3", name: "Sachet de 3 galettes", price: 6.90 }],
-      description: "Véritable trésor du terroir haïtien, notre cassave est confectionnée artisanalement à partir de manioc frais râpé. Découvrez nos différentes saveurs : nature traditionnelle, fourrée coco/cannelle et fourrée arachide."
+      isBestseller: false,
+      badge: "Zéro Piquant 🌿",
+      badge_ht: "San Piman 🌿",
+      inStock: true,
+      images: [
+        "./images/product-epis-authentique.jpg",
+        "./images/product-pack-decouverte.jpg"
+      ],
+      formats: [
+        { id: "250g", name: "Bocal 250 g", price: 7.90, isDefault: true }
+      ],
+      variants: [
+        { id: "doux", name: "Zéro Piquant", name_ht: "San Piman" }
+      ],
+      description: "Toute la richesse aromatique sans piquant. Idéal pour les enfants et les palais délicats. Préparé avec des poivrons doux multicolores, échalotes, ail rôti doux et fines herbes.",
+      ingredients: "Poivrons multicolores doux, échalotes, ail rôti doux, persil, coriandre, jus de citron vert.",
+      storage: "Conserver au réfrigérateur après ouverture.",
+      usage: "Légumes rôtis au four, poissons blancs, purées, papillotes, bouillons doux.",
+      shippingInfo: "Expédition soignée sous 24-48h.",
+      crossSellIds: ["pack-decouverte-epis", "epis-authentique"]
     },
     {
-      id: "chocolat-cacao-haitien-baton",
-      name: "Chocolat Pays Pur Cacao en Bâton",
-      cardTitle: "Chocolat Pays",
-      cardDesc: "100% Cacao brut de la Grand'Anse aux arômes intenses",
-      name_ht: "Chokola Peyi Pi Kakawo an Baton",
-      subtitle: "100% Cacao grand cru de la Grand'Anse aux arômes sauvages",
-      category: "chocolat",
-      price: 8.90,
-      originalPrice: 10.50,
+      id: "epis-special-bbq",
+      slug: "epis-special-bbq",
+      name: "L'Épis Spécial Barbecue & Grillades",
+      cardTitle: "Épis Spécial Barbecue 🔥",
+      cardDesc: "Texture fluide, note fumée et acidulée pour caraméliser parfaitement sur le grill",
+      name_ht: "L'Épis Espesyal Barbecue & Griye",
+      subtitle: "Texture fluide, note acidulée et fumée pour caraméliser parfaitement sur le grill",
+      subtitle_ht: "Teksti likid, gou fume ak asidilite pou fè bèl karamel sou griyaj",
+      category: "epis",
+      categoryName: "Épis Signatures",
+      categoryName_ht: "Epis Siyati",
+      spiciness: "moyen",
+      taste: "fume",
+      price: 8.20,
+      originalPrice: 9.50,
       rating: 5.0,
-      reviewCount: 64,
+      reviewCount: 98,
       isBestseller: true,
-      badge: "Grand Cru",
-      images: ["./images/product-chocolat-cacao.png"],
-      formats: [{ id: "lot-2", name: "Lot de 2 bâtons (200g)", price: 8.90 }],
-      description: "Fèves de cacao sauvages récoltées en Haïti, torréfiées et roulées à la main."
+      badge: "Spécial Grillades 🔥",
+      badge_ht: "Pou Griye 🔥",
+      inStock: true,
+      images: [
+        "./images/product-epis-barbecue.jpg",
+        "./images/product-pack-decouverte.jpg"
+      ],
+      formats: [
+        { id: "250g", name: "Bocal 250 g", price: 8.20, isDefault: true }
+      ],
+      variants: [
+        { id: "bbq", name: "Formule Caramélisante", name_ht: "Fòmil pou Karamel" }
+      ],
+      description: "Une texture plus fluide enrichie d'une note acidulée et fumée pour caraméliser sur le grill. Parfait pour badigeonner les viandes lors des cuissons au barbecue, au four ou à la plancha.",
+      ingredients: "Cives, ail fumé, paprika doux, citron vert pressé, mélasse de canne, fines herbes.",
+      storage: "Conserver au réfrigérateur après ouverture.",
+      usage: "Côtes de porc, pilons de poulet au barbecue, ribs, brochettes party.",
+      shippingInfo: "Expédition soignée sous 24-48h.",
+      crossSellIds: ["pack-famille-barbecue", "pikliz-traditionnel-merlie"]
     },
     {
-      id: "akasan-traditionnel-haitien",
-      name: "Akasan — Boisson au Maïs & Épices",
-      cardTitle: "Akasan Cho",
-      cardDesc: "Boisson douce réconfortante à la cannelle et anis",
-      name_ht: "Akasan Cho — Bwason Mayi ak Bon Epices",
-      subtitle: "Boisson traditionnelle réconfortante à la cannelle, anis et lait doux",
-      category: "akasan",
-      price: 7.50,
-      originalPrice: 9.00,
-      rating: 4.9,
-      reviewCount: 78,
-      isBestseller: false,
-      badge: "Nouveau",
-      images: ["./images/product-akasan.png"],
-      formats: [{ id: "500ml", name: "Bouteille 500ml", price: 7.50 }],
-      description: "Infusion lente de farine de maïs fin avec bâtons de cannelle, badiane et lait concentré."
-    },
-    {
-      id: "cham-cham-artisanal-gourmand",
-      name: "Cham-Cham Croustillant",
-      cardTitle: "Chanm-Chanm",
-      cardDesc: "Maïs torréfié moulu, cacahuètes grillées et cannelle douce",
-      name_ht: "Chanm-Chanm Kroustiyan",
-      subtitle: "Maïs torréfié moulu, cacahuètes grillées et cannelle douce",
-      category: "cham-cham",
-      price: 5.90,
-      originalPrice: 7.00,
-      rating: 4.7,
-      reviewCount: 52,
-      isBestseller: false,
-      badge: "Tradition",
-      images: ["./images/product-chanm-chanm.png"],
-      formats: [{ id: "250g", name: "Sachet 250g", price: 5.90 }],
-      description: "Le goûter d'enfance haïtien par excellence à base de maïs et cacahuètes grillées."
-    },
-    {
-      id: "comparette-artisanale-jeremie",
-      name: "Comparètte Artisanale de Jérémie",
-      cardTitle: "Comparètte Jérémie",
-      cardDesc: "Biscuit moelleux parfumé au gingembre et mélasse",
-      name_ht: "Konparèt Atizanal Jeremi",
-      subtitle: "Biscuit moelleux parfumé au gingembre et sirop de batterie",
-      category: "comparette",
-      price: 6.50,
-      originalPrice: 7.50,
-      rating: 4.9,
-      reviewCount: 88,
-      isBestseller: false,
-      badge: "Jérémie",
-      images: ["./images/product-comparette.png"],
-      formats: [{ id: "lot-4", name: "Paquet de 4 (350g)", price: 6.50 }],
-      description: "Spécialité légendaire de Jérémie au gingembre frais et mélasse de canne."
-    },
-    {
-      id: "pack-mamba-lover",
-      name: "Pack Mamba Miam’Addict + Cassave",
-      cardTitle: "Pack Miam’Addict",
-      cardDesc: "1 Mamba Doux 16 oz + 1 Mamba Pimenté 16 oz + Cassave Offerte !",
-      name_ht: "Pak Mamba Miam’Addict + Kasav",
-      subtitle: "1 Mamba Doux 16 oz + 1 Mamba Pimenté 16 oz + Cassave Offerte !",
+      id: "pack-decouverte-epis",
+      slug: "pack-decouverte-epis",
+      name: "Le Pack Découverte (Trio 3 × 250 g)",
+      cardTitle: "Pack Découverte (Trio)",
+      cardDesc: "1 Authentique + 1 Piquant + 1 Doux — Pour tester toute la gamme avec remise",
+      name_ht: "Pak Dekouvèt (Trio 3 × 250 g)",
+      subtitle: "1 Authentique + 1 Piquant + 1 Doux — Permet de tester toute la gamme avec une remise",
+      subtitle_ht: "1 Otantik + 1 Pikan + 1 Dous — Pèmèt ou goute tout seri a ak yon bèl rabè",
       category: "packs",
-      price: 32.50,
-      originalPrice: 38.80,
-      savingsPercentage: 16,
+      categoryName: "Packs & Bundles",
+      categoryName_ht: "Pak & Kado",
+      spiciness: "mix",
+      taste: "complet",
+      price: 22.90,
+      originalPrice: 24.30,
       rating: 5.0,
-      reviewCount: 92,
-      isBestseller: false,
-      badge: "Cassave Offerte",
-      images: ["./images/hero-slide-2.jpg"],
-      description: "Le pack exclusif dédié aux Miam’Addicts : le duo ultime de Mamba (Doux & Pimenté) accompagné de sa galette de cassave offerte."
+      reviewCount: 215,
+      isBestseller: true,
+      badge: "Trio Populaire ⭐",
+      badge_ht: "Pi Bon Vant ⭐",
+      inStock: true,
+      images: [
+        "./images/product-pack-decouverte.jpg",
+        "./images/product-epis-authentique.jpg"
+      ],
+      formats: [
+        { id: "trio", name: "Trio 3 x 250 g (750 g total)", price: 22.90, isDefault: true }
+      ],
+      variants: [
+        { id: "pack-trio", name: "1 Authentique + 1 Piquant + 1 Doux", name_ht: "1 Otantik + 1 Pikan + 1 Dous" }
+      ],
+      description: "Le pack phare pour découvrir l'univers de Merlie ! Permet de tester toute la gamme avec une remise par rapport à l'unité. Contenu : 1 Authentique (250 g) + 1 Piquant (250 g) + 1 Doux & Végétal (250 g).",
+      ingredients: "Ensemble des ingrédients des 3 recettes signatures (100% naturels, sans conservateurs ni additifs).",
+      storage: "Conserver au réfrigérateur après ouverture.",
+      usage: "Parfait pour alterner selon vos envies : le doux pour les enfants, le piquant pour le griyo, l'authentique pour le poulet et le riz collé.",
+      shippingInfo: "Livré dans un coffret de protection anti-casse soigné.",
+      crossSellIds: ["pikliz-traditionnel-merlie", "coffret-cadeau-saveurs-haiti"]
     },
     {
-      id: "pack-decouverte-saveurs",
-      name: "Pack Découverte — Saveurs Lakay",
-      cardTitle: "Pack Découverte",
-      cardDesc: "Coffret 4 spécialités : Mamba 16 oz, Cassave, Chocolat et Cham-Cham",
-      name_ht: "Pak Dekouvèt — Bon Gou Lakay",
-      subtitle: "Coffret 4 spécialités : Mamba 16 oz, Cassave, Chocolat et Cham-Cham",
+      id: "pack-famille-barbecue",
+      slug: "pack-famille-barbecue",
+      name: "Le Pack Famille & Barbecue (Duo 2 × 500 g)",
+      cardTitle: "Pack Famille & BBQ (1 kg)",
+      cardDesc: "2 grands bocaux de 500 g de l'Épis Authentique — Idéal grands repas et cuisiniers réguliers",
+      name_ht: "Pak Fanmi & Barbecue (Duo 2 × 500 g)",
+      subtitle: "2 grands bocaux de 500 g de l'Épis Authentique — Pensé pour cuisiniers réguliers et grands repas",
+      subtitle_ht: "2 gwo bokal 500 g Epis Otantik — Fèt pou moun ki kwit souvan ak gwo fèt",
       category: "packs",
+      categoryName: "Packs & Bundles",
+      categoryName_ht: "Pak & Kado",
+      spiciness: "doux",
+      taste: "authentique",
+      price: 21.90,
+      originalPrice: 25.00,
+      rating: 5.0,
+      reviewCount: 130,
+      isBestseller: true,
+      badge: "Format Éco 1 kg 🏆",
+      badge_ht: "Gwo Fòma 1 kg 🏆",
+      inStock: true,
+      images: [
+        "./images/product-pack-decouverte.jpg",
+        "./images/product-epis-authentique.jpg"
+      ],
+      formats: [
+        { id: "duo-500g", name: "Duo 2 x 500 g (1000 g)", price: 21.90, isDefault: true }
+      ],
+      variants: [
+        { id: "duo-famille", name: "2 x 500 g Authentique", name_ht: "2 x 500 g Otantik" }
+      ],
+      description: "Pensé pour les cuisiniers réguliers et les grands repas du week-end. Contenu : 2 grands bocaux de 500 g de la recette Authentique.",
+      ingredients: "Cives, ail, poivrons verts, persil plat, thym frais, clou de girofle, citron vert, huile d'olive.",
+      storage: "Conserver au réfrigérateur après ouverture. Se conserve plusieurs mois.",
+      usage: "Pour assaisonner de grandes quantités de viande, réceptions familiales, barbecues de fête et mijotés.",
+      shippingInfo: "Expédition protégée sous 24-48h.",
+      crossSellIds: ["pikliz-traditionnel-merlie", "epis-special-bbq"]
+    },
+    {
+      id: "coffret-cadeau-saveurs-haiti",
+      slug: "coffret-cadeau-saveurs-haiti",
+      name: "Le Coffret Cadeau « Saveurs d'Haïti »",
+      cardTitle: "Coffret Cadeau Prestige 🎁",
+      cardDesc: "Trio 3x250g + cuillère en bois artisanale + livret imprimé 5 recettes traditionnelles",
+      name_ht: "Bwat Kado « Saveurs d'Haïti »",
+      subtitle: "Trio 3x250g + cuillère artisanale en bois + livret imprimé de 5 recettes traditionnelles",
+      subtitle_ht: "Trio 3x250g + bèl kiyè an bwa atizanal + liv 5 bèl resèt tradisyonèl Merlie",
+      category: "packs",
+      categoryName: "Packs & Bundles",
+      categoryName_ht: "Pak & Kado",
+      spiciness: "mix",
+      taste: "gourmet",
       price: 29.90,
-      originalPrice: 36.20,
-      savingsPercentage: 18,
+      originalPrice: 35.00,
       rating: 5.0,
-      reviewCount: 165,
-      isBestseller: false,
-      badge: "Offre Spéciale -18%",
-      images: ["./images/hero-slide-2.jpg"],
-      description: "Le coffret idéal pour découvrir ou faire découvrir les trésors gastronomiques d'Haïti signés Miam’Icieuse."
+      reviewCount: 182,
+      isBestseller: true,
+      badge: "Coffret Cadeau 🎁",
+      badge_ht: "Bèl Kado 🎁",
+      inStock: true,
+      images: [
+        "./images/product-coffret-saveurs.jpg",
+        "./images/product-pack-decouverte.jpg"
+      ],
+      formats: [
+        { id: "coffret", name: "Coffret Cadeau Complet", price: 29.90, isDefault: true }
+      ],
+      variants: [
+        { id: "coffret-complet", name: "Coffret Prestige avec Accessoires", name_ht: "Bwat Kado ak Tout Akseswa" }
+      ],
+      description: "Le cadeau par excellence pour tous les passionnés de cuisine créole ! Contenu : Le Trio de bocaux 250 g + 1 cuillère de service artisanale en bois sculptée + 1 livret imprimé de 5 recettes traditionnelles de Merlie (Griyo, Poulet créole, Riz djon-djon, Tassot, Poisson gros sel).",
+      ingredients: "Ingrédients des 3 recettes d'épis artisanales, cuillère en bois naturel, livret papier glacé haute qualité.",
+      storage: "Conserver les bocaux au frais après ouverture.",
+      usage: "À offrir ou pour débuter une aventure culinaire authentique guidée par les astuces de Merlie.",
+      shippingInfo: "Emballage cadeau soigné avec ruban doré et carte personnalisable.",
+      crossSellIds: ["pikliz-traditionnel-merlie", "duo-essentiels-haiti"]
     },
     {
-      id: "pack-saveurs-d-haiti",
-      name: "Pack Prestige — Saveurs d'Haïti",
-      cardTitle: "Pack Prestige",
-      cardDesc: "Grand coffret 6 spécialités haïtiennes d'exception",
-      name_ht: "Pak Prestij — Tout Gou Dayiti",
-      subtitle: "Le grand coffret gastronomique réunissant tous les trésors de Miam’Icieuse",
-      category: "packs",
-      price: 54.90,
-      originalPrice: 66.80,
-      savingsPercentage: 18,
-      rating: 5.0,
-      reviewCount: 74,
+      id: "pikliz-traditionnel-merlie",
+      slug: "pikliz-traditionnel-merlie",
+      name: "Le Pikliz Traditionnel de Merlie (Bocal 350 g)",
+      cardTitle: "Pikliz Traditionnel 🥗",
+      cardDesc: "Condiment croquant et vinaigré — L'accompagnement obligatoire du Griyo et des fritures",
+      name_ht: "Pikliz Tradisyonèl Merlie (Bokal 350 g)",
+      subtitle: "Condiment croquant et vinaigré incontournable — L'accompagnement obligatoire du Griyo et fritures",
+      subtitle_ht: "Pikliz kroustiyan ak vinèg — Sa ou pa ka pa genyen ak Griyo ak tout fritay",
+      category: "condiments",
+      categoryName: "Condiments & Pikliz",
+      categoryName_ht: "Kondiman & Pikliz",
+      spiciness: "pimente",
+      taste: "vinaigre",
+      price: 6.90,
+      originalPrice: 7.90,
+      rating: 4.9,
+      reviewCount: 175,
       isBestseller: true,
-      badge: "Coffret Prestige",
-      images: ["./images/hero-slide-2.jpg"],
-      description: "Le summum de l'authenticité haïtienne dans un écrin d'exception : 2 pots de Mamba (32 oz et 16 oz), cassaves, chocolat pays, comparèttes et chanm-chanm."
+      badge: "Incontournable 🇭🇹",
+      badge_ht: "Endispansab 🇭🇹",
+      inStock: true,
+      images: [
+        "./images/product-pikliz.jpg",
+        "./images/product-duo-essentiels.jpg"
+      ],
+      formats: [
+        { id: "350g", name: "Bocal 350 g", price: 6.90, isDefault: true }
+      ],
+      variants: [
+        { id: "pikliz-classique", name: "Pikliz Artisanal Traditionnel", name_ht: "Pikliz Atizanal Tradisyonèl" }
+      ],
+      description: "Condiment croquant et vinaigré à base de chou blanc râpé, carottes, piments et agrumes. L'accompagnement obligatoire du Griyo et des fritures haïtiennes.",
+      ingredients: "Chou blanc croquant émincé, carottes râpées, piments habanero / cabri, échalotes, clous de girofle, jus de citron vert pressé, vinaigre de canne, sel marin.",
+      storage: "Conserver au réfrigérateur après ouverture. Se bonifie avec le temps.",
+      usage: "À servir généreusement avec du Griyo de porc, des bananes pesées, du tassot, des beignets marinades et viandes grillées.",
+      shippingInfo: "Expédié dans son bocal hermétique sécurisé sous 24-48h.",
+      crossSellIds: ["epis-authentique", "duo-essentiels-haiti"]
+    },
+    {
+      id: "duo-essentiels-haiti",
+      slug: "duo-essentiels-haiti",
+      name: "Le Duo « Essentiels d'Haïti »",
+      cardTitle: "Duo Essentiels d'Haïti 🥇",
+      cardDesc: "1 Épis Authentique (250 g) + 1 Pikliz Traditionnel (350 g) — L'accord parfait du dimanche",
+      name_ht: "Duo « Esansyèl Ayiti »",
+      subtitle: "1 Épis Authentique (250 g) + 1 Pikliz Traditionnel (350 g) — L'accord parfait pour le repas dominical",
+      subtitle_ht: "1 Epis Otantik (250 g) + 1 Pikliz Tradisyonèl (350 g) — Bèl akò pou manje dimanch",
+      category: "condiments",
+      categoryName: "Condiments & Essentiels",
+      categoryName_ht: "Kondiman & Esansyèl",
+      spiciness: "equilibre",
+      taste: "duo",
+      price: 13.90,
+      originalPrice: 14.80,
+      rating: 5.0,
+      reviewCount: 164,
+      isBestseller: true,
+      badge: "Duo Essentiel 🥇",
+      badge_ht: "Duo Esansyèl 🥇",
+      inStock: true,
+      images: [
+        "./images/product-duo-essentiels.jpg",
+        "./images/product-epis-authentique.jpg",
+        "./images/product-pikliz.jpg"
+      ],
+      formats: [
+        { id: "duo-pack", name: "1 Épis 250g + 1 Pikliz 350g", price: 13.90, isDefault: true }
+      ],
+      variants: [
+        { id: "duo-standard", name: "Duo Repas Dominical", name_ht: "Duo Manje Dimanch" }
+      ],
+      description: "L'accord parfait pour reproduire chez soi l'expérience d'un véritable repas dominical haïtien : marinade pour cuire viandes et sauces, et condiment croquant vinaigré pour accompagner vos assiettes.",
+      ingredients: "Contient 1 bocal d'Épis Authentique 250 g et 1 bocal de Pikliz Traditionnel 350 g.",
+      storage: "Conserver les deux bocaux au réfrigérateur après ouverture.",
+      usage: "Marine vos grillades à l'épis, faites frire vos bananes et servez avec le pikliz frais croquant.",
+      shippingInfo: "Emballage duo sécurisé anti-choc.",
+      crossSellIds: ["pack-decouverte-epis", "coffret-cadeau-saveurs-haiti"]
+    },
+    {
+      id: "seau-professionnel-2kg",
+      slug: "seau-professionnel-2kg",
+      name: "Le Seau Professionnel / Vrac (Format 2 kg)",
+      cardTitle: "Seau Pro / Vrac 2 kg 🏢",
+      cardDesc: "Espace Traiteurs & Pros — Seau hermétique sous vide d'Épis Authentique à prix dégressif",
+      name_ht: "Fòma Pwofesyonèl / Vrak (2 kg)",
+      subtitle: "Espace Traiteurs & Pros — Seau hermétique sous vide d'Épis Authentique à prix dégressif",
+      subtitle_ht: "Espas Restoran & Trètè — Gwo sevo sele Epis Otantik a pri espesyal",
+      category: "pros",
+      categoryName: "Espace Traiteurs & Pros",
+      categoryName_ht: "Espas Pwofesyonèl",
+      spiciness: "doux",
+      taste: "authentique",
+      price: 23.21,
+      originalPrice: 26.50,
+      rating: 5.0,
+      reviewCount: 68,
+      isBestseller: false,
+      badge: "Format Pro 2 kg (22€ HT)",
+      badge_ht: "Fòma Pro 2 kg",
+      inStock: true,
+      images: [
+        "./images/product-epis-authentique.jpg",
+        "./images/product-pack-decouverte.jpg"
+      ],
+      formats: [
+        { id: "seau-2kg", name: "Seau 2 kg (22,00 € HT / 23,21 € TTC)", price: 23.21, isDefault: true }
+      ],
+      variants: [
+        { id: "pro-authentique", name: "Recette Authentique Pro", name_ht: "Resèt Otantik Pro" }
+      ],
+      description: "Section « Espace Traiteurs & Pros » pour commander des poches/seaux sous vide à prix dégressif. 22,00 € HT (23,21 € TTC). Idéal pour restaurateurs, traiteurs événementiels et grandes célébrations.",
+      ingredients: "Cives fraîches, ail de qualité, poivrons verts, persil plat, thym, clou de girofle, citron vert, huile d'olive.",
+      storage: "Conserver au frais entre 2°C et 6°C.",
+      usage: "Pour assaisonnements en continu en cuisine professionnelle, marinades en bac gastro et banquets.",
+      shippingInfo: "Conditionnement professionnel sous vide avec fermeture hermétique.",
+      crossSellIds: ["epis-piquant", "duo-essentiels-haiti"]
+    },
+    {
+      id: "box-mensuelle-merlie",
+      slug: "box-mensuelle-merlie",
+      name: "La Box Mensuelle de Merlie",
+      cardTitle: "Box Mensuelle de Merlie 📦",
+      cardDesc: "Abonnement récurrent : 2 pots au choix + 1 fiche recette exclusive chaque mois",
+      name_ht: "Bwat Abònman Chak Mwa Merlie",
+      subtitle: "Abonnement récurrent sans engagement : 2 pots au choix + 1 fiche recette exclusive chaque mois",
+      subtitle_ht: "Abònman san angajman: 2 bokal chak mwa selon chwa w + 1 bèl resèt eksklizif",
+      category: "packs",
+      categoryName: "Packs & Bundles",
+      categoryName_ht: "Pak & Kado",
+      spiciness: "personnalise",
+      taste: "surprise",
+      price: 19.90,
+      originalPrice: 22.50,
+      rating: 5.0,
+      reviewCount: 89,
+      isBestseller: true,
+      badge: "Abonnement 19,90€/mois ✨",
+      badge_ht: "Abònman Chak Mwa ✨",
+      inStock: true,
+      images: [
+        "./images/product-coffret-saveurs.jpg",
+        "./images/product-pack-decouverte.jpg"
+      ],
+      formats: [
+        { id: "box-mensuelle", name: "Box Mensuelle (Livraison Réduite incluse)", price: 19.90, isDefault: true }
+      ],
+      variants: [
+        { id: "box-choix", name: "2 Pots au Choix + Fiche Recette", name_ht: "2 Bokal selon Chwa w + Resèt" }
+      ],
+      description: "La Box Mensuelle de Merlie — 19,90 € / mois (Livraison offerte ou réduite). Réception de 2 pots par mois (au choix du client) + 1 fiche recette exclusive de saison élaborée par Merlie. Sans engagement.",
+      ingredients: "2 bocaux artisanaux de votre choix + 1 fiche recette collector cartonnée.",
+      storage: "Conserver les bocaux au frais dès réception.",
+      usage: "Pour cuisiner créole toute l'année sans jamais manquer de marinade fraîche, et enrichir votre carnet de recettes.",
+      shippingInfo: "Expédiée automatiquement chaque mois.",
+      crossSellIds: ["coffret-cadeau-saveurs-haiti", "duo-essentiels-haiti"]
     }
   ];
 
@@ -256,14 +438,14 @@
   const videoTestimonials = [
     {
       id: "vid-1",
-      author: "Miam'Icieuse",
-      handle: "@miamicieuse",
+      author: "Le Secret de Merlie",
+      handle: "@lesecretremerlie",
       avatar: "./images/story-portrait.png",
       image: "./images/hero-slide-2.jpg",
       quote: "« N’attendez pas demain pour goûter ! Le goût de la pure satisfaction avec nos authentiques Kasav Okap et douceurs artisanales. »",
       productName: "Kasav Okap & Mamba",
       productId: "cassave-mamba-traditionnel-pack",
-      instagramUrl: "https://www.instagram.com/miamicieuse/reel/DVgZwcdjq-8/",
+      instagramUrl: "https://www.instagram.com/le secret de merlie/reel/DVgZwcdjq-8/",
       embedUrl: "https://www.instagram.com/reel/DVgZwcdjq-8/embed/"
     },
     {
@@ -275,7 +457,7 @@
       quote: "« Le piment bouk est dosé à la perfection ! Un vrai coup de foudre gourmand avec la cassave croustillante. Livraison rapide et soignée. »",
       productName: "Mamba Piman Bouk 32 oz",
       productId: "mamba-pimente-sale",
-      instagramUrl: "https://www.instagram.com/miamicieuse/reel/DVgZwcdjq-8/",
+      instagramUrl: "https://www.instagram.com/le secret de merlie/reel/DVgZwcdjq-8/",
       embedUrl: "https://www.instagram.com/reel/DVgZwcdjq-8/embed/"
     },
     {
@@ -287,7 +469,7 @@
       quote: "« Le chocolat pays au lait le matin, c'est un réconfort inégalable ! Du vrai cacao brut d'Haïti roulé à la main, un goût boisé unique. »",
       productName: "Chocolat Pays Pur Cacao",
       productId: "chocolat-cacao-haitien-baton",
-      instagramUrl: "https://www.instagram.com/miamicieuse/reel/DVgZwcdjq-8/",
+      instagramUrl: "https://www.instagram.com/le secret de merlie/reel/DVgZwcdjq-8/",
       embedUrl: "https://www.instagram.com/reel/DVgZwcdjq-8/embed/"
     },
     {
@@ -299,7 +481,7 @@
       quote: "« Rien ne vaut un bon Akasan crémeux bien chaud à l'anis étoilé et cannelle douce pour démarrer la journée en pleine forme ! »",
       productName: "Akasan Cho Traditionnel",
       productId: "akasan-traditionnel-haitien",
-      instagramUrl: "https://www.instagram.com/miamicieuse/reel/DVgZwcdjq-8/",
+      instagramUrl: "https://www.instagram.com/le secret de merlie/reel/DVgZwcdjq-8/",
       embedUrl: "https://www.instagram.com/reel/DVgZwcdjq-8/embed/"
     }
   ];
@@ -307,7 +489,7 @@
   // État du panier
   let cart = [];
   try {
-    cart = JSON.parse(localStorage.getItem('miamcieuse_cart') || '[]');
+    cart = JSON.parse(localStorage.getItem('le secret de merlie_cart') || '[]');
   } catch(e) {
     cart = [];
   }
@@ -315,7 +497,7 @@
   // État des favoris
   let favorites = [];
   try {
-    favorites = JSON.parse(localStorage.getItem('miamcieuse_favs') || '[]');
+    favorites = JSON.parse(localStorage.getItem('le secret de merlie_favs') || '[]');
   } catch(e) {
     favorites = [];
   }
@@ -332,14 +514,14 @@
 
   let currentLang = 'fr';
   try {
-    currentLang = localStorage.getItem('miamcieuse_lang') || 'fr';
+    currentLang = localStorage.getItem('le secret de merlie_lang') || 'fr';
   } catch(e) {
     currentLang = 'fr';
   }
 
   function saveCart() {
     try {
-      localStorage.setItem('miamcieuse_cart', JSON.stringify(cart));
+      localStorage.setItem('le secret de merlie_cart', JSON.stringify(cart));
     } catch(e) {}
     updateCartUI();
   }
@@ -433,7 +615,7 @@
     const waCartBtn = document.getElementById('cart-whatsapp-checkout-btn');
     if (waCartBtn) {
       const itemsText = cart.map(i => `- ${i.quantity}x ${i.name} (${(i.price * i.quantity).toFixed(2)} €)`).join('%0A');
-      const text = `Bonjour Miam’Icieuse 👋%0AJe souhaite finaliser ma commande sur WhatsApp :%0A${itemsText}%0ATotal : ${totalPrice.toFixed(2)} €`;
+      const text = `Bonjour Le Secret de Merlie 👋%0AJe souhaite finaliser ma commande sur WhatsApp :%0A${itemsText}%0ATotal : ${totalPrice.toFixed(2)} €`;
       waCartBtn.href = `https://wa.me/50939424419?text=${text}`;
     }
   }
@@ -462,11 +644,7 @@
 
     // Catégorie
     if (filterState.category && filterState.category !== 'all') {
-      if (filterState.category === 'biscuits') {
-        list = list.filter(p => p.category === 'biscuits' || p.category === 'comparette' || p.category === 'cham-cham');
-      } else {
-        list = list.filter(p => p.category === filterState.category);
-      }
+      list = list.filter(p => p.category === filterState.category);
     } else if (!filterState.searchQuery || filterState.searchQuery.trim().length === 0) {
       // Dans "Nos Meilleurs Produits" (vue par défaut), exclure les packs : ils ont leur section dédiée (#packs-anchor)
       list = list.filter(p => p.category !== 'packs');
@@ -509,7 +687,7 @@
   }
 
   function renderProductsGrid() {
-    const grid = document.querySelector('.popular-items-grid');
+    const grid = document.querySelector('.popular-items-grid') || document.querySelector('.popular-items-slider');
     if (!grid) return;
 
     const filtered = getFilteredProducts();
@@ -530,7 +708,7 @@
             <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
           </button>
           <div class="popular-image-wrap">
-            <img src="${(p.images && p.images[0]) || './images/product-mamba-pot.png'}" alt="${p.name}">
+            <img src="${(p.images && p.images[0]) || './images/product-epis-authentique.jpg'}" alt="${p.name}">
           </div>
           <h3 class="popular-item-title">${p.cardTitle || p.name}</h3>
           <p class="popular-item-desc">${p.cardDesc || p.subtitle || p.description}</p>
@@ -576,13 +754,11 @@
 
     // 3. Libellé de catégorie dans le modal
     const catLabels = {
-      all: "Tous les délices",
-      mamba: "Mamba Haïtien",
-      cassave: "Cassave Traditionnelle",
-      chocolat: "Chocolat Pur Cacao",
-      akasan: "Akasan Cho",
-      biscuits: "Biscuits & Gâteaux",
-      packs: "Packs & Coffrets"
+      all: "Toutes nos spécialités",
+      epis: "Épis Signatures (250 g)",
+      packs: "Packs & Bundles",
+      condiments: "Pikliz & Compléments",
+      pros: "Espace Traiteurs & Pros"
     };
     const catLabelEl = document.getElementById('filter-selected-category-text');
     if (catLabelEl) catLabelEl.textContent = catLabels[filterState.category] || "Tous les délices";
@@ -632,12 +808,12 @@
           <span>Recherches populaires</span>
         </div>
         <div class="hero-search-chips">
-          <button type="button" class="hero-search-chip" onclick="window.miamApp.quickSearch('Mamba')">🥜 Mamba</button>
-          <button type="button" class="hero-search-chip" onclick="window.miamApp.quickSearch('Cassave')">🥞 Cassave</button>
-          <button type="button" class="hero-search-chip" onclick="window.miamApp.quickSearch('Chocolat')">🍫 Chocolat Pays</button>
-          <button type="button" class="hero-search-chip" onclick="window.miamApp.quickSearch('Akasan')">🌽 Akasan Cho</button>
-          <button type="button" class="hero-search-chip" onclick="window.miamApp.quickSearch('Piment')">🌶️ Mamba Pimenté</button>
-          <button type="button" class="hero-search-chip" onclick="window.miamApp.quickSearch('Pack')">🎁 Packs Découverte</button>
+          <button type="button" class="hero-search-chip" onclick="window.miamApp.quickSearch('Authentique')">🌿 Épis Authentique</button>
+          <button type="button" class="hero-search-chip" onclick="window.miamApp.quickSearch('Piquant')">🌶️ Épis Piquant</button>
+          <button type="button" class="hero-search-chip" onclick="window.miamApp.quickSearch('Pikliz')">🥗 Pikliz Traditionnel</button>
+          <button type="button" class="hero-search-chip" onclick="window.miamApp.quickSearch('Barbecue')">🔥 Épis Grillades</button>
+          <button type="button" class="hero-search-chip" onclick="window.miamApp.quickSearch('Pack')">🎁 Pack Découverte</button>
+          <button type="button" class="hero-search-chip" onclick="window.miamApp.quickSearch('Box')">📦 Box Mensuelle</button>
         </div>
       `;
       return;
@@ -660,13 +836,13 @@
       dropdown.innerHTML = `
         <div class="hero-search-dropdown-header">
           <span>Résultats trouvés (${matches.length})</span>
-          <span style="font-size: 0.76rem; color: #cf0072; text-transform: none; font-weight: 700;">« ${q} »</span>
+          <span style="font-size: 0.76rem; color: #CC211C; text-transform: none; font-weight: 700;">« ${q} »</span>
         </div>
         <div class="hero-search-results-list">
           ${matches.slice(0, 5).map(p => `
             <div class="hero-search-item" onclick="window.miamApp.selectSearchResult('${p.id}')">
               <div class="hero-search-item-left">
-                <img src="${(p.images && p.images[0]) || './images/product-mamba-pot.png'}" alt="${p.name}" class="hero-search-item-thumb">
+                <img src="${(p.images && p.images[0]) || './images/product-epis-authentique.jpg'}" alt="${p.name}" class="hero-search-item-thumb">
                 <div class="hero-search-item-info">
                   <h4 class="hero-search-item-title">${p.cardTitle || p.name}</h4>
                   <p class="hero-search-item-cat">${p.subtitle || p.cardDesc || p.category}</p>
@@ -710,7 +886,7 @@
     {
       id: "comment-passer-commande",
       category: "order",
-      question: "Comment passer une commande sur le site Miam’Icieuse ?",
+      question: "Comment passer une commande sur le site Le Secret de Merlie ?",
       answer: "Vous pouvez commander directement en ligne en ajoutant vos spécialités au panier et en validant votre commande. Vous pouvez également commander en 1 clic via WhatsApp grâce au bouton présent sur chaque fiche produit : un message pré-rempli avec votre sélection de délices est instantanément transmis à notre équipe."
     },
     {
@@ -776,7 +952,7 @@
       category: "Culture & Terroir",
       readTime: "4 min de lecture",
       date: "10 Septembre 2026",
-      author: "L'Équipe Miam’Icieuse",
+      author: "L'Équipe Le Secret de Merlie",
       image: "./images/product-mamba-pot.jpg",
       summary: "Découvrez l'histoire fascinante du Mamba haïtien, ce beurre de cacahuète artisanal torréfié au goût inimitable, décliné en version douce ou relevée au piment bouk.",
       content: `
@@ -784,7 +960,7 @@
         <p>En Haïti, le <strong>Mamba</strong> n'est pas un simple beurre de cacahuète : c'est un monument de l'art de vivre et des petits-déjeuners partagés. Contrairement aux pâtes à tartiner industrielles chargées d'huiles de palme et de sucres raffinés, le Mamba traditionnel haïtien repose sur une méthode 100% naturelle.</p>
         <h3>Le secret : la torréfaction artisanale à cœur</h3>
         <p>Les arachides locales sont triées à la main, puis grillées à cœur dans de grands chaudrons en fonte. Cette torréfaction lente permet aux huiles naturelles de s'exprimer pleinement, libérant des arômes intenses de noisette grillée et de caramel toasté.</p>
-        <blockquote style="border-left: 4px solid #cf0072; padding: 16px 20px; background: #fdf0f7; font-style: italic; color: #12351c; margin: 20px 0; border-radius: 0 8px 8px 0; font-size: 15px;">
+        <blockquote style="border-left: 4px solid #CC211C; padding: 16px 20px; background: #FDF2F0; font-style: italic; color: #12351c; margin: 20px 0; border-radius: 0 8px 8px 0; font-size: 15px;">
           « Le Mamba, c'est le goût de la maison, la générosité des matins partagés et l'énergie pure de notre terroir. »
         </blockquote>
         <h3>Doux ou Piman Bouk : deux écoles, un même plaisir</h3>
@@ -797,12 +973,12 @@
       category: "Guides & Recettes",
       readTime: "7 min de lecture",
       date: "5 Septembre 2026",
-      author: "Miam’Icieuse",
+      author: "Le Secret de Merlie",
       image: "./images/product-cassave-mamba.jpg",
       summary: "Héritage direct des Taïnos, la galette de manioc pur est le compagnon idéal du Mamba. Découvrez nos meilleures astuces pour la savourer chaude, croustillante et gourmande.",
       content: `
       <p><strong>Comment manger la cassave haïtienne ?</strong> Avec du manba, accompagnée d'un chocolat chaud ou garnie pour l'apéritif, cette galette de manioc se prête à des envies très différentes. Que vous la découvriez pour la première fois ou que vous cherchiez une nouvelle façon de la servir, voici cinq idées pour composer un petit-déjeuner, un goûter ou une assiette à partager.</p>
-      <p>Chez Miam’Icieuse, nos cassaves se déclinent en plusieurs saveurs : nature, coco/cannelle et arachide. Pour les accompagner, notre manba est proposé pimenté ou non pimenté, sucré ou salé, en pots de 16 oz et 32 oz. Le choix de la cassave et de sa garniture permet de varier les associations sans multiplier les préparations.</p>
+      <p>Chez Le Secret de Merlie, nos cassaves se déclinent en plusieurs saveurs : nature, coco/cannelle et arachide. Pour les accompagner, notre manba est proposé pimenté ou non pimenté, sucré ou salé, en pots de 16 oz et 32 oz. Le choix de la cassave et de sa garniture permet de varier les associations sans multiplier les préparations.</p>
 
       <h2>Quelle cassave choisir pour votre préparation ?</h2>
       <p>La cassave nature est un bon point de départ pour découvrir le goût du manioc et essayer plusieurs accompagnements. Elle laisse une place généreuse à la garniture : manba, avocat, légumes ou préparation sucrée. Pour une première dégustation à plusieurs, coupez-la en portions et proposez les accompagnements séparément. Chacun pourra composer sa bouchée.</p>
@@ -835,7 +1011,7 @@
 
       <h2>Comment conserver les cassaves après ouverture ?</h2>
       <p>Refermez soigneusement le sachet après avoir prélevé vos portions, ou utilisez une boîte hermétique adaptée. Respectez les consignes de conservation inscrites sur l'emballage, notamment pour les cassaves garnies. Ne leur attribuez pas une durée unique : la date et les indications du produit choisi restent votre référence.</p>
-      <p>Conservez les garnitures séparément et assemblez vos tartines au moment de les déguster. Si vous souhaitez connaître les conditions de conservation d'une saveur avant votre achat, contactez Miam’Icieuse. Vous pourrez ainsi choisir la quantité adaptée à votre occasion et à votre rythme de consommation.</p>
+      <p>Conservez les garnitures séparément et assemblez vos tartines au moment de les déguster. Si vous souhaitez connaître les conditions de conservation d'une saveur avant votre achat, contactez Le Secret de Merlie. Vous pourrez ainsi choisir la quantité adaptée à votre occasion et à votre rythme de consommation.</p>
 
       <h2>Questions fréquentes sur la dégustation de la cassave</h2>
       <h3>Faut-il toujours manger la cassave chaude ?</h3>
@@ -843,7 +1019,7 @@
       <h3>Quel manba choisir avec une cassave nature ?</h3>
       <p>Choisissez d'abord sucré ou salé selon votre accompagnement, puis pimenté ou non pimenté selon votre goût. Les formats 16 oz et 32 oz vous permettent de choisir la quantité. Pour une tartine à la banane, essayez le non pimenté ; pour une bouchée d'apéritif, commencez par le salé.</p>
       <h3>Quelle saveur de cassave choisir pour commencer ?</h3>
-      <p>La nature permet de tester facilement plusieurs garnitures. La coco/cannelle et l'arachide offrent d'autres expériences de dégustation, y compris sans accompagnement. Découvrez les cassaves Miam’Icieuse dans la boutique et vérifiez les saveurs disponibles au moment de votre commande.</p>
+      <p>La nature permet de tester facilement plusieurs garnitures. La coco/cannelle et l'arachide offrent d'autres expériences de dégustation, y compris sans accompagnement. Découvrez les cassaves Le Secret de Merlie dans la boutique et vérifiez les saveurs disponibles au moment de votre commande.</p>
 
       `
     },
@@ -853,7 +1029,7 @@
       category: "Recettes Authentiques",
       readTime: "4 min de lecture",
       date: "20 Août 2026",
-      author: "Miam’Icieuse",
+      author: "Le Secret de Merlie",
       image: "./images/product-chocolat-cacao.jpg",
       summary: "Oubliez le chocolat en poudre industriel ! Apprenez à préparer le véritable chocolat pays haïtien au bâton de cacao pur, muscade, cannelle et zeste d'agrume.",
       content: `
@@ -861,7 +1037,7 @@
         <p>En Haïti, les fèves de cacao poussent sous la canopée tropicale de la Grand'Anse et du Nord. Récoltées à maturité, elles sont torréfiées puis broyées à chaud pour former une pâte dense roulée en bâtonnets.</p>
         <h3>Ingrédients pour 4 personnes :</h3>
         <ul>
-          <li>1 bâton de Chocolat Pays Miam’Icieuse (environ 100g râpé)</li>
+          <li>1 bâton de Chocolat Pays Le Secret de Merlie (environ 100g râpé)</li>
           <li>750 ml d'eau de source + 250 ml de lait concentré ou lait entier</li>
           <li>1 bâton de cannelle et 1/2 cuillère à café de muscade fraîchement râpée</li>
           <li>1 zeste de citron vert bio</li>
@@ -876,7 +1052,7 @@
       category: "Traditions & Saveurs",
       readTime: "6 min de lecture",
       date: "28 Août 2026",
-      author: "L'Équipe Miam’Icieuse",
+      author: "L'Équipe Le Secret de Merlie",
       image: "./images/product-akasan.png",
       summary: "Douce, onctueuse et parfumée à la cannelle, l'Akasan est la boisson chaude préférée des petits-déjeuners haïtiens. Plongez dans ses origines et sa recette.",
       content: `
@@ -892,14 +1068,14 @@
       category: "Recettes Créatives",
       readTime: "4 min de lecture",
       date: "02 Août 2026",
-      author: "Miam’Icieuse",
+      author: "Le Secret de Merlie",
       image: "./images/hero-feast.jpg",
-      summary: "Smoothie énergisant, sauce saté créole pour grillades, cookies au cœur fondant... Sublimez votre pot de Mamba Miam’Icieuse avec nos recettes faciles.",
+      summary: "Smoothie énergisant, sauce saté créole pour grillades, cookies au cœur fondant... Sublimez votre pot de Mamba Le Secret de Merlie avec nos recettes faciles.",
       content: `
         <h2>Faites entrer le Mamba dans toutes vos créations</h2>
         <p>Le Mamba est d'une polyvalence remarquable en cuisine. Voici des manières faciles d'émerveiller vos convives :</p>
         <h3>1. Le Smoothie Énergie Créole</h3>
-        <p>Mixez 1 banane mûre, 2 cuillères à soupe de Mamba Miam’Icieuse doux, 250ml de lait végétal, 1 cuillère à café de miel et une pincée de cannelle.</p>
+        <p>Mixez 1 banane mûre, 2 cuillères à soupe de Mamba Le Secret de Merlie doux, 250ml de lait végétal, 1 cuillère à café de miel et une pincée de cannelle.</p>
         <h3>2. Sauce Saté Créole pour Griot ou Grillades</h3>
         <p>Mélangez 3 cuillères de Mamba Pimenté avec un filet de jus de citron vert, une pointe de sauce soja, une gousse d'ail écrasée et un peu d'eau tiède pour émulsionner.</p>
         <h3>3. Cookies fondants cœur Mamba</h3>
@@ -1088,7 +1264,7 @@
           </div>
         </div>
 
-        <!-- Avantages & Engagements Miam’Icieuse -->
+        <!-- Avantages & Engagements Le Secret de Merlie -->
         <div class="delivery-perks-banner">
           <div class="delivery-perk-item">
             <div class="delivery-perk-icon">🎁</div>
@@ -1164,7 +1340,7 @@
           <div class="contact-info-card">
             <div>
               <span class="contact-info-tag">ATELIER ARTISANAL</span>
-              <h2 class="contact-info-title">Miam’Icieuse Haïti</h2>
+              <h2 class="contact-info-title">Le Secret de Merlie Haïti</h2>
               <p class="contact-info-tagline">
                 « Le goût de la pure satisfaction. »<br>
                 Nous préparons chaque commande avec amour et le respect rigoureux de nos traditions culinaires haïtiennes.
@@ -1188,11 +1364,11 @@
                 </div>
               </a>
 
-              <a href="mailto:Miamicieuse@gmail.com" class="contact-method-entry">
+              <a href="mailto:contact@lesecretremerlie.com" class="contact-method-entry">
                 <div class="contact-method-icon">✉️</div>
                 <div>
                   <div class="contact-method-label">Courrier Électronique</div>
-                  <div class="contact-method-val">Miamicieuse@gmail.com</div>
+                  <div class="contact-method-val">contact@lesecretremerlie.com</div>
                 </div>
               </a>
 
@@ -1216,7 +1392,7 @@
 
           <!-- Formulaire Droite (White Card) -->
           <div class="contact-form-box">
-            <span class="hero-banner-tag" style="background:#fce8f3; color:#aa005e; border-color:#fad1e8; margin-bottom:12px;">MESSAGE EN LIGNE</span>
+            <span class="hero-banner-tag" style="background:#FDF2F0; color:#CC211C; border-color:#fad1e8; margin-bottom:12px;">MESSAGE EN LIGNE</span>
             <h3 style="font-size:1.6rem; color:#12351c; margin:0 0 8px; font-weight:900;">Envoyez-nous un message</h3>
             <p style="color:#556758; font-size:14px; margin:0 0 24px; line-height:1.5;">Remplissez ce formulaire et notre service client vous répondra dans un délai de 24h ouvrées.</p>
 
@@ -1294,52 +1470,8 @@
             <span class="story-num-badge">01</span>
             <h2>La Genèse : Faire revivre le goût vrai</h2>
           </div>
-          <p class="story-lead">Miam’Icieuse est née d'un souvenir d'enfance profondément enraciné : l'odeur envoûtante des arachides fraîches que l'on torréfiait au lever du soleil dans la cour familiale en Haïti. Ce parfum chaud, boisé et toasté qui annonçait les plus doux petits-déjeuners.</p>
+          <p class="story-lead">Le Secret de Merlie est née d'un souvenir d'enfance profondément enraciné : l'odeur envoûtante des arachides fraîches que l'on torréfiait au lever du soleil dans la cour familiale en Haïti. Ce parfum chaud, boisé et toasté qui annonçait les plus doux petits-déjeuners.</p>
           <p>Face à l'omniprésence des pâtes industrielles saturées d'huiles hydrogénées et de conservateurs, nous avons pris un engagement solennel : <strong>rendre hommage au terroir haïtien en proposant des spécialités 100% artisanales, pures et généreuses.</strong></p>
-        </div>
-
-        <div class="story-full-section">
-          <div class="story-section-header">
-            <span class="story-num-badge">02</span>
-            <h2>L'Art de la Torréfaction et le Piman Bouk</h2>
-          </div>
-          <p>Notre Mamba n'est pas un simple beurre de cacahuète. Les arachides proviennent de nos terroirs locaux réputés pour leur saveur concentrée. Elles sont triées une à une à la main, puis torréfiées lentement sur feu doux dans de traditionnels chaudrons en fonte.</p>
-          <blockquote class="story-quote">
-            « Le Mamba, c'est l'essence du matin haïtien : la force de la terre, le croquant du pain ou de la cassave, et cette pointe de piment bouk qui fait frissonner le cœur. »
-          </blockquote>
-          <p>Pour notre version relevée, nous incorporons le véritable piment habanero haïtien (piman bouk). Le mariage entre l'onctuosité des cacahuètes et la chaleur piquante crée une explosion aromatique inimitable.</p>
-        </div>
-
-        <div class="story-full-section">
-          <div class="story-section-header">
-            <span class="story-num-badge">03</span>
-            <h2>La Kasav : Héritage sacré des Taïnos</h2>
-          </div>
-          <p>La cassave (kasav) est le trésor le plus résilient de la gastronomie des Caraïbes. Travaillée à partir de la racine de manioc doux, pressée dans les règles de l'art pour éliminer l'amidon liquide puis cuite à sec sur de grandes platines fumantes, elle est naturellement sans gluten et croustille sous la dent.</p>
-          <p>Manger une cassave chaude tartinée de Mamba Miam’Icieuse, c'est renouer avec des siècles d'artisanat culinaire transmis de génération en génération.</p>
-
-          <div class="story-values-grid">
-            <div class="story-value-card">
-              <div class="story-value-icon">🥜</div>
-              <h4>100% Terroir Haïtien</h4>
-              <p>Des arachides locales récoltées et transformées dans le respect des producteurs de notre île.</p>
-            </div>
-            <div class="story-value-card">
-              <div class="story-value-icon">🔥</div>
-              <h4>Torréfaction Douce</h4>
-              <p>Une cuisson lente au chaudron qui préserve les nutriments, les bonnes graisses et concentre les arômes.</p>
-            </div>
-            <div class="story-value-card">
-              <div class="story-value-icon">🌱</div>
-              <h4>Zéro Conservateur</h4>
-              <p>Aucune huile de palme, aucun additif artificiel. Uniquement des ingrédients sains et purs.</p>
-            </div>
-            <div class="story-value-card">
-              <div class="story-value-icon">❤️</div>
-              <h4>Fait avec Fierté</h4>
-              <p>Chaque bocal et chaque galette est préparé à la main avec une exigence absolue de qualité.</p>
-            </div>
-          </div>
         </div>
 
         <!-- CTA Bottom -->
@@ -1387,7 +1519,7 @@
         <div class="subpage-hero-container blog-hero-container">
           <div class="subpage-hero-content blog-hero-content">
             <span class="hero-banner-tag">JOURNAL GOURMAND</span>
-            <h1 class="subpage-hero-title blog-hero-title">Le Blog & Les Recettes <span>Miam’Icieuse</span></h1>
+            <h1 class="subpage-hero-title blog-hero-title">Le Blog & Les Recettes <span>Le Secret de Merlie</span></h1>
             <p class="subpage-hero-desc blog-hero-desc">Secrets de fabrication, histoires du terroir caribéen et idées de recettes faciles pour sublimer votre quotidien.</p>
             <div class="subpage-hero-badges blog-hero-badges">
               <span class="subpage-hero-stat blog-hero-stat">📚 <strong>5</strong> Articles & Recettes</span>
@@ -1478,14 +1610,14 @@
             <span>›</span>
             <a href="#" onclick="event.preventDefault(); window.miamApp.navigate('blog')">Blog & Recettes</a>
             <span>›</span>
-            <span style="font-weight:700; color:#cf0072;">${article.category}</span>
+            <span style="font-weight:700; color:#CC211C;">${article.category}</span>
           </nav>
         </div>
       </div>
 
       <article class="article-single-view">
         <header class="article-single-header">
-          <span class="badge" style="background:#fce8f3; color:#aa005e; padding:6px 14px; border-radius:8px; font-weight:800; font-size:12px; text-transform:uppercase; margin-bottom:14px; display:inline-block;">${article.category}</span>
+          <span class="badge" style="background:#FDF2F0; color:#CC211C; padding:6px 14px; border-radius:8px; font-weight:800; font-size:12px; text-transform:uppercase; margin-bottom:14px; display:inline-block;">${article.category}</span>
           <h1 class="article-single-title">${article.title}</h1>
           <div class="article-time-row" style="justify-content:center; font-size:14px; margin-bottom:24px;">
             <span>✍️ Par ${article.author}</span>
@@ -1528,6 +1660,55 @@
   // API Publique window.miamApp
   // ==========================================
   window.miamApp = {
+  scrollPopularCarousel: (direction) => {
+    const track = document.getElementById('popular-items-track');
+    if (!track) return;
+    const card = track.querySelector('.popular-card');
+    const scrollAmount = card ? (card.offsetWidth + 24) : 290;
+    track.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+  },
+
+  setTestimonial: (index) => {
+    const slides = document.querySelectorAll('.testimonials-story-slide');
+    const dots = document.querySelectorAll('.t-story-dot');
+    if (!slides.length) return;
+    const nextIdx = (index + slides.length) % slides.length;
+    slides.forEach((slide, idx) => {
+      if (idx === nextIdx) {
+        slide.classList.add('is-active');
+      } else {
+        slide.classList.remove('is-active');
+      }
+    });
+    dots.forEach((dot, idx) => {
+      if (idx === nextIdx) {
+        dot.classList.add('is-active');
+      } else {
+        dot.classList.remove('is-active');
+      }
+    });
+  },
+
+  nextTestimonial: () => {
+    const slides = document.querySelectorAll('.testimonials-story-slide');
+    if (!slides.length) return;
+    let currentIdx = 0;
+    slides.forEach((slide, idx) => {
+      if (slide.classList.contains('is-active')) currentIdx = idx;
+    });
+    window.miamApp.setTestimonial(currentIdx + 1);
+  },
+
+  prevTestimonial: () => {
+    const slides = document.querySelectorAll('.testimonials-story-slide');
+    if (!slides.length) return;
+    let currentIdx = 0;
+    slides.forEach((slide, idx) => {
+      if (slide.classList.contains('is-active')) currentIdx = idx;
+    });
+    window.miamApp.setTestimonial(currentIdx - 1);
+  },
+
     navigate: function(route, param) {
       if (this.closeMobileMenu) this.closeMobileMenu();
 
@@ -1804,7 +1985,7 @@
               <div style="position:relative; width:100%; height:100%; display:flex; align-items:center; justify-content:center; background:#071f10; overflow:hidden;">
                 <img src="${item.image}" alt="${item.productName}" style="width:100%; height:100%; object-fit:cover; opacity:0.88; filter: brightness(0.9);">
                 <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(7,31,16,0.2) 0%, rgba(7,31,16,0.65) 100%); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; padding:20px; text-align:center;">
-                  <a href="${item.instagramUrl}" target="_blank" rel="noopener" style="width:58px; height:58px; border-radius:50%; background:#cf0072; color:#ffffff; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 18px rgba(207,0,114,0.45); text-decoration:none; transform:scale(1); transition:transform 0.2s, background 0.2s; border:2px solid #ffffff; padding-left:3px;" onmouseenter="this.style.transform='scale(1.08)'; this.style.background='#aa005e'" onmouseleave="this.style.transform='scale(1)'; this.style.background='#cf0072'" title="Lire sur Instagram">
+                  <a href="${item.instagramUrl}" target="_blank" rel="noopener" style="width:58px; height:58px; border-radius:50%; background:#CC211C; color:#ffffff; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 18px rgba(204,33,28,0.45); text-decoration:none; transform:scale(1); transition:transform 0.2s, background 0.2s; border:2px solid #ffffff; padding-left:3px;" onmouseenter="this.style.transform='scale(1.08)'; this.style.background='#CC211C'" onmouseleave="this.style.transform='scale(1)'; this.style.background='#CC211C'" title="Lire sur Instagram">
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg>
                   </a>
                   <span style="color:#ffffff; font-weight:800; font-size:13px; letter-spacing:-0.01em; text-shadow:0 2px 8px rgba(0,0,0,0.6); display:flex; align-items:center; gap:6px;">
@@ -1858,7 +2039,7 @@
         showToast('Ajouté aux favoris ❤️');
       }
       try {
-        localStorage.setItem('miamcieuse_favs', JSON.stringify(favorites));
+        localStorage.setItem('le secret de merlie_favs', JSON.stringify(favorites));
       } catch(e) {}
     },
 
@@ -1892,6 +2073,39 @@
           btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
         }
       }
+    },
+
+    focusSearch: function() {
+      if (this.closeMobileMenu) this.closeMobileMenu();
+      const searchInput = document.getElementById('shop-search-input');
+      if (searchInput) {
+        searchInput.focus();
+        searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        const target = document.getElementById('best-products-anchor');
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+      }
+    },
+
+    openAccountModal: function() {
+      if (this.closeMobileMenu) this.closeMobileMenu();
+      showToast('👤 Espace Client : Connexion & suivi de commandes bientôt disponibles !');
+    },
+
+    toggleMobileCurrencyMenu: function(event) {
+      if (event) event.stopPropagation();
+      const menu = document.getElementById('mobile-currency-dropdown');
+      if (menu) {
+        menu.classList.toggle('is-open');
+      }
+    },
+
+    selectMobileCurrency: function(currCode, label) {
+      const codeEl = document.getElementById('mobile-currency-code');
+      if (codeEl) codeEl.textContent = label || currCode;
+      const menu = document.getElementById('mobile-currency-dropdown');
+      if (menu) menu.classList.remove('is-open');
+      showToast('Devise : ' + (label || currCode));
     },
 
     selectCollection: function(catId) {
@@ -1931,7 +2145,7 @@
       const itemId = (customData && customData.id) || id;
       const itemName = (customData && customData.name) || (p && (p.cardTitle || p.name));
       const itemPrice = (customData && customData.price) !== undefined ? customData.price : (p && p.price);
-      const itemImage = (customData && customData.image) || (p && p.images && p.images[0]) || './images/product-mamba-pot.png';
+      const itemImage = (customData && customData.image) || (p && p.images && p.images[0]) || './images/product-epis-authentique.jpg';
 
       const exist = cart.find(item => item.id === itemId);
       if (exist) {
@@ -2052,7 +2266,7 @@
             id: variantId,
             name: variantName,
             price: price,
-            image: (p.images && p.images[0]) || './images/product-mamba-pot.png'
+            image: (p.images && p.images[0]) || './images/product-epis-authentique.jpg'
           });
           window.miamApp.closeQuickView();
         };
@@ -2061,7 +2275,7 @@
       // Mise à jour du lien WhatsApp
       const waBtn = document.getElementById('quickview-whatsapp-btn');
       if (waBtn) {
-        const msg = `Bonjour Miam’Icieuse 👋\nJe souhaite commander :\n📦 ${variantName}\nPrix : ${price.toFixed(2)} €\nEst-il disponible pour livraison s'il vous plaît ?`;
+        const msg = `Bonjour Le Secret de Merlie 👋\nJe souhaite commander :\n📦 ${variantName}\nPrix : ${price.toFixed(2)} €\nEst-il disponible pour livraison s'il vous plaît ?`;
         waBtn.href = `https://wa.me/50939424419?text=${encodeURIComponent(msg)}`;
       }
     },
@@ -2086,7 +2300,7 @@
         variant: null
       };
 
-      const imgSrc = (p.images && p.images[0]) || './images/product-mamba-pot.png';
+      const imgSrc = (p.images && p.images[0]) || './images/product-epis-authentique.jpg';
 
       content.innerHTML = `
         <button class="modal-close-btn" onclick="window.miamApp.closeQuickView()" aria-label="Fermer la vue rapide">✕</button>
@@ -2095,7 +2309,7 @@
             <img src="${imgSrc}" alt="${p.name}" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div>
-            <span class="badge badge-pink" style="margin-bottom: 0.5rem; display: inline-block;">${p.badge || 'Miam’Icieuse'}</span>
+            <span class="badge badge-pink" style="margin-bottom: 0.5rem; display: inline-block;">${p.badge || 'Le Secret de Merlie'}</span>
             <h2 style="font-size: 1.65rem; margin-bottom: 0.35rem; color: var(--color-dark); font-family: 'Playfair Display', serif; line-height: 1.2;">${p.name}</h2>
             <p id="quickview-subtitle-display" style="color: var(--color-pink); font-weight: 700; margin-bottom: 0.65rem; font-size: 0.95rem;">${p.subtitle}</p>
             <div style="color: #F59E0B; margin-bottom: 0.85rem; font-size: 0.95rem;">★★★★★ <span style="color: #333; font-weight: 700;">${p.rating}</span> <span style="color: #888; font-size: 0.85rem;">(${p.reviewCount} avis vérifiés)</span></div>
@@ -2106,7 +2320,7 @@
             </div>
 
             ${isMamba ? `
-              <div style="background: #FDF9F4; border: 1px solid rgba(207,0,114,0.15); border-radius: 12px; padding: 1rem; margin-bottom: 1.25rem;">
+              <div style="background: #FDF9F4; border: 1px solid rgba(204,33,28,0.15); border-radius: 12px; padding: 1rem; margin-bottom: 1.25rem;">
                 <!-- 1. Format : 16 oz ou 32 oz -->
                 <div style="margin-bottom: 0.85rem;">
                   <div style="display:flex; justify-content:space-between; margin-bottom: 0.35rem;">
@@ -2189,7 +2403,7 @@
 
     switchLang: function(lang) {
       currentLang = lang;
-      try { localStorage.setItem('miamcieuse_lang', lang); } catch(e){}
+      try { localStorage.setItem('le secret de merlie_lang', lang); } catch(e){}
       showToast(lang === 'ht' ? 'Lang chanje an Kreyòl Ayisyen 🇭🇹' : 'Langue changée en Français 🇫🇷');
       document.querySelectorAll('.lang-btn').forEach(b => {
         b.classList.toggle('is-active', b.getAttribute('data-lang') === lang);
@@ -2552,7 +2766,42 @@
       mobDrawer.addEventListener('click', function(e) {
         if (e.target === mobDrawer) closeMob();
       });
-      document.querySelectorAll('.mobile-nav-item:not(.menu-dropdown-toggle)').forEach(item => item.addEventListener('click', closeMob));
+      mobDrawer.querySelectorAll('a.mobile-nav-item').forEach(item => item.addEventListener('click', closeMob));
     }
   });
 })();
+
+
+let testimonialsTimer = null;
+function initTestimonialsSlider() {
+  if (testimonialsTimer) {
+    clearInterval(testimonialsTimer);
+    testimonialsTimer = null;
+  }
+  const container = document.getElementById('testimonials-carousel-container');
+  if (!container) return;
+
+  testimonialsTimer = setInterval(() => {
+    if (window.miamApp && window.miamApp.nextTestimonial) {
+      window.miamApp.nextTestimonial();
+    }
+  }, 5000);
+
+  container.onmouseenter = () => {
+    if (testimonialsTimer) clearInterval(testimonialsTimer);
+  };
+  container.onmouseleave = () => {
+    if (testimonialsTimer) clearInterval(testimonialsTimer);
+    testimonialsTimer = setInterval(() => {
+      if (window.miamApp && window.miamApp.nextTestimonial) {
+        window.miamApp.nextTestimonial();
+      }
+    }, 5000);
+  };
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initTestimonialsSlider);
+} else {
+  initTestimonialsSlider();
+}

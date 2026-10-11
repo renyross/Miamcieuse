@@ -1,4 +1,4 @@
-// Articles du Journal Miam’Icieuse et Recettes traditionnelles optimisées SEO
+// Articles du Journal Le Secret de Merlie et Recettes traditionnelles optimisées SEO
 export const articles = [
   {
     id: "qu-est-ce-que-le-mamba-haitien",
@@ -10,7 +10,7 @@ export const articles = [
     readTime: "4 min de lecture",
     readTime_ht: "4 min lekti",
     date: "10 Septembre 2026",
-    author: "L'Équipe Miam’Icieuse",
+    author: "L'Équipe Le Secret de Merlie",
     image: "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=1200&q=85",
     summary: "Découvrez l'histoire fascinante du Mamba haïtien, ce beurre de cacahuète artisanal torréfié au goût inimitable, qui se décline aussi bien en version douce qu'en version relevée au piment bouk.",
     summary_ht: "Dekouvri istwa bèl mamba ayisyen an, bè pistach atizanal griye ki gen yon gou ekstraòdinè, kit li dous kit li fèt ak piman bouk.",
@@ -39,13 +39,13 @@ export const articles = [
     readTime: "7 min de lecture",
     readTime_ht: "7 min lekti",
     date: "5 Septembre 2026",
-    author: "Miam’Icieuse",
+    author: "Le Secret de Merlie",
     image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1200&q=85",
     summary: "Héritage direct des Taïnos, la galette de manioc pur est le compagnon idéal du Mamba. Découvrez nos meilleures astuces pour la savourer chaude, croustillante et gourmande.",
     summary_ht: "Eritaj zansèt Tayino yo, galèt manyòk la se pi bon zanmi Mamba. Men pi bon konsèy nou pou w jwi l byen cho e kroustiyan.",
     content: `
       <p><strong>Comment manger la cassave haïtienne ?</strong> Avec du manba, accompagnée d'un chocolat chaud ou garnie pour l'apéritif, cette galette de manioc se prête à des envies très différentes. Que vous la découvriez pour la première fois ou que vous cherchiez une nouvelle façon de la servir, voici cinq idées pour composer un petit-déjeuner, un goûter ou une assiette à partager.</p>
-      <p>Chez Miam’Icieuse, nos cassaves se déclinent en plusieurs saveurs : nature, coco/cannelle et arachide. Pour les accompagner, notre manba est proposé pimenté ou non pimenté, sucré ou salé, en pots de 16 oz et 32 oz. Le choix de la cassave et de sa garniture permet de varier les associations sans multiplier les préparations.</p>
+      <p>Chez Le Secret de Merlie, nos cassaves se déclinent en plusieurs saveurs : nature, coco/cannelle et arachide. Pour les accompagner, notre manba est proposé pimenté ou non pimenté, sucré ou salé, en pots de 16 oz et 32 oz. Le choix de la cassave et de sa garniture permet de varier les associations sans multiplier les préparations.</p>
 
       <h2>Quelle cassave choisir pour votre préparation ?</h2>
       <p>La cassave nature est un bon point de départ pour découvrir le goût du manioc et essayer plusieurs accompagnements. Elle laisse une place généreuse à la garniture : manba, avocat, légumes ou préparation sucrée. Pour une première dégustation à plusieurs, coupez-la en portions et proposez les accompagnements séparément. Chacun pourra composer sa bouchée.</p>
@@ -78,7 +78,7 @@ export const articles = [
 
       <h2>Comment conserver les cassaves après ouverture ?</h2>
       <p>Refermez soigneusement le sachet après avoir prélevé vos portions, ou utilisez une boîte hermétique adaptée. Respectez les consignes de conservation inscrites sur l'emballage, notamment pour les cassaves garnies. Ne leur attribuez pas une durée unique : la date et les indications du produit choisi restent votre référence.</p>
-      <p>Conservez les garnitures séparément et assemblez vos tartines au moment de les déguster. Si vous souhaitez connaître les conditions de conservation d'une saveur avant votre achat, contactez Miam’Icieuse. Vous pourrez ainsi choisir la quantité adaptée à votre occasion et à votre rythme de consommation.</p>
+      <p>Conservez les garnitures séparément et assemblez vos tartines au moment de les déguster. Si vous souhaitez connaître les conditions de conservation d'une saveur avant votre achat, contactez Le Secret de Merlie. Vous pourrez ainsi choisir la quantité adaptée à votre occasion et à votre rythme de consommation.</p>
 
       <h2>Questions fréquentes sur la dégustation de la cassave</h2>
       <h3>Faut-il toujours manger la cassave chaude ?</h3>
@@ -86,7 +86,7 @@ export const articles = [
       <h3>Quel manba choisir avec une cassave nature ?</h3>
       <p>Choisissez d'abord sucré ou salé selon votre accompagnement, puis pimenté ou non pimenté selon votre goût. Les formats 16 oz et 32 oz vous permettent de choisir la quantité. Pour une tartine à la banane, essayez le non pimenté ; pour une bouchée d'apéritif, commencez par le salé.</p>
       <h3>Quelle saveur de cassave choisir pour commencer ?</h3>
-      <p>La nature permet de tester facilement plusieurs garnitures. La coco/cannelle et l'arachide offrent d'autres expériences de dégustation, y compris sans accompagnement. Découvrez les cassaves Miam’Icieuse dans la boutique et vérifiez les saveurs disponibles au moment de votre commande.</p>
+      <p>La nature permet de tester facilement plusieurs garnitures. La coco/cannelle et l'arachide offrent d'autres expériences de dégustation, y compris sans accompagnement. Découvrez les cassaves Le Secret de Merlie dans la boutique et vérifiez les saveurs disponibles au moment de votre commande.</p>
 
       `
   },
@@ -100,7 +100,7 @@ export const articles = [
     readTime: "6 min de lecture",
     readTime_ht: "6 min lekti",
     date: "28 Août 2026",
-    author: "L'Équipe Miam’Icieuse",
+    author: "L'Équipe Le Secret de Merlie",
     image: "https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=1200&q=85",
     summary: "Douce, onctueuse et parfumée à la cannelle, l'Akasan est la boisson chaude préférée des petits-déjeuners haïtiens. Plongez dans ses origines et sa recette.",
     summary_ht: "Dous, krèm epi byen pafen ak kannèl, Akasan se bwason maten tout ayisyen renmen. Ann dekouvri istwa l ak resèt li.",
@@ -122,7 +122,7 @@ export const articles = [
     readTime: "4 min de lecture",
     readTime_ht: "4 min lekti",
     date: "20 Août 2026",
-    author: "Miam’Icieuse",
+    author: "Le Secret de Merlie",
     image: "https://images.unsplash.com/photo-1548848221-0c2e497ed557?auto=format&fit=crop&w=1200&q=85",
     summary: "Oubliez le chocolat en poudre industriel ! Apprenez à préparer le véritable chocolat pays haïtien au bâton de cacao pur, muscade, cannelle et zeste d'agrume.",
     summary_ht: "Bliye poud chokola nan bwat ! Aprann fè vrè chokola peyi a ak baton kakawo natirèl, miskad, kannèl ak zès sitwon.",
@@ -132,7 +132,7 @@ export const articles = [
       
       <h3>Ingrédients pour 4 personnes :</h3>
       <ul>
-        <li>1 bâton de Chocolat Pays Miam’Icieuse (100g râpé)</li>
+        <li>1 bâton de Chocolat Pays Le Secret de Merlie (100g râpé)</li>
         <li>750 ml d'eau de source + 250 ml de lait concentré ou lait entier</li>
         <li>1 bâton de cannelle</li>
         <li>1/2 cuillère à café de muscade fraîchement râpée</li>
@@ -152,7 +152,7 @@ export const articles = [
     readTime: "5 min de lecture",
     readTime_ht: "5 min lekti",
     date: "14 Août 2026",
-    author: "L'Équipe Miam’Icieuse",
+    author: "L'Équipe Le Secret de Merlie",
     image: "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=1200&q=85",
     summary: "Pourquoi le Mamba haïtien offre-t-il une saveur incomparablement plus riche que les beurres de cacahuètes classiques ? Analyse complète des ingrédients et du savoir-faire.",
     summary_ht: "Poukisa Mamba ayisyen an gen plis gou pase bè pistach endistriyèl yo ? Analiz konplè sou engredyan ak konesans zansèt nou yo.",
@@ -164,7 +164,7 @@ export const articles = [
       <p>Le Mamba haïtien bénéficie d'une torréfaction plus poussée et artisanale. Cela confère une couleur plus ambrée et une saveur toastée profonde qui dure en bouche.</p>
 
       <h3>2. La pureté des ingrédients</h3>
-      <p>Alors que la plupart des marques de grande distribution ajoutent des huiles de palme hydrogénées pour figer la pâte et du sirop de maïs à haute teneur en fructose, le Mamba Miam’Icieuse est 100% pur : des cacahuètes, du sel, et pour la version épicée, du piment bouk haïtien.</p>
+      <p>Alors que la plupart des marques de grande distribution ajoutent des huiles de palme hydrogénées pour figer la pâte et du sirop de maïs à haute teneur en fructose, le Mamba Le Secret de Merlie est 100% pur : des cacahuètes, du sel, et pour la version épicée, du piment bouk haïtien.</p>
     `
   },
   {
@@ -177,10 +177,10 @@ export const articles = [
     readTime: "4 min de lecture",
     readTime_ht: "4 min lekti",
     date: "02 Août 2026",
-    author: "Miam’Icieuse",
+    author: "Le Secret de Merlie",
     image: "https://images.unsplash.com/photo-1541832676-9b763b0239ab?auto=format&fit=crop&w=1200&q=85",
-    summary: "Smoothie énergisant, sauce saté créole pour grillades, cookies au cœur fondant... Sublimez votre pot de Mamba Miam’Icieuse avec nos recettes faciles.",
-    summary_ht: "Smoothie plen fòs, sòs pistach pou griyad, bonbon bon gou... Mete Mamba Miam’Icieuse ou an valè ak ti resèt senp sa yo.",
+    summary: "Smoothie énergisant, sauce saté créole pour grillades, cookies au cœur fondant... Sublimez votre pot de Mamba Le Secret de Merlie avec nos recettes faciles.",
+    summary_ht: "Smoothie plen fòs, sòs pistach pou griyad, bonbon bon gou... Mete Mamba Le Secret de Merlie ou an valè ak ti resèt senp sa yo.",
     featured_image: "./images/product-mamba-pot.png",
     tags: ["Mamba", "Recettes Faciles", "Cuisine Créole"],
     content: `
@@ -188,7 +188,7 @@ export const articles = [
       <p>Le Mamba est d'une polyvalence remarquable en cuisine. Voici 5 manières faciles d'émerveiller vos convives :</p>
       
       <h3>1. Le Smoothie Énergie Matin Mamba-Banane</h3>
-      <p>Mixez 1 banane mûre, 2 cuillères à soupe de Mamba Miam’Icieuse doux, 250ml de lait d'amande ou d'avoine, 1 cuillère à café de miel et une pincée de cannelle.</p>
+      <p>Mixez 1 banane mûre, 2 cuillères à soupe de Mamba Le Secret de Merlie doux, 250ml de lait d'amande ou d'avoine, 1 cuillère à café de miel et une pincée de cannelle.</p>
 
       <h3>2. Sauce Saté Créole pour Griot ou Poulet grillé</h3>
       <p>Mélangez 3 cuillères de Mamba Pimenté avec un filet de jus de citron vert, une pointe de sauce soja, une gousse d'ail écrasée et un peu d'eau tiède pour émulsionner.</p>

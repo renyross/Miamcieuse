@@ -1,4 +1,4 @@
-// Foire aux questions (FAQ) Miam’Icieuse avec support bilingue
+// Foire aux questions (FAQ) Le Secret de Merlie avec support bilingue
 export const faqCategories = [
   { id: "all", name: "Toutes les questions", name_ht: "Tout Kesyon yo" },
   { id: "order", name: "Commandes & WhatsApp", name_ht: "Kòmand & WhatsApp" },
@@ -11,8 +11,8 @@ export const faqItems = [
   {
     id: "comment-passer-commande",
     category: "order",
-    question: "Comment passer une commande sur le site Miam’Icieuse ?",
-    question_ht: "Kijan pou m pase yon kòmand sou sit Miam’Icieuse la ?",
+    question: "Comment passer une commande sur le site Le Secret de Merlie ?",
+    question_ht: "Kijan pou m pase yon kòmand sou sit Le Secret de Merlie la ?",
     answer: "Vous pouvez commander directement en ligne en ajoutant vos produits au panier et en validant votre paiement sécurisé (CB/Stripe ou PayPal). Vous pouvez également commander en 1 clic via WhatsApp grâce au bouton présent sur chaque fiche produit : un message pré-rempli avec votre sélection est généré automatiquement.",
     answer_ht: "Ou ka kòmande dirèkteman sou sit la lè w ajoute pwodui yo nan panyen w lan epi peye an sekirite (Kat labank/Stripe oswa PayPal). Ou ka kòmande tou an 1 klik sou WhatsApp ak bouton ki sou paj pwodui a : yon mesaj otomatik ap prepare pou ou touswit."
   },
@@ -69,8 +69,8 @@ export const faqItems = [
     category: "products",
     question: "Quelles sont les variétés et formats de Mamba disponibles ?",
     question_ht: "Ki varyete ak gwosè Mamba ki disponib ?",
-    answer: "Nos beurres de cacahuètes Miam’Icieuse sont disponibles en 4 délicieuses déclinaisons : Pimenté ou Non pimenté, et Sucré ou Salé. Chaque variété est proposée en format standard 16 oz (environ 454g) et en grand format généreux 32 oz (environ 908g).",
-    answer_ht: "Bè pistach Miam’Icieuse yo disponib nan 4 bèl opsyon : Piman bouk oswa San piman, epi Sikre oswa Sale. Chak varyete fèt nan fòma 16 oz (454g) ak gwo fòma 32 oz (908g)."
+    answer: "Nos beurres de cacahuètes Le Secret de Merlie sont disponibles en 4 délicieuses déclinaisons : Pimenté ou Non pimenté, et Sucré ou Salé. Chaque variété est proposée en format standard 16 oz (environ 454g) et en grand format généreux 32 oz (environ 908g).",
+    answer_ht: "Bè pistach Le Secret de Merlie yo disponib nan 4 bèl opsyon : Piman bouk oswa San piman, epi Sikre oswa Sale. Chak varyete fèt nan fòma 16 oz (454g) ak gwo fòma 32 oz (908g)."
   },
   {
     id: "mamba-pimente-degre",
@@ -89,11 +89,11 @@ export const faqItems = [
     answer_ht: "Wi san mank ! Pak Gouman nou yo (Pak Dekouvèt, Pak Mamba Miam’Addict, Pak Prestij) pèmèt ou fè ekonomi jiska -18% konpare ak si w t ap achte yo grenn pa grenn, nan yon bèl bwat kado."
   },
   {
-    id: "contacter-miamcieuse",
+    id: "contacter-le secret de merlie",
     category: "order",
-    question: "Comment contacter le service client de Miam’Icieuse ?",
-    question_ht: "Kijan pou m kontakte sèvis kliyan Miam’Icieuse ?",
-    answer: "Notre équipe est disponible 7j/7 ! Vous pouvez nous écrire directement sur WhatsApp au +509 39 42 4419, utiliser le formulaire de la page Contact, ou nous envoyer un message sur Instagram / Facebook @miamcieuse.",
-    answer_ht: "Ekip nou an disponib 7 jou sou 7 ! Ou ka ekri nou dirèkteman sou WhatsApp nan +509 39 42 4419, sèvi ak fòmilè kontak la, oswa voye yon mesaj sou Instagram / Facebook @miamcieuse."
+    question: "Comment contacter le service client de Le Secret de Merlie ?",
+    question_ht: "Kijan pou m kontakte sèvis kliyan Le Secret de Merlie ?",
+    answer: "Notre équipe est disponible 7j/7 ! Vous pouvez nous écrire directement sur WhatsApp au +509 39 42 4419, utiliser le formulaire de la page Contact, ou nous envoyer un message sur Instagram / Facebook @lesecretremerlie.",
+    answer_ht: "Ekip nou an disponib 7 jou sou 7 ! Ou ka ekri nou dirèkteman sou WhatsApp nan +509 39 42 4419, sèvi ak fòmilè kontak la, oswa voye yon mesaj sou Instagram / Facebook @lesecretremerlie."
   }
 ];

@@ -1,5 +1,5 @@
 /* ===================================================
-   MIAM'CIEUSE — UI Components (Style Moderne & Dynamique)
+   LE SECRET DE MERLIE — UI Components (Style Moderne & Dynamique)
    =================================================== */
 
 /* Boutons */
@@ -33,7 +33,7 @@
 
 .btn-primary:hover {
   background-color: var(--color-pink-hover);
-  box-shadow: 0 12px 32px rgba(230, 0, 126, 0.45);
+  box-shadow: 0 12px 32px rgba(204, 33, 28, 0.45);
   transform: translateY(-2px);
 }
 
@@ -187,9 +187,9 @@
 
 /* Première carte en couleur vive (Style Hero Card de la référence) */
 .product-card-modern.is-hero-accent {
-  background: linear-gradient(145deg, #cf0072 0%, #C4006B 100%);
+  background: linear-gradient(145deg, #CC211C 0%, #B21A15 100%);
   color: #FFFFFF;
-  box-shadow: 0 14px 35px rgba(230, 0, 126, 0.3);
+  box-shadow: 0 14px 35px rgba(204, 33, 28, 0.3);
 }
 
 .product-card-modern.is-hero-accent .product-card-title,
@@ -393,7 +393,7 @@
 .form-input:focus, .form-select:focus, .form-textarea:focus {
   outline: none;
   border-color: var(--color-pink);
-  box-shadow: 0 0 0 3px rgba(230, 0, 126, 0.15);
+  box-shadow: 0 0 0 3px rgba(204, 33, 28, 0.15);
 }
 
 .form-textarea {

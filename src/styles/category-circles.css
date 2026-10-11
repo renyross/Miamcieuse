@@ -1,5 +1,5 @@
 /* ===================================================
-   MIAM'CIEUSE — Section Sélecteur de Catégories
+   LE SECRET DE MERLIE — Section Sélecteur de Catégories
    Rondelles nettement réduites en taille et en arrondi
    (Format compact épuré avec coins adoucis 10px au lieu de cercles)
    =================================================== */
@@ -95,13 +95,13 @@
 /* ÉTAT ACTIF (Cercle 100% rond avec contour rouge franc) */
 .category-circle-item.is-active .category-circle-bubble {
   border-radius: 50%;
-  outline: 2.5px solid #cf0072;
+  outline: 2.5px solid #CC211C;
   outline-offset: 3px;
   box-shadow: 0 6px 16px rgba(196, 18, 32, 0.2);
 }
 
 .category-circle-item.is-active .category-circle-label {
-  color: #cf0072;
+  color: #CC211C;
   font-weight: 800;
 }
 
@@ -206,3 +206,14 @@
   }
 }
 
+
+
+
+/* Suppression définitive de la section des rondelles de catégories */
+.category-circles-section {
+  display: none !important;
+  height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+}

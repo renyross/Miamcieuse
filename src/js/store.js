@@ -1,12 +1,12 @@
-// Gestion de l'état global réactif de l'application Miam’Icieuse
+// Gestion de l'état global réactif de l'application Le Secret de Merlie
 import { products } from '../data/products.js';
 import { translations } from '../data/translations.js';
 
 class Store {
   constructor() {
     this.state = {
-      lang: localStorage.getItem('miamcieuse_lang') || 'fr',
-      cart: JSON.parse(localStorage.getItem('miamcieuse_cart') || '[]'),
+      lang: localStorage.getItem('le secret de merlie_lang') || 'fr',
+      cart: JSON.parse(localStorage.getItem('le secret de merlie_cart') || '[]'),
       activeRoute: 'home', // 'home', 'shop', 'product', 'packs', 'story', 'blog', 'article', 'faq', 'contact'
       currentProductId: null,
       currentArticleId: null,
@@ -42,7 +42,7 @@ class Store {
   setLanguage(lang) {
     if (['fr', 'ht'].includes(lang)) {
       this.state.lang = lang;
-      localStorage.setItem('miamcieuse_lang', lang);
+      localStorage.setItem('le secret de merlie_lang', lang);
       document.documentElement.lang = lang === 'ht' ? 'ht' : 'fr';
       this.notify();
     }
@@ -124,7 +124,7 @@ class Store {
   }
 
   saveCart() {
-    localStorage.setItem('miamcieuse_cart', JSON.stringify(this.state.cart));
+    localStorage.setItem('le secret de merlie_cart', JSON.stringify(this.state.cart));
   }
 
   getCartTotals() {
@@ -157,7 +157,7 @@ class Store {
       this.state.appliedPromoCode = cleanCode;
       this.state.promoDiscount = 0.15; // 15% de réduction
       this.notify();
-      return { success: true, message: 'Code promo Club Miam’Addict -15% appliqué !' };
+      return { success: true, message: 'Code promo Club Le Secret de Merlie -15% appliqué !' };
     }
     return { success: false, message: 'Code promo invalide.' };
   }

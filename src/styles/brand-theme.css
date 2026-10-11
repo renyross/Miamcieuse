@@ -1,7 +1,7 @@
-/* Charte Miam'cieuse : vert profond, fuchsia et surfaces claires. */
+/* Charte Le Secret de Merlie : vert profond, fuchsia et surfaces claires. */
 :root {
   --brand-green: #07521c;
-  --brand-fuchsia: #cf0072;
+  --brand-fuchsia: #CC211C;
   --text-main: #12351c;
   --text-muted: #58665a;
   --border-color: #dce7da;
@@ -24,7 +24,7 @@
 .home-offer-button:hover,
 .home-packs-section .pack-card .btn:hover,
 .home-club-section .newsletter-form .btn:hover {
-  background: #aa005e;
+  background: #CC211C;
   color: #fff;
 }
 .home-offer-button span { color: var(--brand-fuchsia); }
@@ -42,4 +42,4 @@
 .home-club-section .newsletter-card { border: 1px solid #315b3b; }
 .site-footer a:focus-visible,
 button:focus-visible,
-.popular-view-all:focus-visible { outline: 3px solid #cf0072; outline-offset: 3px; }
+.popular-view-all:focus-visible { outline: 3px solid #CC211C; outline-offset: 3px; }

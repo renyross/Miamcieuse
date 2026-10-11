@@ -1,5 +1,5 @@
 /* ===================================================
-   MIAM'CIEUSE — Section Hero Style Food App (Capture de Référence)
+   LE SECRET DE MERLIE — Section Hero Style Food App (Capture de Référence)
    =================================================== */
 
 .hero-app-section {
@@ -39,7 +39,7 @@
 .greeting-brand {
   font-size: 2.2rem;
   font-weight: 900;
-  color: #cf0072;
+  color: #CC211C;
   font-family: 'Plus Jakarta Sans', var(--font-sans), sans-serif;
   letter-spacing: -0.025em;
   margin: 0;
@@ -75,7 +75,7 @@
 .hero-square-icon-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  color: #cf0072;
+  color: #CC211C;
 }
 
 .hero-square-icon-btn:active {
@@ -93,7 +93,7 @@
   position: absolute;
   top: -4px;
   right: -4px;
-  background: #cf0072;
+  background: #CC211C;
   color: #FFFFFF;
   font-size: 0.7rem;
   font-weight: 800;
@@ -179,7 +179,7 @@
 }
 
 .hero-search-clear-btn:hover {
-  background: #cf0072;
+  background: #CC211C;
   color: #FFFFFF;
   transform: scale(1.1);
 }
@@ -249,9 +249,9 @@
 }
 
 .hero-search-chip:hover {
-  background: #cf0072;
+  background: #CC211C;
   color: #FFFFFF;
-  border-color: #cf0072;
+  border-color: #CC211C;
   transform: translateY(-1px);
 }
 
@@ -330,7 +330,7 @@
 .hero-search-item-price {
   font-weight: 800;
   font-size: 0.95rem;
-  color: #cf0072;
+  color: #CC211C;
 }
 
 .hero-search-item-btn {
@@ -338,8 +338,8 @@
   height: 32px;
   border-radius: 8px;
   border: none;
-  background: #FDF2F7;
-  color: #cf0072;
+  background: #FFF5F5;
+  color: #CC211C;
   font-weight: 800;
   font-size: 1.1rem;
   display: flex;
@@ -351,7 +351,7 @@
 }
 
 .hero-search-item-btn:hover {
-  background: #cf0072;
+  background: #CC211C;
   color: #FFFFFF;
   transform: scale(1.08);
 }
@@ -376,7 +376,7 @@
 }
 
 .hero-search-footer-link:hover {
-  color: #cf0072;
+  color: #CC211C;
 }
 
 .hero-search-empty {
@@ -517,7 +517,7 @@
 
 /* Bouton "Commander Maintenant" */
 .hero-order-now-btn {
-  background: #cf0072;
+  background: #CC211C;
   color: #FFFFFF;
   border: none;
   border-radius: 14px;
@@ -534,7 +534,7 @@
 }
 
 .hero-order-now-btn:hover {
-  background: #aa005e;
+  background: #CC211C;
   transform: translateY(-3px) scale(1.03);
   box-shadow: 0 12px 30px rgba(230, 0, 0, 0.6);
 }
@@ -549,7 +549,7 @@
   height: 30px;
   border-radius: 10px;
   background: #FFFFFF;
-  color: #cf0072;
+  color: #CC211C;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -588,8 +588,8 @@
 }
 
 .hero-slide-arrow:hover {
-  background: #cf0072;
-  border-color: #cf0072;
+  background: #CC211C;
+  border-color: #CC211C;
   transform: translateY(-50%) scale(1.1);
   box-shadow: 0 6px 18px rgba(230, 0, 0, 0.4);
 }
@@ -633,7 +633,7 @@
 .hero-dot.is-active {
   width: 24px;
   border-radius: 3px;
-  background: #cf0072;
+  background: #CC211C;
   box-shadow: 0 0 10px rgba(230, 0, 0, 0.7);
 }
 

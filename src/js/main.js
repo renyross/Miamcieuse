@@ -1,4 +1,4 @@
-// Application Principale MIAM'CIEUSE — Point d'entrée et orchestration
+// Application Principale LE SECRET DE MERLIE — Point d'entrée et orchestration
 import '../styles/variables.css';
 import '../styles/base.css';
 import '../styles/components.css';
@@ -120,7 +120,7 @@ function initMobileMenu() {
       if (e.target === mobileBackdrop) closeMenu();
     });
 
-    document.querySelectorAll('.mobile-nav-item:not(.menu-dropdown-toggle)').forEach(item => {
+    mobileBackdrop.querySelectorAll('a.mobile-nav-item').forEach(item => {
       item.addEventListener('click', () => closeMenu());
     });
   }
@@ -140,6 +140,55 @@ function initStickyHeader() {
 
 // Initialisation de l'API globale pour les interactions utilisateur
 window.miamApp = {
+  scrollPopularCarousel: (direction) => {
+    const track = document.getElementById('popular-items-track');
+    if (!track) return;
+    const card = track.querySelector('.popular-card');
+    const scrollAmount = card ? (card.offsetWidth + 24) : 290;
+    track.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+  },
+
+  setTestimonial: (index) => {
+    const slides = document.querySelectorAll('.testimonials-story-slide');
+    const dots = document.querySelectorAll('.t-story-dot');
+    if (!slides.length) return;
+    const nextIdx = (index + slides.length) % slides.length;
+    slides.forEach((slide, idx) => {
+      if (idx === nextIdx) {
+        slide.classList.add('is-active');
+      } else {
+        slide.classList.remove('is-active');
+      }
+    });
+    dots.forEach((dot, idx) => {
+      if (idx === nextIdx) {
+        dot.classList.add('is-active');
+      } else {
+        dot.classList.remove('is-active');
+      }
+    });
+  },
+
+  nextTestimonial: () => {
+    const slides = document.querySelectorAll('.testimonials-story-slide');
+    if (!slides.length) return;
+    let currentIdx = 0;
+    slides.forEach((slide, idx) => {
+      if (slide.classList.contains('is-active')) currentIdx = idx;
+    });
+    window.miamApp.setTestimonial(currentIdx + 1);
+  },
+
+  prevTestimonial: () => {
+    const slides = document.querySelectorAll('.testimonials-story-slide');
+    if (!slides.length) return;
+    let currentIdx = 0;
+    slides.forEach((slide, idx) => {
+      if (slide.classList.contains('is-active')) currentIdx = idx;
+    });
+    window.miamApp.setTestimonial(currentIdx - 1);
+  },
+
   navigate: (route, params) => store.navigate(route, params),
   
   viewProduct: (productId) => store.navigate('product', { productId }),
@@ -434,4 +483,39 @@ function updateFloatingWhatsApp() {
   if (btn) {
     btn.href = getGeneralWhatsAppUrl(store.getState().lang);
   }
+}
+
+
+let testimonialsTimer = null;
+function initTestimonialsSlider() {
+  if (testimonialsTimer) {
+    clearInterval(testimonialsTimer);
+    testimonialsTimer = null;
+  }
+  const container = document.getElementById('testimonials-carousel-container');
+  if (!container) return;
+
+  testimonialsTimer = setInterval(() => {
+    if (window.miamApp && window.miamApp.nextTestimonial) {
+      window.miamApp.nextTestimonial();
+    }
+  }, 5000);
+
+  container.onmouseenter = () => {
+    if (testimonialsTimer) clearInterval(testimonialsTimer);
+  };
+  container.onmouseleave = () => {
+    if (testimonialsTimer) clearInterval(testimonialsTimer);
+    testimonialsTimer = setInterval(() => {
+      if (window.miamApp && window.miamApp.nextTestimonial) {
+        window.miamApp.nextTestimonial();
+      }
+    }, 5000);
+  };
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initTestimonialsSlider);
+} else {
+  initTestimonialsSlider();
 }

@@ -1,0 +1,40 @@
+/* Product collection — logo palette, scoped to the homepage. */
+#best-products-anchor { background: #f7faf5 !important; padding: 48px 24px !important; color: #153b20; }
+#best-products-anchor > .container { width: 100% !important; max-width: 1280px !important; margin-inline: auto !important; padding: 0 !important; }
+#best-products-anchor .popular-header-bar { display:flex; align-items:center; justify-content:space-between; gap:24px; margin-bottom:32px; }
+#best-products-anchor .popular-title { color:#153b20 !important; font-size:clamp(25px,3vw,36px) !important; letter-spacing:-.04em; line-height:1.2; }
+#best-products-anchor .popular-header-right { display:flex; align-items:center; gap:24px; }
+#best-products-anchor .popular-view-all { color:#153b20 !important; }
+#best-products-anchor .popular-arrow { color:#cc211c !important; }
+#best-products-anchor .popular-nav-arrows { display:flex; gap:8px; }
+#best-products-anchor .popular-circle-arrow-btn { width:44px; height:44px; border:1px solid #d9e3d5 !important; border-radius:50%; background:#fff !important; color:#07521c !important; }
+#best-products-anchor #popular-items-track { display:flex !important; gap:20px !important; overflow-x:auto !important; padding:0 0 16px !important; scroll-snap-type:x mandatory; scrollbar-width:thin; scrollbar-color:#cad8c6 transparent; }
+#best-products-anchor .popular-card { flex:0 0 calc((100% - 60px)/4) !important; min-width:0 !important; max-width:none !important; display:flex !important; flex-direction:column !important; padding:12px !important; background:#fff !important; border:1px solid #dce5d7 !important; border-radius:0 !important; box-shadow:none !important; transform:none !important; position:relative; scroll-snap-align:start; box-sizing:border-box; }
+#best-products-anchor .popular-card:hover { border-color:#98b58e !important; }
+#best-products-anchor .popular-card .popular-image-wrap { position:relative !important; width:100% !important; height:auto !important; aspect-ratio:1; margin:0 !important; padding:0 !important; border:0 !important; border-radius:0 !important; overflow:hidden; }
+#best-products-anchor .popular-image-wrap img { display:block; position:absolute; inset:0; width:100% !important; height:100% !important; max-height:none !important; object-fit:cover !important; border-radius:0 !important; transform:none !important; }
+#best-products-anchor .popular-card-body { display:flex; flex:1; flex-direction:column; padding:20px 4px 8px !important; }
+#best-products-anchor .popular-item-title { color:#153b20 !important; font-size:16px !important; line-height:1.45; padding:0 !important; margin:0 0 10px !important; }
+#best-products-anchor .popular-item-desc { color:#717d6e !important; font-size:14px !important; line-height:1.65; padding:0 !important; margin:0 0 22px !important; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; min-height:3.3em; }
+#best-products-anchor .popular-bottom-row { display:flex; align-items:center; justify-content:space-between; gap:12px; margin: auto 0 0 !important; padding:18px 0 0 !important; border-top:1px solid #e2e9de !important; }
+#best-products-anchor .popular-item-price { color:#07521c !important; font-size:23px !important; font-weight:800; }
+#best-products-anchor .popular-card .popular-plus-btn { background:#cc211c !important; color:#fff !important; border:0 !important; border-radius:6px !important; width:44px !important; min-width:44px !important; height:44px !important; padding:0 !important; font-size:18px !important; box-shadow:none !important; }
+#best-products-anchor .popular-plus-btn:hover { background:#a81b17 !important; }
+#best-products-anchor .popular-card .popular-heart-btn { position:absolute !important; top:16px !important; right:16px !important; width:44px !important; height:44px !important; padding:10px !important; z-index:3; border:0 !important; background:transparent !important; box-shadow:none !important; }
+#best-products-anchor .popular-heart-btn svg { width:23px !important; height:23px !important; stroke:#153b20 !important; fill:none !important; stroke-width:1.8 !important; }
+#best-products-anchor .popular-heart-btn.is-active svg { stroke:#cc211c !important; fill:#cc211c !important; }
+#best-products-anchor button:focus-visible, #best-products-anchor a:focus-visible { outline:2px solid #07521c; outline-offset:3px; }
+@media(max-width:1000px) { #best-products-anchor .popular-card { flex-basis:calc((100% - 40px)/3) !important; } }
+@media(max-width:760px) { #best-products-anchor { padding:32px 20px !important; } #best-products-anchor .popular-header-bar { align-items:flex-start; flex-direction:column; gap:16px; } #best-products-anchor .popular-header-right { width:100%; justify-content:space-between; } #best-products-anchor .popular-card { flex-basis:calc((100% - 20px)/2) !important; } }
+@media (max-width: 500px) {
+  #best-products-anchor #popular-items-track { gap: 10px !important; }
+  #best-products-anchor .popular-card {
+    flex-basis: calc((100% - 10px) / 2) !important;
+    padding: 8px !important;
+  }
+  #best-products-anchor .popular-card-body { padding: 12px 0 4px !important; min-width: 0; }
+  #best-products-anchor .popular-item-title { font-size: 14px !important; overflow-wrap: anywhere; }
+  #best-products-anchor .popular-item-desc { font-size: 12px !important; margin-bottom: 14px !important; }
+  #best-products-anchor .popular-bottom-row { gap: 4px; padding-top: 12px !important; }
+  #best-products-anchor .popular-item-price { font-size: 18px !important; white-space: nowrap; }
+}

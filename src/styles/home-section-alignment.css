@@ -1,0 +1,63 @@
+/* Match the hero container and its responsive inner gutters. */
+#story-anchor,
+#testimonials-anchor,
+#best-products-anchor,
+.home-offer-section.trio-logo {
+ padding-inline: 0 !important;
+}
+#story-anchor > .container,
+#testimonials-anchor > .container,
+#best-products-anchor > .container,
+.home-offer-section.trio-logo > .container {
+ box-sizing: border-box;
+ width: 100% !important;
+ max-width: 1160px !important;
+ margin-inline: auto !important;
+ padding-inline: 1.25rem !important;
+}
+@media (max-width: 767px) {
+ #story-anchor > .container,
+#testimonials-anchor > .container,
+#best-products-anchor > .container,
+ .home-offer-section.trio-logo > .container {
+  padding-inline: 8px !important;
+ }
+}
+
+/* Keep the testimonial introduction on the shared section left edge. */
+#testimonials-anchor .testimonials-header-story {
+ text-align: left !important;
+ padding-inline: 0 !important;
+ margin-inline: 0 !important;
+ width: 100% !important;
+ max-width: none !important;
+ align-self: stretch;
+}
+#testimonials-anchor .testimonials-story-tag,
+#testimonials-anchor .testimonials-story-title,
+#testimonials-anchor .testimonials-story-desc {
+ text-align: left !important;
+ margin-inline: 0 !important;
+ padding-inline: 0 !important;
+}
+
+/* Account for the gap within the card width, preserving its right padding. */
+#testimonials-anchor .testimonials-story-card {
+ grid-template-columns: minmax(0, 44fr) minmax(0, 56fr) !important;
+ box-sizing: border-box;
+}
+#testimonials-anchor .testimonials-story-body,
+#testimonials-anchor .testimonials-story-author { min-width: 0; }
+#testimonials-anchor .testimonials-story-footer { flex-wrap: wrap; }
+#testimonials-anchor .testimonials-story-arrows { flex-shrink: 0; margin-left: auto; }
+@media (max-width: 768px) {
+ #testimonials-anchor .testimonials-story-card { grid-template-columns: minmax(0, 1fr) !important; }
+}
+
+/* Remove the legacy 980px cap so the trio matches the hero edges. */
+.home-offer-section.trio-logo > .container > .home-offer-banner {
+ width: 100% !important;
+ max-width: none !important;
+ margin-inline: 0 !important;
+ box-sizing: border-box !important;
+}

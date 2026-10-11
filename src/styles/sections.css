@@ -1,5 +1,5 @@
 /* ===================================================
-   MIAM'CIEUSE — Sections Principales (Inspiration Khadya / Food UI Moderne)
+   LE SECRET DE MERLIE — Sections Principales (Inspiration Khadya / Food UI Moderne)
    =================================================== */
 
 /* Header */
@@ -625,7 +625,7 @@
   padding: 1.25rem 1rem;
   border-radius: var(--radius-md);
   text-align: center;
-  border: 1px solid rgba(230, 0, 126, 0.12);
+  border: 1px solid rgba(204, 33, 28, 0.12);
 }
 
 .stat-number {

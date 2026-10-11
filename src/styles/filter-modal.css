@@ -1,5 +1,5 @@
 /* ===================================================
-   MIAM'CIEUSE — Tiroir & Modal de Filtres Avancés
+   LE SECRET DE MERLIE — Tiroir & Modal de Filtres Avancés
    Mobile-First Bottom Sheet & Modal Desktop
    =================================================== */
 
@@ -67,8 +67,8 @@
   width: 36px;
   height: 36px;
   border-radius: 10px;
-  background: #FDF2F7;
-  color: #cf0072;
+  background: #FFF5F5;
+  color: #CC211C;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -101,7 +101,7 @@
 }
 
 .filter-modal-close:hover {
-  background: #cf0072;
+  background: #CC211C;
   color: #FFFFFF;
   transform: rotate(90deg);
 }
@@ -134,7 +134,7 @@
 }
 
 .filter-group-title span.current-val {
-  color: #cf0072;
+  color: #CC211C;
   font-weight: 800;
   font-size: 0.95rem;
   text-transform: none;
@@ -164,16 +164,16 @@
 }
 
 .filter-chip:hover {
-  border-color: #cf0072;
+  border-color: #CC211C;
   background: #FFFFFF;
   transform: translateY(-1px);
 }
 
 .filter-chip.is-active {
-  background: #cf0072;
-  border-color: #cf0072;
+  background: #CC211C;
+  border-color: #CC211C;
   color: #FFFFFF;
-  box-shadow: 0 4px 12px rgba(207, 0, 114, 0.28);
+  box-shadow: 0 4px 12px rgba(204, 33, 28, 0.28);
 }
 
 /* Curseur Prix */
@@ -200,9 +200,9 @@
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  background: #cf0072;
+  background: #CC211C;
   border: 3px solid #FFFFFF;
-  box-shadow: 0 2px 8px rgba(207, 0, 114, 0.4);
+  box-shadow: 0 2px 8px rgba(204, 33, 28, 0.4);
   cursor: pointer;
   transition: transform 0.15s ease;
 }
@@ -215,9 +215,9 @@
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  background: #cf0072;
+  background: #CC211C;
   border: 3px solid #FFFFFF;
-  box-shadow: 0 2px 8px rgba(207, 0, 114, 0.4);
+  box-shadow: 0 2px 8px rgba(204, 33, 28, 0.4);
   cursor: pointer;
 }
 
@@ -329,7 +329,7 @@
 }
 
 .filter-toggle-switch input:checked + .filter-toggle-slider {
-  background-color: #cf0072;
+  background-color: #CC211C;
 }
 
 .filter-toggle-switch input:checked + .filter-toggle-slider:before {
@@ -362,8 +362,8 @@
 
 .filter-reset-btn:hover {
   background: #FAF8F5;
-  color: #cf0072;
-  border-color: #cf0072;
+  color: #CC211C;
+  border-color: #CC211C;
 }
 
 .filter-apply-btn {
@@ -371,7 +371,7 @@
   padding: 0.85rem 1.5rem;
   border-radius: 10px;
   border: none;
-  background: #cf0072;
+  background: #CC211C;
   color: #FFFFFF;
   font-weight: 800;
   font-size: 0.98rem;
@@ -382,13 +382,13 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  box-shadow: 0 4px 14px rgba(207, 0, 114, 0.35);
+  box-shadow: 0 4px 14px rgba(204, 33, 28, 0.35);
 }
 
 .filter-apply-btn:hover {
   background: #b50064;
   transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(207, 0, 114, 0.45);
+  box-shadow: 0 6px 18px rgba(204, 33, 28, 0.45);
 }
 
 .filter-apply-btn:active {
@@ -397,10 +397,10 @@
 
 /* Bouton Filtre dans le Hero — État Actif & Badge */
 .hero-filter-btn.has-active-filters {
-  background: #cf0072 !important;
+  background: #CC211C !important;
   color: #FFFFFF !important;
-  border-color: #cf0072 !important;
-  box-shadow: 0 6px 18px rgba(207, 0, 114, 0.38) !important;
+  border-color: #CC211C !important;
+  box-shadow: 0 6px 18px rgba(204, 33, 28, 0.38) !important;
 }
 
 .hero-filter-btn.has-active-filters svg {

@@ -1,0 +1,22 @@
+/* A shared 10px radius matches the homepage hero. */
+:root { --home-carousel-radius: 10px; }
+.hero-app-section .hero-banner-card,
+#best-products-anchor .popular-card,
+section.home-offer-section.trio-logo .home-offer-banner,
+#testimonials-anchor .testimonials-story-card,
+#testimonials-anchor .testimonial-card,
+#packs-anchor .pack-card {
+ border-radius: var(--home-carousel-radius) !important;
+ overflow: hidden;
+}
+#best-products-anchor .popular-card .popular-image-wrap,
+#best-products-anchor .popular-card .popular-image-wrap img,
+#testimonials-anchor .testimonials-story-media {
+ border-radius: var(--home-carousel-radius) !important;
+}
+
+/* Match the experience visual to the hero corners. */
+#story-anchor .story-shape-card {
+ border-radius: var(--home-carousel-radius, 10px) !important;
+ overflow: hidden;
+}

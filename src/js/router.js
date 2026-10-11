@@ -1,4 +1,4 @@
-// Routeur et Moteur de Rendu des Vues de l'Application Miam’Icieuse (Style Moderne Inspiré du Mockup)
+// Routeur et Moteur de Rendu des Vues de l'Application Le Secret de Merlie (Style Moderne Inspiré du Mockup)
 import { store } from './store.js';
 import { products, categories } from '../data/products.js';
 import { articles } from '../data/recipes.js';
@@ -70,79 +70,15 @@ export function renderApp() {
 function renderHomeView() {
   const state = store.getState();
   const lang = state.lang;
-  const popular6Products = ['mamba-pimente-sale', 'cassave-traditionnelle-artisanale', 'chocolat-cacao-haitien-baton', 'akasan-traditionnel-haitien', 'cham-cham-artisanal-gourmand', 'comparette-artisanale-jeremie'].map(id => products.find(product => product.id === id)).filter(Boolean);
+  const popularCarouselProducts = ['epis-authentique', 'epis-piquant', 'epis-special-bbq', 'pikliz-traditionnel-merlie', 'epis-doux-vegetal', 'duo-essentiels-haiti', 'cassave-traditionnelle-artisanale', 'mamba-traditionnel-16oz'].map(id => products.find(product => product.id === id)).filter(Boolean);
   const packs = products.filter(p => p.category === 'packs');
 
   return `
     <!-- SECTION 1 — HERO STYLE FOOD APP (CONFORME À LA CAPTURE FOURNIE) -->
     <section class="hero-app-section">
       <div class="hero-app-container">
-        <!-- 1. Top App Bar (Menu | Logo Salutation | Notif & Panier) -->
-        <div class="hero-app-bar">
-          <button class="hero-square-icon-btn" id="hero-menu-toggle-btn" onclick="window.miamApp.openMobileMenu()" aria-label="Menu">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-          </button>
 
-          <div class="hero-app-greeting">
-            <span class="greeting-subtitle">${lang === 'ht' ? 'Bonjou, Miam’Addict! 👋' : 'Hello, Miam’Addict! 👋'}</span>
-            <h1 class="greeting-brand"><a href="/" onclick="window.miamApp.handleLogoClick(event)" title="Miam’Icieuse — Accueil" style="display:inline-block; text-decoration:none;"><img class="site-brand-logo" src="./images/logo-miam-icieuse-transparent.png" alt="Miam’Icieuse" width="2172" height="724"></a></h1>
-            <span class="greeting-slogan">Le goût de la pure satisfaction.</span>
-          </div>
-
-          <div class="hero-app-actions">
-            <button class="hero-square-icon-btn with-badge" onclick="alert('🎉 Code promo MIAM10 : -10% de réduction immédiate !')" aria-label="Notifications" title="Offres & Nouveautés">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
-              <span class="hero-badge-count">3</span>
-            </button>
-            <button class="hero-square-icon-btn with-badge" onclick="window.miamApp.openCart()" aria-label="Panier" title="Mon Panier">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-              <span class="hero-badge-count cart-count-badge" id="hero-badge-cart-qty">0</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- 2. Rangée Recherche & Filtre -->
-        <div class="hero-search-row">
-          <div class="hero-search-input-wrap">
-            <svg class="hero-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            <input type="text" class="hero-search-input" placeholder="${lang === 'ht' ? 'Chèche bon Mamba, Kasav ou Akasan...' : 'Rechercher votre délice haïtien préféré...'}" id="hero-app-search" onfocus="window.miamApp.navigate('shop')">
-          </div>
-          <button class="hero-square-icon-btn hero-filter-btn" id="hero-filter-trigger-btn" onclick="window.miamApp.openFilterModal()" aria-label="Filtres" title="Filtrer les spécialités">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="4" y1="8" x2="20" y2="8"></line><circle cx="9" cy="8" r="2.5" fill="#fff"></circle><line x1="4" y1="16" x2="20" y2="16"></line><circle cx="15" cy="16" r="2.5" fill="#fff"></circle></svg>
-            <span class="hero-filter-badge" id="hero-filter-badge" style="display: none;">0</span>
-          </button>
-        </div>
-
-        <!-- 3. Grande Bannière Pleine Largeur avec Images Étirées & Texte Au-dessus -->
-        <div class="hero-banner-card" id="hero-banner-slider">
-          <div class="hero-slides-track">
-
-            <!-- Slide 1 : Mamba Authentique (Image 1 de l'utilisateur) -->
-            <div class="hero-slide is-active" data-slide="0">
-              <img src="./images/hero-slide-1.jpg" alt="Mamba Authentique Miam’Icieuse" class="hero-slide-bg">
-              <div class="hero-slide-overlay"></div>
-              <div class="hero-slide-content">
-                <span class="hero-banner-tag">${lang === 'ht' ? 'ÒF ESPESYAL' : 'OFFRE DU MOMENT'}</span>
-                <h2 class="hero-banner-headline">
-                  ${lang === 'ht' 
-                    ? 'KROUSTIYAN.<br>BON GOU.<br>IRÉZISTIB.' 
-                    : 'CROUSTILLANT.<br>SAVOUREUX.<br>IRRÉSISTIBLE.'}
-                </h2>
-                <p class="hero-banner-subtext">
-                  ${lang === 'ht'
-                    ? '100% Natif Natal Dayiti.<br>Mamba atizanal fèt ak pistach griye fre.'
-                    : '100% Saveurs Authentiques d\'Haïti.<br>Mamba artisanal fait maison aux arachides fraîches grillées.'}
-                </p>
-                <button class="hero-order-now-btn" onclick="window.miamApp.navigate('shop')">
-                  <span>${lang === 'ht' ? 'Kòmande Kounye a' : 'Commander Maintenant'}</span>
-                  <span class="order-arrow-circle">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                  </span>
-                </button>
-              </div>
-            </div>
-
-            <!-- Slide 2 : Kasav Croustillante & Mamba (Image 2 de l'utilisateur) -->
+        <!-- Slide 2 : Kasav Croustillante & Mamba (Image 2 de l'utilisateur) -->
             <div class="hero-slide" data-slide="1">
               <img src="./images/hero-slide-2.jpg" alt="Kasav artisanale garnie de Mamba" class="hero-slide-bg">
               <div class="hero-slide-overlay"></div>
@@ -212,69 +148,6 @@ function renderHomeView() {
       </div>
     </section>
 
-    <!-- SECTION 2 — SÉLECTEUR DE CATÉGORIES CIRCULAIRES (STYLE EXACT DE L'IMAGE 2) -->
-    <section class="category-circles-section">
-      <div class="category-circles-container">
-        <div class="category-circles-scroll">
-          <!-- Item 1 : Tous -->
-          <button class="category-circle-item is-active" onclick="window.miamApp.filterCategory('all', this)" aria-label="Tous">
-            <div class="category-circle-bubble">
-              <img src="./images/hero-feast.jpg" alt="Tous">
-            </div>
-            <span class="category-circle-label">${lang === 'ht' ? 'Tout' : 'Tous'}</span>
-          </button>
-
-          <!-- Item 2 : Mamba -->
-          <button class="category-circle-item" onclick="window.miamApp.filterCategory('mamba', this)" aria-label="Mamba">
-            <div class="category-circle-bubble">
-              <img src="./images/product-mamba-pot.png" alt="Mamba">
-            </div>
-            <span class="category-circle-label">Mamba</span>
-          </button>
-
-          <!-- Item 3 : Cassave -->
-          <button class="category-circle-item" onclick="window.miamApp.filterCategory('cassave', this)" aria-label="Cassave">
-            <div class="category-circle-bubble">
-              <img src="./images/product-cassave-mamba.png" alt="Cassave">
-            </div>
-            <span class="category-circle-label">${lang === 'ht' ? 'Kasav' : 'Cassave'}</span>
-          </button>
-
-          <!-- Item 4 : Chocolat -->
-          <button class="category-circle-item" onclick="window.miamApp.filterCategory('chocolat', this)" aria-label="Chocolat">
-            <div class="category-circle-bubble">
-              <img src="./images/product-chocolat-cacao.png" alt="Chocolat">
-            </div>
-            <span class="category-circle-label">${lang === 'ht' ? 'Chokola' : 'Chocolat'}</span>
-          </button>
-
-          <!-- Item 5 : Akasan -->
-          <button class="category-circle-item" onclick="window.miamApp.filterCategory('akasan', this)" aria-label="Akasan">
-            <div class="category-circle-bubble">
-              <img src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=200&q=80" alt="Akasan">
-            </div>
-            <span class="category-circle-label">Akasan</span>
-          </button>
-
-          <!-- Item 6 : Biscuits & Snacks -->
-          <button class="category-circle-item" onclick="window.miamApp.filterCategory('biscuits', this)" aria-label="Biscuits">
-            <div class="category-circle-bubble">
-              <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=200&q=80" alt="Biscuits">
-            </div>
-            <span class="category-circle-label">${lang === 'ht' ? 'Biskwit' : 'Biscuits'}</span>
-          </button>
-
-          <!-- Item 7 : Packs -->
-          <button class="category-circle-item" onclick="window.miamApp.filterCategory('packs', this)" aria-label="Packs">
-            <div class="category-circle-bubble">
-              <img src="https://images.unsplash.com/photo-1541832676-9b763b0239ab?auto=format&fit=crop&w=200&q=80" alt="Packs">
-            </div>
-            <span class="category-circle-label">Packs</span>
-          </button>
-        </div>
-      </div>
-    </section>
-
     <!-- SECTION 3 — NOS MEILLEURS PRODUITS (POPULAR ITEMS — STYLE DE L'IMAGE) -->
     <section class="popular-items-section" id="best-products-anchor">
       <div class="container">
@@ -282,29 +155,50 @@ function renderHomeView() {
           <div class="popular-header-left">
             <h2 class="popular-title">${lang === 'ht' ? 'Pi Bon Pwodui Yo' : 'Nos Meilleurs Produits'}</h2>
           </div>
-          <a href="#best-products-anchor" class="popular-view-all" onclick="window.miamApp.navigate('shop')">
-            ${lang === 'ht' ? 'Wè tout' : 'Voir tout'} <span class="popular-arrow">→</span>
-          </a>
+          <div class="popular-header-right">
+            <a href="#best-products-anchor" class="popular-view-all" onclick="window.miamApp.navigate('shop')">
+              ${lang === 'ht' ? 'Wè tout' : 'Voir tout'} <span class="popular-arrow">→</span>
+            </a>
+            <div class="popular-nav-arrows">
+              <button type="button" class="popular-circle-arrow-btn" onclick="window.miamApp.scrollPopularCarousel(-1)" aria-label="Précédent">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+              </button>
+              <button type="button" class="popular-circle-arrow-btn" onclick="window.miamApp.scrollPopularCarousel(1)" aria-label="Suivant">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </div>
         </div>
 
-        <div class="popular-items-grid">
-          ${popular6Products.map((product) => renderPopularItemCard(product, lang)).join('')}
+        <div class="popular-items-grid" id="popular-items-track">
+          ${popularCarouselProducts.map((product) => renderPopularItemCard(product, lang)).join('')}
         </div>
       </div>
     </section>
 
-    <!-- Offre découverte -->
+    <!-- BANNIÈRE LE TRIO DÉCOUVERTE SIGNATURE (STYLE CARTE OFFRE EXCLUSIVE BURGER KING) -->
     <section class="home-offer-section" aria-label="Pack Découverte">
       <div class="container">
         <div class="home-offer-banner">
-          <img class="home-offer-photo" src="./images/hero-slide-2.jpg" alt="Cassave et mamba artisanaux" loading="lazy">
+          <img class="home-offer-banner-bg" src="./images/banner-trio-epices.jpg" alt="Le Trio Découverte Signature — Épis et Épices d'Haïti" loading="lazy">
+          <div class="home-offer-overlay"></div>
+
           <div class="home-offer-content">
-            <span class="home-offer-eyebrow">LE PLAISIR DE DÉCOUVRIR</span>
-            <h2>Un pack, plein de saveurs.</h2>
-            <p>Découvrez nos incontournables haïtiens.</p>
-            <button class="home-offer-button" onclick="window.miamApp.viewProduct('pack-decouverte-saveurs')">Découvrir le pack <span aria-hidden="true">→</span></button>
+            <span class="home-offer-eyebrow">LE TRIO DÉCOUVERTE SIGNATURE</span>
+            <h2 class="home-offer-title">3 Épis, toute l'âme d'Haïti.</h2>
+            <p class="home-offer-desc">1 Authentique + 1 Piquant + 1 Doux pour tester toute la gamme.</p>
+            <button class="home-offer-cta-btn" onclick="window.miamApp.viewProduct('pack-decouverte-epis')">
+              <span>Découvrir le pack</span>
+              <span class="home-offer-cta-arrow">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </span>
+            </button>
           </div>
-          <div class="home-offer-price"><strong>29,90 €</strong><span>LE PACK</span></div>
+
+          <div class="home-offer-circle-badge">
+            <span class="circle-badge-price">22,90 €</span>
+            <span class="circle-badge-label">LE TRIO</span>
+          </div>
         </div>
       </div>
     </section>
@@ -316,11 +210,11 @@ function renderHomeView() {
           <!-- Visuel Découpé à Gauche -->
           <div class="story-cutout-wrap">
             <div class="story-shape-card">
-              <img src="./images/story-portrait.png" alt="Portrait — Miam’Icieuse" class="story-person-img" loading="lazy" width="1122" height="1402">
+              <img src="./images/story-portrait.png" alt="Portrait — Merlie" class="story-person-img" loading="lazy">
             </div>
 
             <div class="story-floating-stat stat-top">
-              <span>🥜</span>
+              <span>🌿</span>
               <span>100% Artisanal</span>
             </div>
 
@@ -335,13 +229,13 @@ function renderHomeView() {
             <h5>${lang === 'ht' ? 'Eksperyans Nou' : 'Notre Expérience'}</h5>
             <h2 class="story-adventure-title">
               ${lang === 'ht' 
-                ? 'Yon <span>Istwa</span> Ki Gen <span>Karakter</span>' 
-                : 'Une <span>Histoire</span> Qui a du <span>Caractère</span>'}
+                ? 'Sekrè <span>Merlie</span> : Gou <span>Peyi a</span>' 
+                : 'Le Secret de <span>Merlie</span> : Le Goût du <span>Terroir</span>'}
             </h2>
             <p class="story-adventure-desc">
               ${lang === 'ht'
-                ? 'Nou chwazi pi bon pistach ak manyòk nan peyi Dayiti pou pote nan chak bokal ak chak sachè vrè gou anfans nou, tout pandan n ap ofri yon bèl eksperyans modèn.'
-                : 'Chez Miam\'cieuse, nous sublimons les recettes transmises par nos aînés : le Mamba torréfié au feu doux, la cassave dorée sur platine et le cacao pur de la Grand\'Anse. Une véritable aventure gustative qui relie tradition et modernité.'}
+                ? 'Kay Le Secret de Merlie, nou valorize resèt epis zansèt nou yo te kite pou nou avèk pasyon. Fèy santi bon fre peyi Dayiti, bon zèb byen melanje ak yon konesans tradisyonèl san parèy pou bay manje w yon gou ou pap janm bliye.'
+                : 'Chez Le Secret de Merlie, nous sublimons les recettes d\'épis transmises avec passion de génération en génération. Des herbes fraîches du terroir haïtien, des aromates soigneusement équilibrés et un savoir-faire artisanal sans compromis pour donner à vos plats une saveur inoubliable.'}
             </p>
 
             <div class="stats-counter-row">
@@ -386,13 +280,16 @@ function renderHomeView() {
     <!-- SECTION 6 — NEWSLETTER CLUB -->
     <section class="section-padding home-club-section">
       <div class="container">
-        <div class="newsletter-card" style="border-radius: var(--radius-xl);">
-          <span class="badge badge-pink" style="margin-bottom: 1rem;">Club Miam’Addict</span>
+        <div class="newsletter-card">
+          <span class="badge badge-pink" style="margin-bottom: 1rem;">Club Le Secret de Merlie</span>
           <h2>${store.t('news_title')}</h2>
           <p>${store.t('news_subtitle')}</p>
           
           <form class="newsletter-form" onsubmit="window.miamApp.handleNewsletter(event)">
-            <input type="email" class="newsletter-input" aria-label="Adresse e-mail" autocomplete="email" required placeholder="${store.t('news_placeholder')}">
+            <label class="club-field-label" for="club-firstname">Votre prénom <span>(facultatif)</span></label>
+            <input type="text" id="club-firstname" name="firstName" autocomplete="given-name" placeholder="Votre prénom">
+            <label class="club-field-label" for="club-email">Votre adresse e-mail</label>
+            <input type="email" id="club-email" name="email" class="newsletter-input" aria-label="Adresse e-mail" autocomplete="email" required placeholder="${store.t('news_placeholder')}">
             <button type="submit" class="btn btn-primary btn-lg">
               ${store.t('news_btn')}
             </button>
@@ -463,11 +360,13 @@ function renderPopularItemCard(product, lang) {
       <div class="popular-image-wrap">
         <img src="${imgUrl}" alt="${name}" loading="lazy">
       </div>
-      <h3 class="popular-item-title">${name}</h3>
-      <p class="popular-item-desc">${subtitle}</p>
-      <div class="popular-bottom-row">
-        <span class="popular-item-price">${product.price.toFixed(2)} €</span>
-        <button class="popular-plus-btn" onclick="event.stopPropagation(); window.miamApp.addProductDirectly('${product.id}')" title="Ajouter au panier">+</button>
+      <div class="popular-card-body">
+        <h3 class="popular-item-title">${name}</h3>
+        <p class="popular-item-desc">${subtitle}</p>
+        <div class="popular-bottom-row">
+          <span class="popular-item-price">${product.price.toFixed(2)} €</span>
+          <button class="popular-plus-btn" onclick="event.stopPropagation(); window.miamApp.addProductDirectly('${product.id}')" title="Ajouter au panier">+</button>
+        </div>
       </div>
     </article>
   `;
@@ -676,13 +575,13 @@ function renderStoryView() {
   return `
     <div class="shop-header-banner" style="background: linear-gradient(135deg, var(--color-cacao) 0%, #3D2214 100%);">
       <div class="container">
-        <h1>Miam’Icieuse, une histoire qui commence par le goût</h1>
+        <h1>Le Secret de Merlie, une histoire qui commence par le goût</h1>
         <p>Transmettre la richesse culinaire d'Haïti dans un écrin de gourmandise et de modernité.</p>
       </div>
     </div>
     <div class="container" style="max-width: 860px; padding: 4rem 1.5rem;">
       <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 2rem;">
-        Chez Miam’Icieuse, nous voulons faire vivre les saveurs qui nous ressemblent. Celles qui rappellent la famille, les souvenirs d'enfance, les goûters partagés et les traditions vivantes d'Haïti.
+        Chez Le Secret de Merlie, nous voulons faire vivre les saveurs qui nous ressemblent. Celles qui rappellent la famille, les souvenirs d'enfance, les goûters partagés et les traditions vivantes d'Haïti.
       </p>
       <button class="btn btn-primary btn-lg" onclick="window.miamApp.navigate('shop')">
         Découvrir nos créations →
@@ -696,7 +595,7 @@ function renderBlogView() {
   return `
     <div class="blog-page-header">
       <div class="container">
-        <h1>Le Journal Miam’Icieuse</h1>
+        <h1>Le Journal Le Secret de Merlie</h1>
         <p>Secrets culinaires, traditions créoles et recettes authentiques.</p>
       </div>
     </div>
@@ -762,13 +661,13 @@ function renderContactView() {
   return `
     <div class="shop-header-banner">
       <div class="container">
-        <h1>Contactez l'Équipe Miam’Icieuse</h1>
+        <h1>Contactez l'Équipe Le Secret de Merlie</h1>
       </div>
     </div>
     <div class="container" style="padding: 4rem 1.5rem;">
       <div class="contact-form-box" style="max-width: 600px; margin: 0 auto;">
         <div class="footer-links" style="margin-bottom: 18px;">
-            <a href="mailto:Miamicieuse@gmail.com">Miamicieuse@gmail.com</a>
+            <a href="mailto:contact@lesecretremerlie.com">contact@lesecretremerlie.com</a>
             <a href="tel:+50939424419">+509 39 42 4419</a>
             <a href="https://www.google.com/maps/search/?api=1&amp;query=P%C3%A9tion-Ville%2C%20Ha%C3%AFti" target="_blank" rel="noopener">Pétion-Ville, Haïti ↗</a>
           </div>
@@ -797,7 +696,7 @@ function renderPackCard(pack, lang) {
   const subtitle = lang === 'ht' ? (pack.subtitle_ht || pack.subtitle) : pack.subtitle;
   return `
     <div class="pack-card" onclick="window.miamApp.viewProduct('${pack.id}')">
-      <span class="badge badge-pink" style="margin-bottom: 0.5rem;">Pack Économique -${pack.savingsPercentage}%</span>
+      <span class="badge badge-pink" style="margin-bottom: 0.5rem;">${pack.badge || (pack.savingsPercentage ? `-${pack.savingsPercentage}%` : 'Pack Signature')}</span>
       <h3 class="pack-name">${name}</h3>
       <p style="font-size: 0.9rem; color: var(--text-muted);">${subtitle}</p>
       <div class="pack-price-wrap">

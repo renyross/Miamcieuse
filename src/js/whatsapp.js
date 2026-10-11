@@ -1,10 +1,10 @@
-// Générateur de messages WhatsApp contextuels pour Miam’Icieuse
-export const WHATSAPP_NUMBER = "50939424419"; // Numéro officiel Miam’Icieuse
+// Générateur de messages WhatsApp contextuels pour Le Secret de Merlie
+export const WHATSAPP_NUMBER = "50939424419"; // Numéro officiel Le Secret de Merlie
 
 export function getGeneralWhatsAppUrl(lang = 'fr') {
   const message = lang === 'ht'
-    ? "Bonjou Miam’Icieuse 👋\nMwen ta renmen gen kèk enfòmasyon sou pwodui nou yo tanpri."
-    : "Bonjour Miam’Icieuse 👋\nJe souhaite avoir des informations concernant vos produits.";
+    ? "Bonjou Le Secret de Merlie 👋\nMwen ta renmen gen kèk enfòmasyon sou pwodui nou yo tanpri."
+    : "Bonjour Le Secret de Merlie 👋\nJe souhaite avoir des informations concernant vos produits.";
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
 
@@ -14,8 +14,8 @@ export function getProductWhatsAppUrl(product, format = null, variant = null, la
   const variantStr = variant ? ` (Variante : ${lang === 'ht' ? (variant.name_ht || variant.name) : variant.name})` : '';
 
   const message = lang === 'ht'
-    ? `Bonjou Miam’Icieuse 👋\nMwen ta renmen kòmande :\n📦 ${productName}${formatStr}${variantStr}\nPri : ${product.price.toFixed(2)} €\nÈske li disponib tanpri ?`
-    : `Bonjour Miam’Icieuse 👋\nJe souhaite commander :\n📦 ${productName}${formatStr}${variantStr}\nPrix : ${product.price.toFixed(2)} €\nEst-il disponible pour livraison s'il vous plaît ?`;
+    ? `Bonjou Le Secret de Merlie 👋\nMwen ta renmen kòmande :\n📦 ${productName}${formatStr}${variantStr}\nPri : ${product.price.toFixed(2)} €\nÈske li disponib tanpri ?`
+    : `Bonjour Le Secret de Merlie 👋\nJe souhaite commander :\n📦 ${productName}${formatStr}${variantStr}\nPrix : ${product.price.toFixed(2)} €\nEst-il disponible pour livraison s'il vous plaît ?`;
 
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
@@ -29,8 +29,8 @@ export function getCartWhatsAppUrl(cartItems, total, lang = 'fr') {
   }).join('\n');
 
   const message = lang === 'ht'
-    ? `Bonjou Miam’Icieuse 👋\nMwen ta renmen pase kòmand sa a dirèkteman sou WhatsApp :\n\n${itemsList}\n\n💰 Total : ${total.toFixed(2)} €\n\nKi enfòmasyon nou bezwen pou livrezon an tanpri ?`
-    : `Bonjour Miam’Icieuse 👋\nJe souhaite finaliser ma commande directement avec vous sur WhatsApp :\n\n${itemsList}\n\n💰 Total : ${total.toFixed(2)} €\n\nQuelles sont les modalités pour la livraison et le paiement s'il vous plaît ?`;
+    ? `Bonjou Le Secret de Merlie 👋\nMwen ta renmen pase kòmand sa a dirèkteman sou WhatsApp :\n\n${itemsList}\n\n💰 Total : ${total.toFixed(2)} €\n\nKi enfòmasyon nou bezwen pou livrezon an tanpri ?`
+    : `Bonjour Le Secret de Merlie 👋\nJe souhaite finaliser ma commande directement avec vous sur WhatsApp :\n\n${itemsList}\n\n💰 Total : ${total.toFixed(2)} €\n\nQuelles sont les modalités pour la livraison et le paiement s'il vous plaît ?`;
 
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }

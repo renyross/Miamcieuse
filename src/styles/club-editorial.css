@@ -1,0 +1,57 @@
+/* Editorial newsletter, using the site's typography and logo palette. */
+.home-club-section { background:#f0f6ef !important; padding:72px 0 !important; }
+.home-club-section > .container { box-sizing:border-box; max-width:1160px !important; width:100%; padding-inline:1.25rem !important; margin-inline:auto; }
+.home-club-section .newsletter-card { display:grid !important; grid-template-columns:minmax(0,1fr) minmax(0,1fr); grid-template-rows:auto auto auto auto; column-gap:clamp(32px,6vw,88px); background:none !important; border:0 !important; border-radius:0 !important; padding:0 !important; box-shadow:none !important; text-align:left !important; overflow:visible; }
+.home-club-section .newsletter-card::before,.home-club-section .newsletter-card::after { display:none !important; }
+.home-club-section .newsletter-card > .badge { grid-column:1; justify-self:start; background:none !important; color:#07521c !important; padding:0 !important; margin:0 0 24px !important; font-size:11px; letter-spacing:.12em; text-transform:uppercase; border:0 !important; }
+.home-club-section .newsletter-card > h2 { grid-column:1; color:#153b20 !important; font-size:clamp(30px,3.8vw,46px) !important; font-weight:800; line-height:1.15; letter-spacing:-.04em; margin:0 0 24px !important; max-width:15ch; }
+.home-club-section .newsletter-card > p { grid-column:1; color:#63705f !important; font-size:15px !important; line-height:1.8; margin:0 0 24px !important; max-width:48ch; }
+.home-club-section .newsletter-card > span:last-child { grid-column:1; color:#63705f !important; font-size:12px !important; line-height:1.7; }
+.home-club-section .newsletter-form { grid-column:2; grid-row:1 / 5; align-self:center; display:flex !important; flex-direction:column; align-items:stretch; gap:0; width:100% !important; max-width:none !important; margin:0 !important; padding:0 !important; background:none !important; border:0 !important; border-radius:0 !important; box-shadow:none !important; }
+.home-club-section .club-field-label { display:block; color:#153b20; font-size:13px; font-weight:600; margin:0 0 10px; }
+.home-club-section .newsletter-form input { box-sizing:border-box; width:100% !important; min-width:0; height:54px; padding:12px 0 !important; background:transparent !important; border:0 !important; border-bottom:1px solid #a9b9a2 !important; border-radius:0 !important; color:#153b20 !important; font:inherit; font-size:16px; margin:0 0 26px; box-shadow:none !important; }
+.home-club-section .newsletter-form input::placeholder { color:#788371; opacity:1; }
+.home-club-section .newsletter-form input:focus { outline:0; border-bottom:2px solid #07521c !important; }
+.home-club-section .newsletter-form button { display:flex; align-items:center; justify-content:space-between; width:100%; min-height:52px; padding:16px 20px !important; background:#cc211c !important; color:#fff !important; border:0 !important; border-radius:3px !important; box-shadow:none !important; font-size:14px; }
+.home-club-section .newsletter-form button::after { content:'→'; font-size:22px; }
+.home-club-section .newsletter-form button:hover { background:#a81b17 !important; }
+.home-club-section .newsletter-form button:focus-visible { outline:2px solid #07521c; outline-offset:4px; }
+@media(max-width:767px) { .home-club-section { padding:44px 0 !important; } .home-club-section > .container { padding-inline:20px !important; } .home-club-section .newsletter-card { grid-template-columns:minmax(0,1fr); } .home-club-section .newsletter-form { grid-column:1; grid-row:auto; margin-top:30px !important; } }
+
+/* Refined club panel: framed form and an explicit reading order. */
+.home-club-section { background:#f7faf6 !important; padding:56px 0 !important; }
+.home-club-section .newsletter-card {
+ grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);
+ grid-template-rows:auto auto auto 1fr;
+ column-gap:clamp(28px,5vw,64px);
+ padding:clamp(24px,4vw,48px) !important;
+ background:#edf4e9 !important;
+ border:1px solid #dce7d7 !important;
+ border-radius:10px !important;
+ align-items:start;
+}
+.home-club-section .newsletter-card > .badge { grid-row:1; margin-bottom:20px !important; font-size:10px; letter-spacing:.14em; }
+.home-club-section .newsletter-card > h2 { grid-row:2; font-size:clamp(28px,3.2vw,42px) !important; max-width:17ch; margin-bottom:20px !important; }
+.home-club-section .newsletter-card > p { grid-row:3; font-size:14px !important; margin-bottom:24px !important; }
+.home-club-section .club-welcome-offer { display:block; width:fit-content; margin-top:18px; padding:8px 12px; border:1px solid #e9c4bd; border-radius:6px; background:#fff6f3; color:#a81b17; font-size:13px; font-weight:700; }
+.home-club-section .newsletter-card > span:last-child { grid-row:4; align-self:end; max-width:42ch; font-size:11px !important; }
+.home-club-section .newsletter-form {
+ grid-row:1 / 5; padding:28px !important; background:#fff !important;
+ border:1px solid #dce7d7 !important; border-radius:10px !important;
+ box-sizing:border-box; align-self:stretch; justify-content:center;
+}
+.home-club-section .club-field-label { margin:0 0 8px !important; line-height:1.5; font-size:12px; }
+.home-club-section .club-field-label span { color:#74806e; font-weight:400; }
+.home-club-section .newsletter-form input {
+ flex:none !important; height:50px; padding:12px 14px !important;
+ border:1px solid #d4dfce !important; border-radius:6px !important;
+ background:#fafcf9 !important; margin:0 0 22px !important;
+}
+.home-club-section .newsletter-form input:focus { border:1px solid #07521c !important; outline:2px solid #d4e6cd; outline-offset:2px; }
+.home-club-section .newsletter-form button { border-radius:6px !important; min-height:50px; margin-top:2px; }
+@media(max-width:767px) {
+ .home-club-section { padding:32px 0 !important; }
+ .home-club-section .newsletter-card { grid-template-columns:minmax(0,1fr); grid-template-rows:auto; padding:24px 20px !important; }
+ .home-club-section .newsletter-form { grid-column:1; grid-row:4; padding:20px !important; margin:0 !important; }
+ .home-club-section .newsletter-card > span:last-child { grid-row:5; margin-top:20px; }
+}

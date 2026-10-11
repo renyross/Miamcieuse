@@ -1,4 +1,4 @@
-// Avis clients authentiques et vérifiés Miam’Icieuse
+// Avis clients authentiques et vérifiés Le Secret de Merlie
 export const testimonials = [
   {
     id: 1,
@@ -45,23 +45,23 @@ export const testimonials = [
     date_ht: "Sa gen 3 semèn",
     verified: true,
     product: "Pack Prestige — Saveurs d'Haïti",
-    text: "J'ai commandé pour toute la famille lors d'un repas de fête. Le Mamba Miam’Icieuse a fait l'unanimité ! Et le service client sur WhatsApp est hyper réactif et bienveillant.",
-    text_ht: "M te pase kòmand pou tout fanmi an nan yon fèt. Mamba Miam’Icieuse a te fè tout moun kontan nèt ! E sèvis sou WhatsApp la reponn vit anpil ak anpil respè."
+    text: "J'ai commandé pour toute la famille lors d'un repas de fête. Le Mamba Le Secret de Merlie a fait l'unanimité ! Et le service client sur WhatsApp est hyper réactif et bienveillant.",
+    text_ht: "M te pase kòmand pou tout fanmi an nan yon fèt. Mamba Le Secret de Merlie a te fè tout moun kontan nèt ! E sèvis sou WhatsApp la reponn vit anpil ak anpil respè."
   }
 ];
 
 export const instagramPosts = [
   {
     id: "ig-1",
-    handle: "@miamcieuse",
+    handle: "@lesecretremerlie",
     image: "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=600&q=80",
     likes: "1.4k",
-    caption: "La texture dorée et crémeuse de notre Mamba fraîchement torréfié 🥜✨ #MambaHaitien #Miamcieuse",
-    caption_ht: "Bèl teksti krèm Mamba nou an ki fenk griye 🥜✨ #MambaAyisyen #Miamcieuse"
+    caption: "La texture dorée et crémeuse de notre Mamba fraîchement torréfié 🥜✨ #MambaHaitien #Le Secret de Merlie",
+    caption_ht: "Bèl teksti krèm Mamba nou an ki fenk griye 🥜✨ #MambaAyisyen #Le Secret de Merlie"
   },
   {
     id: "ig-2",
-    handle: "@miamcieuse",
+    handle: "@lesecretremerlie",
     image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80",
     likes: "980",
     caption: "Cassave chaude sortie du four + Mamba généreux : le combo parfait du goûter 🇭🇹",
@@ -69,7 +69,7 @@ export const instagramPosts = [
   },
   {
     id: "ig-3",
-    handle: "@miamcieuse",
+    handle: "@lesecretremerlie",
     image: "https://images.unsplash.com/photo-1548848221-0c2e497ed557?auto=format&fit=crop&w=600&q=80",
     likes: "2.1k",
     caption: "L'arôme du chocolat pays au petit matin... Un rituel qui réchauffe le cœur ☕🍫",
@@ -77,10 +77,10 @@ export const instagramPosts = [
   },
   {
     id: "ig-4",
-    handle: "@miamcieuse",
+    handle: "@lesecretremerlie",
     image: "https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=600&q=80",
     likes: "1.2k",
-    caption: "L'Akasan traditionnel Miam’Icieuse, préparé avec amour et épices douces 💛",
-    caption_ht: "Akasan tradisyonèl Miam’Icieuse, prepare ak lanmou ak bon epis dous 💛"
+    caption: "L'Akasan traditionnel Le Secret de Merlie, préparé avec amour et épices douces 💛",
+    caption_ht: "Akasan tradisyonèl Le Secret de Merlie, prepare ak lanmou ak bon epis dous 💛"
   }
 ];
