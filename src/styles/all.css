@@ -5212,7 +5212,13 @@ ul, ol {
   }
 
   .hero-slide-arrow {
-    opacity: 0.8;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .hero-banner-card:hover .hero-slide-arrow {
+    opacity: 1;
+    pointer-events: auto;
   }
 }
 
@@ -5337,7 +5343,8 @@ ul, ol {
 
   .hero-slide-arrow {
     display: flex;
-    opacity: 1;
+    opacity: 0;
+    pointer-events: none;
     width: 34px;
     height: 34px;
     aspect-ratio: 1 / 1;
@@ -5346,6 +5353,13 @@ ul, ol {
     align-items: center;
     justify-content: center;
     padding: 0;
+    transition: opacity 0.25s ease, transform 0.2s ease, background 0.2s ease;
+  }
+
+  .hero-banner-card:hover .hero-slide-arrow,
+  .hero-banner-card:focus-within .hero-slide-arrow {
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .hero-arrow-prev { left: 6px; }
