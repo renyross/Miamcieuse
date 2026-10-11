@@ -1,5 +1,5 @@
 // Générateur de messages WhatsApp contextuels pour Le Secret de Merlie
-export const WHATSAPP_NUMBER = "50939424419"; // Numéro officiel Le Secret de Merlie
+export const WHATSAPP_NUMBER = "50949093613"; // Numéro officiel Le Secret de Merlie
 
 export function getGeneralWhatsAppUrl(lang = 'fr') {
   const message = lang === 'ht'

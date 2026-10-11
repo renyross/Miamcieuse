@@ -616,7 +616,7 @@
     if (waCartBtn) {
       const itemsText = cart.map(i => `- ${i.quantity}x ${i.name} (${(i.price * i.quantity).toFixed(2)} €)`).join('%0A');
       const text = `Bonjour Le Secret de Merlie 👋%0AJe souhaite finaliser ma commande sur WhatsApp :%0A${itemsText}%0ATotal : ${totalPrice.toFixed(2)} €`;
-      waCartBtn.href = `https://wa.me/50939424419?text=${text}`;
+      waCartBtn.href = `https://wa.me/50949093613?text=${text}`;
     }
   }
 
@@ -1183,9 +1183,9 @@
             <h3>Une question spécifique non listée ?</h3>
             <p>Notre équipe locale est à votre disposition en direct sur WhatsApp pour répondre à toutes vos interrogations en créole ou en français.</p>
             <div class="subpage-cta-actions">
-              <a href="https://wa.me/50939424419" target="_blank" rel="noopener" class="btn-subpage-whatsapp">
+              <a href="https://wa.me/50949093613" target="_blank" rel="noopener" class="btn-subpage-whatsapp">
                 <span>💬</span>
-                <span>Discuter sur WhatsApp (+509 39 42 4419)</span>
+                <span>Discuter sur WhatsApp (+509 49 09 3613)</span>
               </a>
               <button type="button" class="btn-subpage-secondary" onclick="window.miamApp.navigate('contact')">
                 <span>Formulaire de contact</span>
@@ -1302,7 +1302,7 @@
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                 </span>
               </button>
-              <a href="https://wa.me/50939424419" target="_blank" rel="noopener" class="btn-subpage-whatsapp">
+              <a href="https://wa.me/50949093613" target="_blank" rel="noopener" class="btn-subpage-whatsapp">
                 <span>💬</span>
                 <span>Commander sur WhatsApp</span>
               </a>
@@ -1327,7 +1327,7 @@
             <p class="subpage-hero-desc">Une question sur une commande, un besoin pour un événement ou envie de distribuer nos produits ? Contactez notre équipe locale avec plaisir.</p>
             <div class="subpage-hero-badges">
               <span class="subpage-hero-stat">💬 <strong>WhatsApp</strong> 7j/7</span>
-              <span class="subpage-hero-stat">📞 <strong>+509</strong> 39 42 4419</span>
+              <span class="subpage-hero-stat">📞 <strong>+509</strong> 49 09 3613</span>
               <span class="subpage-hero-stat">📍 <strong>Pétion-Ville</strong>, Haïti</span>
             </div>
           </div>
@@ -1348,19 +1348,19 @@
             </div>
 
             <div class="contact-methods-list">
-              <a href="https://wa.me/50939424419" target="_blank" rel="noopener" class="contact-method-entry">
+              <a href="https://wa.me/50949093613" target="_blank" rel="noopener" class="contact-method-entry">
                 <div class="contact-method-icon">💬</div>
                 <div>
                   <div class="contact-method-label">WhatsApp Direct (Réponse rapide)</div>
-                  <div class="contact-method-val">+509 39 42 4419</div>
+                  <div class="contact-method-val">+509 49 09 3613</div>
                 </div>
               </a>
 
-              <a href="tel:+50939424419" class="contact-method-entry">
+              <a href="tel:+50949093613" class="contact-method-entry">
                 <div class="contact-method-icon">📞</div>
                 <div>
                   <div class="contact-method-label">Téléphone Service Client</div>
-                  <div class="contact-method-val">+509 39 42 4419 / 42 61 6756</div>
+                  <div class="contact-method-val">+509 49 09 3613 / 42 61 6756</div>
                 </div>
               </a>
 
@@ -2276,7 +2276,7 @@
       const waBtn = document.getElementById('quickview-whatsapp-btn');
       if (waBtn) {
         const msg = `Bonjour Le Secret de Merlie 👋\nJe souhaite commander :\n📦 ${variantName}\nPrix : ${price.toFixed(2)} €\nEst-il disponible pour livraison s'il vous plaît ?`;
-        waBtn.href = `https://wa.me/50939424419?text=${encodeURIComponent(msg)}`;
+        waBtn.href = `https://wa.me/50949093613?text=${encodeURIComponent(msg)}`;
       }
     },
 

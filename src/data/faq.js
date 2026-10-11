@@ -93,7 +93,7 @@ export const faqItems = [
     category: "order",
     question: "Comment contacter le service client de Le Secret de Merlie ?",
     question_ht: "Kijan pou m kontakte sèvis kliyan Le Secret de Merlie ?",
-    answer: "Notre équipe est disponible 7j/7 ! Vous pouvez nous écrire directement sur WhatsApp au +509 39 42 4419, utiliser le formulaire de la page Contact, ou nous envoyer un message sur Instagram / Facebook @lesecretremerlie.",
-    answer_ht: "Ekip nou an disponib 7 jou sou 7 ! Ou ka ekri nou dirèkteman sou WhatsApp nan +509 39 42 4419, sèvi ak fòmilè kontak la, oswa voye yon mesaj sou Instagram / Facebook @lesecretremerlie."
+    answer: "Notre équipe est disponible 7j/7 ! Vous pouvez nous écrire directement sur WhatsApp au +509 49 09 3613, utiliser le formulaire de la page Contact, ou nous envoyer un message sur Instagram / Facebook @lesecretremerlie.",
+    answer_ht: "Ekip nou an disponib 7 jou sou 7 ! Ou ka ekri nou dirèkteman sou WhatsApp nan +509 49 09 3613, sèvi ak fòmilè kontak la, oswa voye yon mesaj sou Instagram / Facebook @lesecretremerlie."
   }
 ];

@@ -668,7 +668,7 @@ function renderContactView() {
       <div class="contact-form-box" style="max-width: 600px; margin: 0 auto;">
         <div class="footer-links" style="margin-bottom: 18px;">
             <a href="mailto:contact@lesecretremerlie.com">contact@lesecretremerlie.com</a>
-            <a href="tel:+50939424419">+509 39 42 4419</a>
+            <a href="tel:+50949093613">+509 49 09 3613</a>
             <a href="https://www.google.com/maps/search/?api=1&amp;query=P%C3%A9tion-Ville%2C%20Ha%C3%AFti" target="_blank" rel="noopener">Pétion-Ville, Haïti ↗</a>
           </div>
         <form onsubmit="window.miamApp.handleContactSubmit(event)">
